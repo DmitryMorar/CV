@@ -1,0 +1,37 @@
+.container-fluid {
+
+}
+
+.left-block {
+  background: #1d2939;
+  min-height: 980px;
+  padding: 40px 15px 0 40px;
+}
+
+.navbar {
+
+  &-list {
+   }
+
+  &-list__item {
+    margin-top: 10px;
+
+    &_active {
+      background: #1caf9a;
+    }
+    &:hover {
+      background: #fff;
+    }
+    &:hover &__link {
+      color: #000;
+    }
+  }
+
+  &-list__item__link {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    padding: 7px 10px;
+
+  }
+}

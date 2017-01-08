@@ -1,0 +1,89 @@
+/*--------------------------------------------------------------
+* Main content
+--------------------------------------------------------------*/
+
+/* Colors
+------------------------------------------- */
+$white: #fff;
+$grey: #777379;
+$red: #da4e60;
+$light-grey: #989ca3;
+$blue-1: #366685;
+$blue-2: #4b7190;
+$blue-3: #30536b;
+$blue-4: #4a708e;
+$light-blue: #47bae6;
+
+/*permanent variable-colors*/
+$bg-main-section: $white; //background main section
+$bg-top-line: $blue-2; //background top line main section
+$bg-nav-menu: $blue-1; //background sidebar
+
+$main-ft-color: $grey; //main-font-color
+$title-ft-color: $light-grey; //title-font-color
+$label-ft-color: $light-grey; //label-font-color
+$ft-color-lk-nav-menu: $white; //font color link nav-menu
+/*/permanent variable-colors*/
+/* /Colors
+------------------------------------------- */
+
+/* Sizing
+------------------------------------------- */
+/*typography*/
+$ft-size-base: 14px !default; //font size base
+$ft-size-small: ceil(($ft-size-base * 0.85)); //font size small  ~12px
+$ft-size-medium: ceil(($ft-size-base * 1.14)); //font size small  ~16px
+$ft-size-large: ceil(($ft-size-base * 1.285)); //font size large ~18px
+$ft-size-xlarge: ceil(($ft-size-base * 1.714)); //font size large ~24px
+/*/typography*/
+
+$padding-base-vertical: 6px;
+$padding-base-horizontal: 12px;
+/* /Sizing
+----------------------------------------------- */
+
+
+/* Grid
+----------------------------------------------- */
+
+// Grid breakpoints
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+        xs: 0,
+  // Small screen / phone
+        sm: 544px,
+  // Medium screen / tablet
+        md: 768px,
+  // Large screen / desktop
+        lg: 992px,
+  // Extra large screen / wide desktop
+        xl: 1200px
+) !default;
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+        sm: 576px,
+        md: 720px,
+        lg: 940px,
+        xl: 1140px
+) !default;
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:               12 !default;
+$grid-gutter-width:          1.875rem !default; // 30px
+
+//missing variables
+$enable-flex:               false !default;
+$enable-grid-classes:        true !default;
+
+/* /Grid
+----------------------------------------------- */

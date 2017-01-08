@@ -1,0 +1,40 @@
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+
+  &-create {
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #8BC34A;
+    color: #fff;
+    font-size: 25px;
+
+    &:hover {
+      opacity: .7;
+    }
+    &:active {
+      background: #73b135;
+    }
+  }
+  &-form {
+    width: 100%;
+    background: #D9534F;
+
+    &:hover {
+      background: #bc2e29;
+    }
+  }
+}
+
