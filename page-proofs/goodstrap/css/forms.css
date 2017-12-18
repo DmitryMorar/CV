@@ -1,0 +1,189 @@
+/* Forms
+----------------------------------------- */
+.field-it,  /*field-input*/
+.field-it-group { /*field-input-group*/
+	position: relative;
+}
+
+.field-it .it {
+	margin-bottom: 15px;
+	padding-right: 40px;
+}
+
+.field-it .field-it-group_ic {
+	font-size: 18px;
+}
+
+.field-it .it:focus + .field-it_ic {
+	color: #000;
+}
+
+/*classes for input with badge*/ 	
+.field-it-group { /*field forms group*/ 
+	border-collapse: separate;
+	display: table;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.field-it-group .it {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	display: table-cell;
+	position: relative;
+}
+
+.field-it-group.__sm .field-it-group_badge {
+	height: 40px;
+	padding: 8px 12px;
+}
+
+.field-it-group_badge { /*field input group badge*/
+	background-color: #ccc;
+    border: 2px solid #ccc;
+	border-bottom-right-radius: 4px;
+	border-top-right-radius: 4px;
+	color: #fff;
+	display: table-cell;
+	font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+	position: relative;
+	padding: 13px 19px;
+    text-align: center;
+	vertical-align: top;
+	white-space: nowrap;
+	width: 1%;
+}
+
+/*inputs*/
+.it { /*input*/
+	background: #fff;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	color:  #808080;
+	display: block;
+	font-size: 14px;
+	height: 50px;
+	outline: 0;
+	padding: 8px 20px;
+	width: 100%;
+}
+
+.it:disabled { /*if input have attribute disabled to apply the rules*/
+	background-color:  #f2f2f2;
+	border: 2px solid #ccc;
+}
+.itx:focus,
+.it:focus {
+	border: 2px solid #1abc9c;
+	color: #000;
+}
+
+.it:focus + .field-it_ic {
+	color: #fff;
+}
+
+.it:focus + .field-it-group_badge {
+	background-color: #1abc9c;
+	border-color: #1abc9c;
+}
+
+.itx { /*textarea*/
+	background: #fff;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	color: #000;
+	font-size: 16px;
+	font-family: 'PT Sans', sans-serif;
+	height: auto;
+	min-height: 170px;
+	outline: 0;
+	padding: 8px 20px;
+	resize: vertical;
+	white-space: normal;
+	width: 100%;
+}
+/*/inputs*/
+
+/*icon*/
+.field-it_ic {
+	color: #ccc;
+	display: block;
+	font-size: 17px;
+	position: absolute;
+	padding: 16px 20px;
+	text-align: center;
+	right: 0;
+	top: 0;
+}
+/*/icon*/
+
+/*classes modifiers*/
+.field-it.__sm .it, /*change input on small size*/
+.field-it-group.__sm .it,
+.it.__sm  {  /*change input on small size*/
+	height: 40px;
+}
+
+.field-it-group.__sm .field-it-group_badge {
+	height: 40px;
+	padding: 8px 12px;
+}
+
+.it.__sm .field-it_ic {
+	padding: 11px 15px;
+}
+
+.field-it.__lg .it,  /*change forms on large size*/
+.field-it-group.__lg .it,  /*change forms on large size*/
+.it.__lg {  /*change forms on large size*/
+	font-size: 16px;
+	height: 56px;
+}
+
+.field-it.__bg-dark .it,  /*change backgound input on dark*/
+.field-it.__bg-dark .itx,  /*change backgound textarea on dark*/
+.itx.__bg-dark,
+.it.__bg-dark {
+	background-color:  #394264;
+	border: 1px solid #2b2937;
+	color: #fff;
+}
+.itx.__bg-dark:focus {
+	border: 1px solid #1abc9c;
+}
+.field-it.__bg-dark .it:focus + .field-it_ic {
+	color: #fff;
+}
+
+.field-it.__bg-dark .it:disabled,  /*if input have attribute disabled to apply the rules*/
+.it.__bg-dark:disabled { 
+	background-color: #9095aa;
+	border-color: #ccc;
+	color: #ccc;
+}
+
+.field-it.__bg-dark .it:focus,
+.field-it.__bg-dark .itx:focus,
+.it.__bg-dark:focus {
+	border: 1px solid #1abc9c;
+	color: #fff;
+}
+
+.field-it.__error .it,  /*change state input on error*/
+.field-it-group.__error .it,  /*change state input on error*/
+.it.__error { 
+	border-color: #e52c39;
+	color: #e52c39;
+}
+
+.field-it-group.__error .field-it-group_badge { /*change state badge on error*/
+	background-color: #e52c39;
+	border-color: #e52c39;
+
+}  
+
+/*/classes modifiers*/
+/* /Forms
+----------------------------------------- */

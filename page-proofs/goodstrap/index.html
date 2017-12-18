@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My first freamework</title>
+		<meta charset="utf-8" />
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+		<link href='https://fonts.googleapis.com/css?family=Raleway:400,300italic' rel='stylesheet' type='text/css' />
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300italic' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="css/style.css" />
+
+	</head>
+	<body>
+		<div class="container">
+			<div class="b-left">
+				<h1>Goodstrap</h1>
+				<nav id="top-menu" class="b-left_nav">
+					<a  class="b-left_nav_i __active" href="#" data-scroll=
+						"top">Getting started</a>
+					<a class="b-left_nav_i" href="#" data-scroll="nav">Navbar
+					</a>
+					<a class="b-left_nav_i" href="#" data-scroll='breadcrumb'>
+						Breadcrumb</a>
+					<a class="b-left_nav_i" href="#" data-scroll="pagination">
+						Pagination</a>
+					<a class="b-left_nav_i" href="#" data-scroll="buttons">
+						Buttons</a>
+					<a class="b-left_nav_i" href="#" data-scroll="forms">
+						Forms</a>
+					<a class="b-left_nav_i" href="#" data-scroll="input-tags">
+						Input tags</a>
+				</nav>
+			</div>
+			<main class="b-right">
+				<div class="b-right_wrapper">
+					<!--Getting started-->
+					<section data-anchor="top">
+						<div class="title-cnt">
+							<h1>Getting started</h1>
+
+						</div>
+						<div class="main-cnt">
+							<h2>Downdload</h2>
+							<p>To start using Goodstrap, all you have to do
+								is push on button download.</p>
+							<a class="btn btn-download" 
+							   href="http://goo.gl/nYYCSb" 
+							   download>Download</a>
+							<h2>The file structure</h2>
+							<pre class="example">
+								<code>
+	goodstrap/
+	├── css/
+	│   ├── breadcrumb.css
+	│   ├── buttons.css
+	│   ├── forms.css
+	│   ├── menu.css
+	│   ├── pagination.css
+	│   ├── reset.css
+	│   └── style.css
+	│     
+	└── index.html /*base page*/
+								</code>
+							</pre>
+							<p>In the <code>css/</code> folder includes the styles 
+								of each component presented in this framework. 
+								Use the <code>index.html</code> 
+								page for a quick dip in Goodstrap.
+							</p>
+
+							<h2>HTML5 doctype</h2>
+							<p>Goodstrap makes use of certain HTML elements and 
+								CSS properties that require the use of the HTML5 
+								doctype. Include it at the beginning of all your 
+								projects.
+							</p>	
+							<pre class="example">
+									<code>
+<span>&lt;!DOCTYPE html&gt;</span>
+<span>&lt;html&gt;</span>
+...									
+<span>&lt;/html&gt;</span>									
+									</code>
+							</pre>
+							<h2>Include files</h2>
+							<p>To work successfully with Goodstrap simply connect the 
+								<code>style.css</code> file which contains the 
+								reference to the rules of each component and 
+								reset styles.
+							</p>
+							<p>Next <code>style.css</code>, you should connect the link to 
+								the icons and font
+							</p>
+							<h2>Basic template</h2>
+							<p>Copy the HTML below to begin working with a minimal 
+								Goodstrap document.</p>
+							<pre class="example">
+								<code>
+<span>&lt;!DOCTYPE html&gt;</span>
+<span>&lt;html&gt;</span>
+    <span>&lt;head&gt;</span>
+        <span>&lt;title&gt;My first page with Goodstrap&lt;/title&gt;</span>
+        <span>&lt;meta charset="utf-8" /&gt;</span>
+		
+        <span class="comments">&lt;!--Icon and font--&gt;</span>
+        <span>&lt;link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' /&gt;</span>
+        <span>&lt;link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" /&gt;</span>
+        <span class="comments">&lt;!--Goodstrap--&gt;</span>
+        <span>&lt;link href="css/style.css" rel="stylesheet" /&gt;</span>
+
+    <span>&lt;/head&gt;</span>
+    <span>&lt;body&gt;</span>
+        <span>&lt;h1&gt;</span>Hello team internship<span>&lt;/h1&gt;</span>
+
+    <span>&lt;/body&gt;</span>
+<span>&lt;/html&gt;</span>
+								</code>
+							</pre>
+						</div>	
+					</section>
+					<!--NAVBAR-->
+					<section data-anchor="nav">
+						<div class="title-cnt">
+							<h1>Navbar</h1>
+						</div>
+						<div class="main-cnt">
+							<!--Default navbar-->
+							<h2>Default navbar</h2>
+							<p>Navbars are responsive components that serve as navigation 
+								headers for your application or site.</p>
+							<nav class="navbar">
+								<ul class="nav">
+									<li class="nav_i">
+										<a class="nav_i_lk" href="#">Home</a>
+									</li>
+									<li class="nav_i __active">
+										<a class="nav_i_lk" href="#">About us</a>
+									</li>
+									<li class="nav_i">
+										<a class="nav_i_lk" href="#">Works</a>
+									</li>
+									<li class="nav_i">
+										<a class="nav_i_lk" href="#">Featurs</a>
+									</li>
+									<li class="nav_i">
+										<a class="nav_i_lk" href="#">Blog</a>
+									</li>
+									<li class="nav_i">
+										<a class="nav_i_lk" href="#">Contact us</a>
+									</li>
+								</ul>
+							</nav>
+							<pre class="example">
+								<code>
+<span>&lt;nav <span>class</span>=<span class="__class">"navbar"</span>&gt;</span>
+    <span>&lt;ul <span>class</span>=<span class="__class">"nav"</span>&gt;</span>
+        <span>&lt;li <span>class</span>=<span class="__class">"nav_i"</span>&gt;&lt;a class=<span class="__class">"nav_i_lk"</span> href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;</span>
+        <span>&lt;li <span>class</span>=<span class="__class">"nav_i __active"</span>&gt;&lt;a class=<span class="__class">"nav_i_lk"</span> href="#"&gt;About us&lt;/a&gt;&lt;/li&gt;</span>
+        <span>&lt;li <span>class</span>=<span class="__class">"nav_i"</span>&gt;&lt;a class=<span class="__class">"nav_i_lk"</span> href="#"&gt;Works&lt;/a&gt;&lt;/li&gt;</span>
+        <span>&lt;li <span>class</span>=<span class="__class">"nav_i"</span>&gt;&lt;a class=<span class="__class">"nav_i_lk"</span> href="#"&gt;Featurs&lt;/a&gt;&lt;/li&gt;</span>
+        <span>&lt;li <span>class</span>=<span class="__class">"nav_i"</span>&gt;&lt;a class=<span class="__class">"nav_i_lk"</span> href="#"&gt;Blog&lt;/a&gt;&lt;/li&gt;</span>
+        <span>&lt;li <span>class</span>=<span class="__class">"nav_i"</span>&gt;&lt;a class=<span class="__class">"nav_i_lk"</span> href="#"&gt;Contact us&lt;/a&gt;&lt;/li&gt;</span>
+    <span>&lt;/ul&gt;</span>
+<span>&lt;/nav&gt;</span>
+								</code>
+							</pre>
+							<!--Modifier-->
+							<h2>Modifier</h2>
+							<p>Add <code>.__dark</code> class to change 
+								appearance navbar.
+							</p>
+							<nav class="navbar __dark">
+								<ul class="nav">
+									<li class="nav_i">
+										<a class="nav_i_lk" href="#">Home</a>
+									</li>
+									<li class="nav_i __active">
+										<a class="nav_i_lk" href="#">About us</a>
+									</li>
+									<li class="nav_i">
+										<a class="nav_i_lk" href="#">Works</a>
+									</li>
+									<li class="nav_i">
+										<a class="nav_i_lk" href="#">Featurs</a>
+									</li>
+									<li class="nav_i">
+										<a class="nav_i_lk" href="#">Blog</a>
+									</li>
+									<li class="nav_i">
+										<a class="nav_i_lk" href="#">Contact us</a>
+									</li>
+								</ul>
+							</nav>
+							<pre class="example">
+								<code>
+<span>&lt;nav <span>class</span>=<span class="__class">"navbar __dark"</span>&gt;</span>
+    <span>&lt;ul <span>class</span>=<span class="__class">"nav"</span>&gt;</span>
+        <span>&lt;li <span>class</span>=<span class="__class">"nav_i"</span>&gt;&lt;a class=<span class="__class">"nav_i_lk"</span> href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;</span>
+        <span>&lt;li <span>class</span>=<span class="__class">"nav_i __active"</span>&gt;&lt;a class=<span class="__class">"nav_i_lk"</span> href="#"&gt;About us&lt;/a&gt;&lt;/li&gt;</span>
+        <span>&lt;li <span>class</span>=<span class="__class">"nav_i"</span>&gt;&lt;a class=<span class="__class">"nav_i_lk"</span> href="#"&gt;Works&lt;/a&gt;&lt;/li&gt;</span>
+        <span>&lt;li <span>class</span>=<span class="__class">"nav_i"</span>&gt;&lt;a class=<span class="__class">"nav_i_lk"</span> href="#"&gt;Featurs&lt;/a&gt;&lt;/li&gt;</span>
+        <span>&lt;li <span>class</span>=<span class="__class">"nav_i"</span>&gt;&lt;a class=<span class="__class">"nav_i_lk"</span> href="#"&gt;Blog&lt;/a&gt;&lt;/li&gt;</span>
+        <span>&lt;li <span>class</span>=<span class="__class">"nav_i"</span>&gt;&lt;a class=<span class="__class">"nav_i_lk"</span> href="#"&gt;Contact us&lt;/a&gt;&lt;/li&gt;</span>
+    <span>&lt;/ul&gt;</span>
+<span>&lt;/nav&gt;</span>
+								</code>
+							</pre>
+						</div>	
+					</section>
+					<!--BREADCRUMB-->
+					<section data-anchor='breadcrumb'>
+						<div class="title-cnt">
+							<h1>Breadcrumb</h1>
+						</div>
+						<div class="main-cnt">
+							<p>Indicate the current page's location within a 
+								navigational hierarchy.
+							</p>
+							<!--Default breadcrumb-->
+							<h2>Default breadcrumb</h2>
+							<ul class="breadcrumb __default">
+								<li class="breadcrumb_i">
+									<a class="breadcrumb_i_lk" href="#">Works</a>
+								</li>
+								<li class="breadcrumb_i">
+									<a class="breadcrumb_i_lk" href="#">Selected works</a>
+								</li>
+								<li class="breadcrumb_i">
+									<a class="breadcrumb_i_lk" href="#">UI Design</a>
+								</li>
+								<li class="breadcrumb_i">
+									<a class="breadcrumb_i_lk" href="#">Interfaces</a>
+								</li>
+								<li class="breadcrumb_i">
+									<a class="breadcrumb_i_lk" href="#">Flat</a>
+								</li>
+								<li class="breadcrumb_i __active">
+									<span class="breadcrumb_i_lk">Flat Brick UI</span>
+								</li>
+							</ul>
+							<pre class="example">
+								<code>
+<span>&lt;ul <span>class</span>=<span class="__class">"breadcrumb __default"</span>&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"breadcrumb_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"breadcrumb_i_lk"</span> href="#"&gt;Works&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"breadcrumb_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"breadcrumb_i_lk"</span> href="#"&gt;Selected works&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"breadcrumb_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"breadcrumb_i_lk"</span> href="#"&gt;UI Design&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"breadcrumb_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"breadcrumb_i_lk"</span> href="#"&gt;Interfaces&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"breadcrumb_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"breadcrumb_i_lk"</span> href="#"&gt;Flat&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"breadcrumb_i __active"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"breadcrumb_i_lk"</span> href="#"&gt;Flat Brick UI&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+<span>&lt;/ul&gt;</span>
+								</code>
+							</pre>
+							<!--Breadcrumb dark-->
+							<h2>Dark breadcrumb</h2>
+							<ul class="breadcrumb __dark">
+								<li class="breadcrumb_i">
+									<a href="#" class="breadcrumb_i_lk">Works</a>
+								</li>
+								<li class="breadcrumb_i">
+									<a href="#" class="breadcrumb_i_lk">Selected works</a>
+								</li>
+								<li class="breadcrumb_i">
+									<a href="#" class="breadcrumb_i_lk">UI Design</a>
+								</li>
+								<li class="breadcrumb_i">
+									<a href="#" class="breadcrumb_i_lk">Interfaces</a>
+								</li>
+								<li class="breadcrumb_i">
+									<a href="#" class="breadcrumb_i_lk">Flat</a>
+								</li>
+								<li class="breadcrumb_i __active">
+									<span class="breadcrumb_i_lk">Flat Brick UI</span>
+								</li>
+							</ul>
+							<pre class="example">
+								<code>
+<span>&lt;ul <span>class</span>=<span class="__class">"breadcrumb __dark"</span>&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"breadcrumb_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"breadcrumb_i_lk"</span> href="#"&gt;Works&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"breadcrumb_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"breadcrumb_i_lk"</span> href="#"&gt;Selected works&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"breadcrumb_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"breadcrumb_i_lk"</span> href="#"&gt;UI Design&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"breadcrumb_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"breadcrumb_i_lk"</span> href="#"&gt;Interfaces&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"breadcrumb_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"breadcrumb_i_lk"</span> href="#"&gt;Flat&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"breadcrumb_i __active"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"breadcrumb_i_lk"</span> href="#"&gt;Flat Brick UI&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+<span>&lt;/ul&gt;</span>
+								</code>
+							</pre>
+						</div>
+					</section>	
+					<!--PAGINATION-->
+					<section data-anchor="pagination">
+						<div class="title-cnt">
+							<h1>Pagination</h1>
+						</div>
+						<div class="main-cnt">
+							<p>Add pagination links to help split up your long 
+								content into shorter, easier to understand blocks.
+							</p>
+							<!--Pagination dark-->
+							<h2>The first option</h2>
+							<ul class="pagination __dark">
+								<li class="pagination_i">
+									<a class="pagination_i_lk __previous" href="#"></a>
+								</li>
+								<li class="pagination_i">
+									<a class="pagination_i_lk" href="#">1</a>
+								</li>
+								<li class="pagination_i">
+									<a class="pagination_i_lk" href="#">2</a>
+								</li>
+								<li class="pagination_i">
+									<a class="pagination_i_lk" href="#">3</a>
+								</li>
+								<li class="pagination_i">
+									<a class="pagination_i_lk" href="#">4</a>
+								</li>
+								<li class="pagination_i __active">
+									<a class="pagination_i_lk" href="#">5</a>
+								</li>
+								<li class="pagination_i">
+									<a class="pagination_i_lk" href="#">6</a>
+								</li>
+								<li class="pagination_i">
+									<a class="pagination_i_lk" href="#">7</a>
+								</li>
+								<li class="pagination_i">
+									<a class="pagination_i_lk" href="#">8</a>
+								</li>
+								<li class="pagination_i">
+									<a class="pagination_i_lk" href="#">9</a>
+								</li>
+								<li class="pagination_i">
+									<a class="pagination_i_lk" href="#">10</a>
+								</li>
+								<li class="pagination_i">
+									<a class="pagination_i_lk" href="#">11</a>
+								</li>
+								<li class="pagination_i">
+									<a class="pagination_i_lk" href="#">12</a>
+								</li>
+								<li class="pagination_i">
+									<a class="pagination_i_lk __next" href="#"></a>
+								</li>
+							</ul>
+							<pre class="example">
+								<code>
+<span>&lt;ul <span>class</span>=<span class="__class">"pagination __dark"</span>&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"pagination_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"pagination_i_lk __previous"</span> href="#"&gt;&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"pagination_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"pagination_i_lk"</span> href="#"&gt;1&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"pagination_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"pagination_i_lk"</span> href="#"&gt;2&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"pagination_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"pagination_i_lk"</span> href="#"&gt;3&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"pagination_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"pagination_i_lk"</span> href="#"&gt;4&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"pagination_i __active"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"pagination_i_lk"</span> href="#"&gt;5&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"pagination_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"pagination_i_lk"</span> href="#"&gt;6&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"pagination_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"pagination_i_lk"</span> href="#"&gt;7&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"pagination_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"pagination_i_lk"</span> href="#"&gt;8&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"pagination_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"pagination_i_lk"</span> href="#"&gt;9&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"pagination_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"pagination_i_lk"</span> href="#"&gt;10&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"pagination_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"pagination_i_lk"</span> href="#"&gt;11&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"pagination_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"pagination_i_lk"</span> href="#"&gt;12&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"pagination_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"pagination_i_lk __next"</span> href="#"&gt;&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+<span>&lt;/ul&gt;</span>
+								</code>
+							</pre>
+							<!--Pagination dark large-->
+							<h2>The second option</h2>
+							<p>The large block is hard to miss, easily scalable, 
+								and provides large click areas.
+							</p>
+							<ul class="pagination __dark-lg">
+								<li class="pagination_i">
+									<a class="pagination_i_lk __previous" href="#">NEWER</a>
+								</li>
+								<li class="pagination_i">
+									<a class="pagination_i_lk" href="#">1</a>
+								</li>
+								<li class="pagination_i">
+									<a class="pagination_i_lk" href="#">2</a>
+								</li>
+								<li class="pagination_i __lg__active">
+									<a class="pagination_i_lk" href="#">3</a>
+								</li>
+								<li class="pagination_i">
+									<a class="pagination_i_lk" href="#">4</a>
+								</li>
+								<li class="pagination_i">
+									<a class="pagination_i_lk __next" href="#">OLDER</a>
+								</li>
+							</ul>
+							<pre class="example">
+								<code>
+<span>&lt;ul <span>class</span>=<span class="__class">"pagination __dark-lg"</span>&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"pagination_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"pagination_i_lk __previous"</span> href="#"&gt;NEWER&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"pagination_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"pagination_i_lk"</span> href="#"&gt;1&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"pagination_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"pagination_i_lk"</span> href="#"&gt;2&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"pagination_i __lg__active"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"pagination_i_lk"</span> href="#"&gt;3&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"pagination_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"pagination_i_lk"</span> href="#"&gt;4&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+    <span>&lt;li <span>class</span>=<span class="__class">"pagination_i"</span>&gt;</span>
+        <span>&lt;a class=<span class="__class">"pagination_i_lk __next"</span> href="#"&gt;OLDER&lt;/a&gt;</span>
+    <span>&lt;/li&gt;</span>
+<span>&lt;/ul&gt;</span>
+								</code>
+							</pre>
+						</div>
+					</section>	
+					<!--BUTTONS-->
+					<section data-anchor="buttons">
+						<div class="title-cnt">
+							<h1>Buttons</h1>
+						</div>
+						<div class="main-cnt">
+							<!--Default Button-->
+							<h2>Default Buttons</h2>
+							<p>To create a button, add the <code>.btn</code> 
+								classname to any <code>&lt;a&gt;</code> or 
+								<code>&lt;button&gt;</code> element. 
+							</p>
+							<button class="btn">Button</button>
+							<a href="#" class="btn">Link</a>
+							<pre class="example">
+								<code>
+<span>&lt;button <span>class</span>=<span class="__class">"btn"</span>&gt;Button&lt;/button&gt;</span>
+
+<span>&lt;a href="#" <span>class</span>=<span class="__class">"btn"</span>&gt;Link&lt;/a&gt;</span>
+								</code>
+							</pre>
+							<!--Modifiers-->
+							<h2>Modifiers</h2>
+							<p>To change the appearance of the button you want 
+								add class modifiers to an item that
+								already has <code>.btn</code> classname.
+							</p>
+							<!--Large Button-->
+							<h2>Button Sizes</h2>
+							<p>There are one button sizes modifiers <code>.__lg
+								</code>.
+							</p>
+							<button class="btn __lg">Large Button</button>
+							<pre class="example">
+								<code>
+<span>&lt;button <span>class</span>=<span class="__class">"btn __lg"</span>&gt;Large Button&lt;/button&gt;</span>
+								</code>
+							</pre>
+							<!--Button Colours-->
+							<h2>Button Colours</h2>
+							<p>There are two button colour modifiers 
+								<code>.__primary</code> or <code>.__danger</code>.
+							</p>
+							<button class="btn __lg __primary">Primary</button>
+							<button class="btn __lg __danger">Danger</button>
+							<pre class="example">
+								<code>
+<span>&lt;button <span>class</span>=<span class="__class">"btn __lg __primary"</span>&gt;Primary&lt;/button&gt;</span>
+
+<span>&lt;button <span>class</span>=<span class="__class">"btn __lg __danger"</span>&gt;Danger&lt;/button&gt;</span>
+								</code>
+							</pre>
+							<!--Disabled Button-->
+							<h2>Disabled Button</h2>
+							<p>To mark a button as disabled, add the attribute 
+								<code>disabled</code>.
+							</p>
+							<button class="btn __lg __primary" disabled>Primary</button>
+							<button class="btn __lg __danger" disabled>Danger</button>
+							<pre class="example">
+								<code>
+<span>&lt;button <span>class</span>=<span class="__class">"btn __lg __primary" disabled</span>&gt;Primary&lt;/button&gt;</span>
+
+<span>&lt;button <span>class</span>=<span class="__class">"btn __lg __danger" disabled</span>&gt;Danger&lt;/button&gt;</span>
+								</code>
+							</pre>
+						</div>
+					</section>		
+					<!--FORMS-->
+					<section data-anchor="forms">	
+						<div class="title-cnt">
+							<h1>Forms</h1>
+						</div>
+						<div class="main-cnt">
+							<!--Default Input-->
+							<h2>Default Forms</h2>
+							<p>To create a basic input, add the 
+								<code>.it</code>(input) classname to 
+								<code>&lt;input&gt;</code> and <code>.itx</code> 
+								(textarea) classname to <code>&lt;textarea&gt;
+								</code> element. 
+							</p>
+							<p class="note">NOTE: the default size of the input, 
+								fills the entire width of the parent container.</p>
+							<input class="it" type="text" 
+								   placeholder="Default">
+							<textarea class="itx" rows="4" 
+									  placeholder="Default"></textarea>
+							<pre class="example">
+								<code>
+<span>&lt;input <span>class</span>=<span class="__class">"it"</span> type="text" placeholder="Default" /&gt;</span>
+
+<span>&lt;textarea <span>class</span>=<span class="__class">"itx"</span> placeholder="Default"&gt;&lt;/textarea&gt;</span>
+								</code>
+							</pre>
+							<p>If you are aiming to create valid and accessibility html 
+								forms, be sure you are using the tag label. 
+								<a href="https://goo.gl/LWtGK6">More</a>
+							</p>
+							<div class="field-it __lg">
+								<label for="example1"></label>
+								<input class="it" id="example1" type="text" placeholder="Normal" />
+							</div>
+							<pre class="example">
+								<code>
+<span>&lt;div<span> class</span>=<span class="__class">"field-it"</span>&gt;</span>
+    <span>&lt;label for ="example1"&gt;</span><span>&lt;/label&gt;</span>
+    <span>&lt;input <span>class</span>=<span class="__class">"it"</span> id="example1" type="text" placeholder="Normal" /&gt;</span>
+<span>&lt;/div&gt;</span>
+								</code>
+							</pre>
+							<!--Input with icon-->
+							<h2>Input with icon</h2>
+							<p class="note">NOTE: icon must be placed within a 
+								<code>.field-it</code> (field-input).
+							</p>
+							<div class="field-it">
+								<label for="example2"></label>
+								<input class="it" id="example2" type="text" placeholder="Search" />
+								<i class="fa fa-search field-it_ic"></i>
+							</div>
+							<pre class="example">
+								<code>
+<span>&lt;div<span> class</span>=<span class="__class">"field-it"</span>&gt;</span>
+    <span>&lt;label for ="example1"&gt;</span><span>&lt;/label&gt;</span>
+    <span>&lt;input <span>class</span>=<span class="__class">"it"</span> id="example1" type="text" placeholder="Normal" /&gt;</span>
+    <span>&lt;i <span>class</span>=<span class="__class">"fa fa-search field-it_ic"</span>&gt;&lt;/i&gt;</span>
+<span>&lt;/div&gt;</span>
+								</code>
+							</pre>
+							<!--Input with badge-->
+							<h2>Input with badge</h2>
+							<p class="note">NOTE: <code>span</code> with class 
+								<code>.field-it-group_badge</code> must be placed 
+								within a <code>.field-it</code>.
+							</p>
+							<div class="field-it-group">
+								<label for="example3"></label>
+								<input class="it" id="example3" type="text" placeholder="Search for.." />
+								<span class="field-it-group_badge">
+									<i class="fa fa-search"></i>
+								</span>
+							</div>
+							<pre class="example">
+								<code>
+<span>&lt;div<span> class</span>=<span class="__class">"field-it-group"</span>&gt;</span>
+    <span>&lt;label for ="example1"&gt;</span><span>&lt;/label&gt;</span>
+    <span>&lt;input <span>class</span>=<span class="__class">"it"</span> id="example1" type="text" placeholder="Normal" /&gt;</span>
+    <span>&lt;span <span>class</span>=<span class="__class">"field-it-group_badge"</span>&gt;</span>
+        <span>&lt;i <span>class</span>=<span class="__class">"fa fa-search"</span>&gt;&lt;/i&gt;</span>
+    <span>&lt;/span&gt;</span>
+<span>&lt;/div&gt;</span>
+								</code>
+							</pre>
+							<!--Modifiers-->	
+							<h2>Modifiers</h2>
+							<p>To change the appearance of the input you want 
+								add class modifiers to an item that already has
+								<code>.it</code> (input) classname.</p>
+							<p>To change group forms, add class 
+								modifiers to the parent classes wrapper
+								<code>.field-it</code> or <code>.field-it-group</code>.
+							</p>
+							<!--Input Sizing-->
+							<h2>Input Sizing</h2>
+							<p>There are two input sizes modifiers 
+								<code>.__sm</code> or <code>.__lg
+								</code>.
+							</p>
+							<input class="it __sm" type="text" 
+								   placeholder="Small" />
+							<div class="field-it __lg">
+								<label for="example4"></label>
+								<input class="it" id="example4" type="text" 
+									   placeholder="Large input" />
+								<i class="fa fa-search field-it_ic"></i>
+							</div>
+							<div class="field-it-group __lg">
+								<label for="example5"></label>
+								<input class="it" id="example5" type="text" placeholder="Search for.." />
+								<span class="field-it-group_badge">
+									<i class="fa fa-search"></i>
+								</span>
+							</div>
+							<pre class="example">
+								<code>
+<span>&lt;input <span>class</span>=<span class="__class">"it __sm"</span> type="text" placeholder="Small size" /&gt;</span>
+
+<span>&lt;div<span> class</span>=<span class="__class">"field-it __lg"</span>&gt;</span>
+    <span>&lt;label for="example1"&gt;</span><span>&lt;/label&gt;</span>
+    <span>&lt;input <span>class</span>=<span class="__class">"it"</span> id="example1" type="text" placeholder="Normal" /&gt;</span>
+    <span>&lt;i <span>class</span>=<span class="__class">"fa fa-search field-it_ic"</span>&gt;&lt;/i&gt;</span>
+<span>&lt;/div&gt;</span>
+
+<span>&lt;div<span> class</span>=<span class="__class">"field-it-group __lg"</span>&gt;</span>
+    <span>&lt;label for="example1"&gt;</span><span>&lt;/label&gt;</span>
+    <span>&lt;input <span>class</span>=<span class="__class">"it"</span> id="example1" type="text" placeholder="Normal" /&gt;</span>
+    <span>&lt;span <span>class</span>=<span class="__class">"field-it-group_badge"</span>&gt;</span>
+        <span>&lt;i <span>class</span>=<span class="__class">"fa fa-search"</span>&gt;&lt;/i&gt;</span>
+    <span>&lt;/span&gt;</span>
+<span>&lt;/div&gt;</span>
+								</code>
+							</pre>
+							<!--Background form-->
+							<h2>Background Input</h2>
+							<p>The class<code>.__bg-dark</code> 
+								changes the background of the input dark.
+							</p>
+							<input class="it __sm __bg-dark" 
+								   type="text" placeholder="Dark background">
+							<div class="field-it __lg __bg-dark">
+								<label for="example6"></label>
+								<input class="it" id="example6" type="text" placeholder=
+									   "Dark background" />
+								<i class="fa fa-search field-it_ic"></i>
+							</div>
+							<textarea class="itx __bg-dark" rows="6" 
+									  placeholder="Textarea dark background"></textarea>
+							<pre class="example">
+								<code>
+<span>&lt;input <span>class</span>=<span class="__class">"it __sm __bg-dark"</span> type="text" placeholder="Dark background" /&gt;</span>
+
+<span>&lt;div<span> class</span>=<span class="__class">"field-it __lg __bg-dark"</span>&gt;</span>
+    <span>&lt;label for="example1"&gt;</span><span>&lt;/label&gt;</span>
+    <span>&lt;input <span>class</span>=<span class="__class">"it"</span> id="example1" type="text" placeholder="Normal" /&gt;</span>
+    <span>&lt;i <span>class</span>=<span class="__class">"fa fa-search field-it_ic"</span>&gt;&lt;/i&gt;</span>
+<span>&lt;/div&gt;</span>
+
+<span>&lt;textarea <span>class</span>=<span class="__class">"itx __bg-dark"</span> placeholder="Dark background"&gt;&lt;/textarea&gt;</span>
+								</code>
+							</pre>
+							<!--Error states-->
+							<h2>Error states</h2>
+							<p>The class<code>.__error</code> reports an error.</p>
+							<input class="it __sm __error" type="text" 
+								   placeholder="Dark background">
+							<div class="field-it __error">
+								<label for="example7"></label>
+								<input class="it" id="example7" type="text" placeholder=
+									   "Unput with icon" />
+								<i class="fa fa-search field-it_ic"></i>
+							</div>
+							<div class="field-it-group __error">
+								<label for="example8"></label>
+								<input class="it" id="example8" type="text" placeholder=
+									   "Error search for..." />
+								<span class="field-it-group_badge">
+									<i class="fa fa-search"></i>
+								</span>
+							</div>
+							<input  class="it __lg __bg-dark __error" type="text" placeholder="Dark background">
+							<pre class="example">
+								<code>
+<span>&lt;input <span>class</span>=<span class="__class">"it __sm __error"</span> type="text" placeholder="Error" /&gt;</span>
+
+<span>&lt;div<span> class</span>=<span class="__class">"field-it __error"</span>&gt;</span>
+    <span>&lt;label for="example1"&gt;</span><span>&lt;/label&gt;</span>
+    <span>&lt;input <span>class</span>=<span class="__class">"it"</span> id="example1" type="text" placeholder="Normal" /&gt;</span>
+    <span>&lt;i <span>class</span>=<span class="__class">"fa fa-search field-it_ic"</span>&gt;&lt;/i&gt;</span>
+<span>&lt;/div&gt;</span>
+
+<span>&lt;div<span> class</span>=<span class="__class">"field-it-group __lg __error"</span>&gt;</span>
+    <span>&lt;label for="example1"&gt;</span><span>&lt;/label&gt;</span>
+    <span>&lt;input <span>class</span>=<span class="__class">"it"</span> id="example1" type="text" placeholder="Normal" /&gt;</span>
+    <span>&lt;span <span>class</span>=<span class="__class">"field-it-group_badge"</span>&gt;</span>
+        <span>&lt;i <span>class</span>=<span class="__class">"fa fa-search"</span>&gt;&lt;/i&gt;</span>
+    <span>&lt;/span&gt;</span>
+<span>&lt;/div&gt;</span>
+
+<span>&lt;input <span>class</span>=<span class="__class">"it __bg-dark __error"</span> type="text" placeholder="Error" /&gt;</span>
+								</code>
+							</pre>
+							<!--Disabled-->
+							<h2>Disabled</h2>
+							<p>To disable a form, add the <code>disabled</code> 
+								attribute.
+							</p>
+							<input class="it __sm" type="text" 
+								   placeholder="Disabled" disabled />
+							<div class="field-it">
+								<label for="example9"></label>
+								<input class="it" id="example9" type="text" placeholder=
+									   "Disabled input with icon" disabled />
+								<i class="fa fa-search field-it_ic"></i>
+							</div>
+							<div class="field-it-group">
+								<label for="example10"></label>
+								<input class="it" id="example10" type="text" placeholder=
+									   "Disabled search for..." disabled />
+								<span class="field-it-group_badge">
+									<i class="fa fa-search"></i>
+								</span>
+							</div>
+							<input class="it __lg __bg-dark " 
+								   type="text" placeholder="Dark background" disabled />
+							<pre class="example">
+								<code>
+<span>&lt;input <span>class</span>=<span class="__class">"it __sm"</span> type="text" <span class="__class">disabled</span> placeholder="Disabled" /&gt;</span>
+
+<span>&lt;div<span> class</span>=<span class="__class">"field-it"</span>&gt;</span>
+    <span>&lt;label for="example1"&gt;</span><span>&lt;/label&gt;</span>
+    <span>&lt;input <span>class</span>=<span class="__class">"it"</span> id="example1" type="text" <span class="__class">disabled</span> placeholder="Disabled input with icon" /&gt;</span>
+    <span>&lt;i <span>class</span>=<span class="__class">"fa fa-search field-it_ic"</span>&gt;&lt;/i&gt;</span>
+<span>&lt;/div&gt;</span>
+
+<span>&lt;div<span> class</span>=<span class="__class">"field-it-group"</span>&gt;</span>
+    <span>&lt;label for="example1"&gt;</span><span>&lt;/label&gt;</span>
+    <span>&lt;input <span>class</span>=<span class="__class">"it"</span> id="exmple1" type="text" <span class="__class">disabled</span> placeholder="Disabled search for..." /&gt;</span>
+    <span>&lt;span <span>class</span>=<span class="__class">"field-it-group_badge"</span>&gt;</span>
+        <span>&lt;i <span>class</span>=<span class="__class">"fa fa-search"</span>&gt;&lt;/i&gt;</span>
+    <span>&lt;/span&gt;</span>
+<span>&lt;/div&gt;</span>
+
+<span>&lt;input <span>class</span>=<span class="__class">"it __bg-dark"</span> type="text" <span class="__class">disabled</span> placeholder="Disabled" /&gt;</span>
+								</code>
+							</pre>
+						</div>
+					</section>
+					<!--INPUT TAGS-->
+					<section data-anchor="input-tags">
+						<div class="title-cnt">
+							<h1>Input tags</h1>
+						</div>
+						<div class="main-cnt">
+							<p>The tag editor featured is a real slick tag editor 
+								that makes it much nicer to enter tags than just 
+								a plain textbox.
+							</p>
+							<h2>Default input tags</h2>
+							<!--Default input tags-->
+							<form class="tags">
+								<span class="tags_i __color-1">
+									Tag 1
+									<a href="#"></a>
+								</span>
+								<span class="tags_i __color-2">
+									Tag 2
+									<a href="#"></a>
+								</span>
+								<span class="tags_i __color-3">
+									Tag 3
+									<a href="#"></a>
+								</span>
+								<span class="tags_i __color-4">
+									Tag 4
+									<a href="#"></a>
+								</span>
+								<span class="add-tags-field">
+									<input class="it" type="text" placeholder="Writing tags">
+								</span>
+							</form>
+							<pre class="example">
+								<code>
+<span>&lt;form <span>class</span>=<span class="__class">"tags"</span>&gt;</span>
+    <span>&lt;span<span> class</span>=<span class="__class">"tags_i __color-1"</span>&gt;</span>
+        Tag 1
+        <span>&lt;a href="#"&gt;&lt;/a&gt;</span>
+    <span>&lt;/span&gt;</span>
+    <span>&lt;span<span> class</span>=<span class="__class">"tags_i __color-2"</span>&gt;</span>
+        Tag 2
+        <span>&lt;a href="#"&gt;&lt;/a&gt;</span>
+    <span>&lt;/span&gt;</span>
+    <span>&lt;span<span> class</span>=<span class="__class">"tags_i __color-3"</span>&gt;</span>
+        Tag 3
+        <span>&lt;a href="#"&gt;&lt;/a&gt;</span>
+    <span>&lt;/span&gt;</span>
+    <span>&lt;span<span> class</span>=<span class="__class">"tags_i __color-4"</span>&gt;</span>
+        Tag 4
+        <span>&lt;a href="#"&gt;&lt;/a&gt;</span>
+    <span>&lt;/span&gt;</span>
+    <span>&lt;span<span> class</span>=<span class="__class">"add-tags-field"</span>&gt;</span>
+        <span>&lt;input <span>class</span>=<span class="__class">"it"</span> type="text" placeholder="Writing tags" /&gt;</span>
+    <span>&lt;/span&gt;</span>
+<span>&lt;/form&gt;</span>
+								</code>
+							</pre>
+							<!--Modifiers-->	
+							<h2>Modifier</h2>
+							<p>To change the appearance of the input you want 
+								to add class modifiers to an item that already has
+								<code>.tags</code>  classname.
+							</p>						
+							<h2>Input tags sizes</h2>
+							<p>There are one input tags sizes modifiers  
+								<code>.__sm</code>.
+							</p>
+							<!--Small input tags size-->
+							<form class="tags __sm">
+								<span class="tags_i __color-1">
+									Tag 1
+									<a href="#"></a>
+								</span>
+								<span class="tags_i __color-2">
+									Tag 2
+									<a href="#"></a>
+								</span>
+								<span class="tags_i __color-3">
+									Tag 3
+									<a href="#"></a>
+								</span>
+								<span class="tags_i __color-4">
+									Tag 4
+									<a href="#"></a>
+								</span>
+								<span class="add-tags-field">
+									<input class="it" type="text" placeholder="Writing tags">
+								</span>
+							</form>
+							<pre class="example">
+								<code>
+<span>&lt;form <span>class</span>=<span class="__class">"tags __sm"</span>&gt;</span>
+    <span>&lt;span<span> class</span>=<span class="__class">"tags_i __color-1"</span>&gt;</span>
+        Tag 1
+        <span>&lt;a href="#"&gt;&lt;/a&gt;</span>
+    <span>&lt;/span&gt;</span>
+    <span>&lt;span<span> class</span>=<span class="__class">"tags_i __color-2"</span>&gt;</span>
+        Tag 2
+        <span>&lt;a href="#"&gt;&lt;/a&gt;</span>
+    <span>&lt;/span&gt;</span>
+    <span>&lt;span<span> class</span>=<span class="__class">"tags_i __color-3"</span>&gt;</span>
+        Tag 3
+        <span>&lt;a href="#"&gt;&lt;/a&gt;</span>
+    <span>&lt;/span&gt;</span>
+    <span>&lt;span<span> class</span>=<span class="__class">"tags_i __color-4"</span>&gt;</span>
+        Tag 4
+        <span>&lt;a href="#"&gt;&lt;/a&gt;</span>
+    <span>&lt;/span&gt;</span>
+    <span>&lt;span<span> class</span>=<span class="__class">"add-tags-field"</span>&gt;</span>
+        <span>&lt;input <span>class</span>=<span class="__class">"it"</span> type="text" placeholder="Writing tags" /&gt;</span>
+    <span>&lt;/span&gt;</span>
+<span>&lt;/form&gt;</span>
+								</code>
+							</pre>
+							<h2>Input tags colours</h2>
+							<p>There are one input tags colour modifiers 
+								<code>.__bg-dark</code> 
+							</p>
+							<form class="tags __sm __bg-dark">
+								<span class="tags_i __color-1">
+									Tag 1
+									<a href="#"></a>
+								</span>
+								<span class="tags_i __color-2">
+									Tag 2
+									<a href="#"></a>
+								</span>
+								<span class="tags_i __color-3">
+									Tag 3
+									<a href="#"></a>
+								</span>
+								<span class="tags_i __color-4">
+									Tag 4
+									<a href="#"></a>
+								</span>
+								<span class="add-tags-field">
+									<input class="it" type="text" placeholder="Writing tags">
+								</span>
+							</form>
+							<pre class="example">
+								<code>
+<span>&lt;form <span>class</span>=<span class="__class">"tags __sm __bg-dark"</span>&gt;</span>
+    <span>&lt;span<span> class</span>=<span class="__class">"tags_i __color-1"</span>&gt;</span>
+        Tag 1
+        <span>&lt;a href="#"&gt;&lt;/a&gt;</span>
+    <span>&lt;/span&gt;</span>
+    <span>&lt;span<span> class</span>=<span class="__class">"tags_i __color-2"</span>&gt;</span>
+        Tag 2
+        <span>&lt;a href="#"&gt;&lt;/a&gt;</span>
+    <span>&lt;/span&gt;</span>
+    <span>&lt;span<span> class</span>=<span class="__class">"tags_i __color-3"</span>&gt;</span>
+        Tag 3
+        <span>&lt;a href="#"&gt;&lt;/a&gt;</span>
+    <span>&lt;/span&gt;</span>
+    <span>&lt;span<span> class</span>=<span class="__class">"tags_i __color-4"</span>&gt;</span>
+        Tag 4
+        <span>&lt;a href="#"&gt;&lt;/a&gt;</span>
+    <span>&lt;/span&gt;</span>
+    <span>&lt;span<span> class</span>=<span class="__class">"add-tags-field"</span>&gt;</span>
+        <span>&lt;input <span>class</span>=<span class="__class">"it"</span> type="text" placeholder="Writing tags" /&gt;</span>
+    <span>&lt;/span&gt;</span>
+<span>&lt;/form&gt;</span>
+								</code>
+							</pre>
+						</div>
+					</section>
+				</div>
+			</main>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<script src="js/index.js"></script>
+
+	</body>
+</html>

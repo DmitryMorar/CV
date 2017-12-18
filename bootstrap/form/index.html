@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Form on Bootstrap</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<div class="cont">
+<div class="wrapper">
+    <h1>Request a demo</h1>
+    <form id="request" action="#" method="get">
+        <div class="row">
+            <div class="form-group col-xs-12 col-sm-6">
+                <label class="control-label" for="first-name">First Name</label>
+                <input class="form-control" type="text" id="first-name" name="form_data[first_name]" autocomplete="off">
+            </div>
+            <div class="form-group col-xs-12 col-sm-6">
+                <label class="control-label">Last Name</label>
+                <input class="form-control" type="text" name="form_data[last_name]" autocomplete="off">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-12 col-sm-6">
+                <label class="control-label">Email *</label>
+                <input class="form-control" type="email" name="form_data[email]" autocomplete="off">
+            </div>
+            <div class="form-group col-xs-12 col-sm-6">
+                <label class="control-label">Phone Number</label>
+                <div class="form-inline input-group custom-col">
+                    <div class="form-group col-xs-3">
+                        <label class="sr-only">Country</label>
+                        <input id="phone-country" class="form-control" maxlength="3" type="text"
+                               name="form_data[phone][country]" autocomplete="off">
+                    </div>
+                    <div class="form-group col-xs-3">
+                        <label class="sr-only">Code</label>
+                        <input id="phone-code" class="form-control" maxlength="2" type="text"
+                               name="form_data[phone][code]" autocomplete="off">
+                    </div>
+                    <div class="form-group col-xs-6">
+                        <label class="sr-only">Number</label>
+                        <input id="phone-number" class="form-control" maxlength="7" type="text"
+                               name="form_data[phone][number]" autocomplete="off">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-12 col-sm-6 icon-in-input">
+                <i class="fa fa-search"></i>
+                <label class="control-label">School/ Organization *</label>
+                <input type="text" class="form-control" name="form_data[school_organization]" autocomplete="off">
+            </div>
+            <div class="form-group col-xs-12 col-sm-6">
+                <label class="control-label">Role on Campus *</label>
+                <input class="form-control" type="text" name="form_data[role]" autocomplete="off">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-12">
+                <label class="control-label">What are your goals for DemoSystem? *</label>
+                <textarea class="form-control" name="form_data[goals]" rows="7"></textarea>
+            </div>
+            <div class="form-group col-xs-12">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> I agree to the DemoSystem <a href="#"> Terms of Service </a> and <a
+                            href="#"> Privacy Policy </a>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group col-xs-12">
+                <button type="submit" class="btn btn-green">Submit</button>
+                <button type="cancel" class="btn btn-dark">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+</body>
+</html>

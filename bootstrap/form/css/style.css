@@ -1,0 +1,174 @@
+body {
+    font-family: 'Lato', sans-serif;
+    color: #47484a;
+    font-size: 13px;
+}
+
+h1 {
+    margin: 0 0 30px 0;
+    padding: 25px 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 29px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #47494b;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+}
+
+/**
+* LAYOUT
+*/
+.cont {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    background-color: #27292b;
+    max-width: 580px;
+}
+
+.wrapper {
+    width: 505px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+.custom-col .col-xs-3 {
+    width: 30%;
+    padding-right: 4px;
+}
+
+.custom-col .col-xs-6 {
+    width: 40%;
+    padding-right: 4px;
+}
+
+
+/**
+* INPUT
+*/
+.form-control {
+    height: 42px;
+    color: #47484a;
+    background-color: transparent;
+    border: 1px solid #47484a;
+    border-radius: 3px;
+    resize: vertical;
+}
+
+.form-control:focus {
+    outline: none;
+    color: #fff;
+    border-color: #fff;
+    box-shadow: none;
+}
+
+.form-inline .form-group {
+    padding-left: 0;
+}
+
+.form-control:focus {
+    color: #fff;
+    border: 1px solid #fff;
+    outline: none;
+}
+
+/*icon*/
+.icon-in-input input {
+    padding-right: 35px;
+}
+
+.icon-in-input i {
+    position: absolute;
+    right: 15px;
+    padding: 5px 12px;
+    top: 50%;
+}
+
+/**
+* CONDITION
+*/
+.valid .form-control {
+    border-color: #6abd97;
+    color: #6abd97;
+}
+
+.valid .control-label {
+    color: #6abd97;
+}
+
+.valid i {
+    color: #6abd97;
+}
+
+.invalid .form-control {
+    border-color: #da5f5b;
+    color: #da5f5b;
+}
+
+.invalid .control-label {
+    color: #da5f5b;
+}
+
+.invalid i {
+    color: #da5f5b;
+}
+
+/* buttons */
+.btn {
+    margin: 0 18px 20px 0;
+    padding: 10px 40px;
+    font-size: 13px;
+}
+
+.btn-green {
+    color: #fff;
+    background-color: #5d9f81;
+    border-color: #5d9f81;
+}
+
+.btn-green:hover,
+.btn-green:active {
+    color: #fff;
+    background-color: #6abd97;
+    border-color: #6abd97;
+}
+
+.btn-dark {
+    color: #47494b;
+    background-color: #27292b;
+    border-color: #47494b;
+}
+
+.btn-dark:hover,
+.btn-dark:active {
+    color: #fff;
+    background-color: #47484a;
+    border-color: #626365;
+}
+
+/*media queries*/
+@media screen and (max-width: 767px) {
+    .row {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 505px) {
+    .wrapper {
+        width: 100%;
+    }
+
+}

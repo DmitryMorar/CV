@@ -1,0 +1,122 @@
+
+/* Pagination
+----------------------------------------- */
+
+/*Pagination dark color*/
+.pagination {
+	display: inline-block;
+	border-radius: 4px;
+	margin: 20px 0;
+	padding-left: 0;
+	font-weight: 700;
+}
+.pagination_i {
+	display: inline;
+}
+.pagination_i_lk {
+	background-color: transparent;
+	color: #9095aa;
+	float: left;
+	line-height: 1.42857143;
+	padding: 13px 12px;
+	position: relative;
+	text-decoration: none;
+}
+
+.pagination_i_lk:hover {
+	color: #fff;
+}
+/*/Pagination dark*/
+
+/*Pagination large*/
+/*classes modifiers*/
+.pagination.__dark-lg .pagination_i_lk { /*pagination dark-large pagination item link*/
+	border: 1px solid #000;
+	border-radius: 4px;
+	box-shadow: 0 4px 0 0 #1a1822;
+	font-size: 18px;
+	height: 46px;
+	margin: 0 1px;
+	padding: 10px 12px;
+}
+
+.pagination.__dark-lg .__next,
+.pagination.__dark-lg .__previous {
+	color: #9095aa;
+	font-size: 14px;
+}
+
+.pagination.__dark-lg .__next:hover,
+.pagination.__dark-lg .__previous:hover {
+	color: #fff;
+}
+
+.pagination.__dark-lg .__previous {
+	padding: 12px 25px 12px 15px;
+}
+
+.pagination.__dark-lg .__next {
+	padding: 12px 15px 12px 25px;
+}
+
+.pagination.__dark-lg .__previous:before {
+	content: "\f053";
+	font-family: FontAwesome;
+	font-weight: 400;
+	padding-right: 20px;
+}
+
+.pagination.__dark-lg .__next:after {
+	content: "\f054";
+	font-family: FontAwesome;
+	font-weight: 400;
+	padding-left: 20px;
+}
+
+.pagination.__dark-lg .pagination_i_lk {
+	background: #2b2937;
+}
+
+.pagination_i.__lg__active .pagination_i_lk {
+	background: #313855;
+}
+
+.pagination.__dark {
+	background: #2b2937;
+	box-shadow: 0 4px 0 0 #1a1822;
+}
+
+.pagination_i.__active .pagination_i_lk {
+	background: #394264;
+    border-radius: 50%;
+    color: #fff;
+    cursor: default;
+    height: 40px;
+    width: 40px;
+    margin-top: 5px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.pagination_i_lk.__previous,
+.pagination_i_lk.__next {
+	background: #313855;
+	border-radius: 4px;
+	color: #fff;
+	padding: 13px 15px;
+}
+
+.pagination_i_lk.__next:after {
+	content: "\f054";
+	font-family: FontAwesome;
+	font-weight: 400;
+}
+
+.pagination_i_lk.__previous:before {
+	content: "\f053";
+	font-family: FontAwesome;
+	font-weight: 400;
+}
+/*/classes modifiers*/
+/* /Pagination
+----------------------------------------- */

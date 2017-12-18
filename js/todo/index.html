@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+    <head>
+        <title>TODO list</title>
+        <!--<meta charset="utf-8"/>-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"/>
+        <link href="css/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="container">
+
+            <!--jQuery-->
+            <div class="left">
+                <h3>TODO on jQuery</h3>
+                <p>Count items:<span class="count"></span></p>
+                <div class="field-it-group">
+                    <input class="it js-jq" type="text">
+                    <span class="field-it-group_badge">
+                        <button class="js-btn">Ok</button>
+                    </span>
+                </div>
+                <p class="state"></p>
+                <ol class="list">
+                </ol>
+            </div>
+
+            <!--Angular-->
+            <div class="right">
+                <h3>TODO on Angular</h3>
+                <div ng-controller="todoController">
+                    <p>Count items:<span>{{items.length}}</span></p>
+                    <form ng-submit="addItem()">
+                        <div class="field-it-group">
+                            <input class="it" type="text" ng-model="inputValue">
+                            <span class="field-it-group_badge">
+                                <button>Ok</button>
+                            </span>
+                        </div>
+                    </form>
+					
+                    <p ng-show="error.visible" ng-style="errorStyle">Must not be empty!</p>
+                    <ol>
+                        <li ng-repeat="item in items">
+                            {{item.txt}}
+                            <span class="remove" ng-click="removeItem(item)"></span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!--JavaScript file-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+        <script src="js/index-jq.js" charset="utf-8"></script>
+        <script src="js/index-ang.js" charset="utf-8"></script>
+
+    </body>
+</html>

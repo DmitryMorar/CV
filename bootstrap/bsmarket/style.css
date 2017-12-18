@@ -1,0 +1,597 @@
+.main-header {
+    background-color: #000;
+}
+
+.background_top {
+    background: url('img/bg.png') no-repeat;
+}
+
+.header-top {
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.header-top_languages_item {
+    display: inline-block;
+    font-family: "Century Gothic", sans-serif;
+    font-size: 16px;
+    margin-right: -3px;
+    width: 65px;
+    height: 30px;
+    background: #000;
+}
+
+.header-top_languages_item a {
+    color: #fff;
+    vertical-align: middle;
+    padding-left: 20px;
+}
+
+.header-top_languages_item a:hover {
+    text-decoration: none;
+    color: #fcc721;
+}
+
+.header-top_languages_item.active a {
+    color: #fcc721;
+}
+
+.header-top_cart {
+    width: 268px;
+    height: 58px;
+    border: 1px solid #353535;
+}
+.header-top_cart img {
+    position: absolute;
+    left: 30px;
+    top: 10px;
+}
+.header-top_cart_count {
+    text-align: center;
+    padding-top: 17px;
+    color: #fcc721;
+    font-family: "Century Gothic", sans-serif;
+    font-size: 18px;
+    position: relative;
+    margin-left: 50px;
+}
+
+.header-top_cart_count span {
+    padding-left: 5px;
+}
+
+.middle-line {
+    padding-bottom: 18px;
+}
+
+.navbar-bg {
+    background: #111;
+}
+
+#navbar li {
+    width: 188px;
+    height: 58px;
+    border-right: 1px solid #000;
+}
+#navbar li:first-child {
+    border-left: 1px solid #000;
+    background: #fcc721;
+}
+#navbar a {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Century Gothic", sans-serif;
+    font-size: 18px;
+    color: #fff;
+    padding-top: 17px;
+    height: 58px;
+}
+#navbar .active {
+    color: #000;
+}
+#navbar li:hover a {
+    color: #000;
+    background: #fcc721;
+}
+
+.nav > li > a {
+    padding: 5px 20px;
+}
+
+.header-bottom_tabs a {
+    color: #696969;
+}
+
+.header-bottom_tabs .visited a{
+    color: #3f8db9;
+}
+
+.header-bottom {
+    position: relative;
+    left: 50%;
+    margin-left: -234px;
+    width: 504px;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-tabs > li > a:hover {
+    border-color: transparent;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    background-color: transparent;
+    border-radius: 0;
+    border-bottom-color: transparent;
+    color: #fcc721 ;
+    border-top: 1px solid #fcc721;
+    border-left: 1px solid #fcc721;
+    border-right: 1px solid #fcc721;
+}
+
+.header-bottom_tabs li {
+    display: inline-block;
+    font-family: "Century Gothic", sans-serif;
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+.header-bottom_tabs li a {
+    text-transform: uppercase;
+}
+
+.header-bottom_tabs > li > .active {
+    color: #fcc721;
+}
+
+.header-bottom_tabs .visited {
+    border-top: 1px solid rgba(63,141,185,0.1);
+    border-left: 1px solid rgba(63,141,185,0.1);
+    border-right: 1px solid rgba(63,141,185,0.1);
+}
+.header-bottom_tabs .simple {
+    border-top: 1px solid rgba(105,105,105,0.1);
+    border-left: 1px solid rgba(105,105,105,0.1);
+    border-right: 1px solid rgba(105,105,105,0.1);
+}
+
+.header-bottom_tabs li a:hover {
+    background: transparent;
+    outline: 1px solid #fcc721;
+    color: #fcc721;
+}
+
+.tabs {
+    background: url(img/main_bg.png) no-repeat;
+    background-size: cover;
+    margin-bottom: -1px;
+}
+
+.soldier-1 img {
+    margin-top: 32px;
+}
+.target-soldier img {
+    margin-top: 167px;
+    margin-left: -189px;
+    position: relative;
+    z-index: 40;
+}
+.soldier-2 img {
+    margin-top: 86px;
+    margin-left: 41px;
+}
+
+.social {
+    position: fixed;
+    right: 17px;
+    top: 243px;
+    z-index: 50;
+}
+.social li {
+    list-style: none;
+    margin-bottom: 10px;
+    background: url(img/sprites.png) no-repeat;
+    box-shadow: 0 0 5px rgba(0,0,0,0.7);
+    border-radius: 50%;
+}
+.social a {
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+.social .ic-cart {
+    background-position: -40px 0;
+}
+
+.social .ic-mail {
+    background-position: -80px 0;
+}
+
+.social li:hover {
+    background-color: #fff;
+}
+
+.tooltip {
+    z-index: -100;
+}
+
+.tooltip-inner {
+    min-width: 255px;
+    height: 40px;
+    padding: 8px 23px 10px 10px;
+    color: #fbc620;
+    text-align: center;
+    background-color: #000;
+    border-radius: 0;
+    font-family: "Century Gothic", sans-serif;
+    font-size: 16px;
+    left: -30px;
+    position: relative;
+}
+
+.description {
+    padding-right: 0;
+}
+
+.description_seria {
+    font-family: "Century Gothic", sans-serif;
+    font-size: 34px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: -16px;
+    margin-top: 60px;
+}
+.description_tactical {
+    font-family: "Century Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 44px;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 36px;
+}
+
+.description_text {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+}
+.description_bold {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 58px;
+}
+
+.description_bold p {
+    margin-bottom: 30px;
+}
+
+.left_img {
+    float: left;
+    margin-top: -12px;
+    margin-right: 9px;
+}
+
+.description_arrow {
+    font-family: "Century Gothic", sans-serif;
+    font-size: 14px;
+    color: #000;
+    text-transform: uppercase;
+}
+.description_arrow:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.description_arrow img {
+    margin-top: -40px;
+    margin-right: 45px;
+}
+
+.slider {
+    background: url('img/slider_bg.png') no-repeat;
+    background-size: cover;
+}
+
+.cloth {
+    font-family: "Century Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 44px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 53px;
+    text-align: center;
+}
+
+.slider-arrows {
+    position: absolute;
+    width: 0;
+    top: -240px;
+    bottom: auto;
+}
+
+.type-cloth {
+    font-family: "Century Gothic", sans-serif;
+    font-size: 34px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.type-cloth span {
+    color: #fbc620;
+    font-weight: bold;
+}
+
+.cloth-descr {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 37px;
+}
+
+.advantages {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 37px;
+}
+.advantages span {
+    font-family: "Century Gothic", sans-serif;
+    font-size: 20px;
+    color: #fbc620;
+    text-transform: uppercase;
+}
+.cloth-colors {
+    font-family: "Century Gothic", sans-serif;
+    font-size: 20px;
+    color: #fbc620;
+    text-transform: uppercase;
+    margin-bottom: 17px;
+}
+
+.catalog {
+    margin-top: 45px;
+    margin-bottom: 60px;
+}
+.catalog_arrow {
+    font-family: "Century Gothic", sans-serif;
+    font-size: 14px;
+    color: #fbc620;
+    text-transform: uppercase;
+}
+.catalog_arrow:hover {
+    color: #fbc620;
+    text-decoration: none;
+}
+
+.catalog_arrow img {
+    margin-top: -40px;
+}
+
+a.right.carousel-control.slider-arrows.arrow-right {
+    position: absolute;
+    right: 45px;
+}
+
+.working {
+    font-family: "Century Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 44px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000;
+}
+.parag-arrows-yellow {
+    margin-top: 15px;
+    width: 100%;
+    max-width: 76px;
+    height: 5px;
+    background: #fbc620;
+    left: 60px;
+}
+.bg-arrow-yellow {
+    height: 1px;
+    background: #fbc620;
+    position: relative;
+}
+
+.parag-arrows-grey {
+    margin-top: 15px;
+    width: 100%;
+    max-width: 76px;
+    height: 5px;
+    background: #111;
+    left: 60px;
+}
+
+.bg-arrow-grey {
+    height: 1px;
+    background: #111;
+}
+.number-1 {
+    margin-top: 290px;
+    margin-left: 39px;
+    font-family: "Century Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 34px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.circle {
+    width: 555px;
+    height: 555px;
+    border: 1px solid #fbc82a;
+    border-radius: 50%;
+    margin-left: 15px;
+    margin-top: 85px;
+    position: relative;
+}
+
+.circle img {
+    position: absolute;
+    top: 45px;
+    left: 43px;
+}
+
+.line-gor {
+    background: #fbc82a;
+    height: 1px;
+    margin-left: -17px;
+    position: absolute;
+    top: 362px;
+}
+
+.line-vert {
+    background: #fbc82a;
+    width: 677px;
+    height: 1px;
+    margin-left: 36px;
+    margin-top: 55px;
+    transform: rotate(-90deg);
+}
+
+.working_idea {
+    margin-top: -368px;
+    left: 40px;
+}
+
+.working_idea__idea {
+    font-family: "Century Gothic", sans-serif;
+    font-size: 34px;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 75px;
+}
+
+.working_idea__idea span {
+    font-family: "Century Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 34px;
+    text-transform: uppercase;
+    color: #fbc620;
+}
+
+.slash-yellow p {
+    font-weight: normal;
+}
+.text-correct {
+    margin-left: 47px;
+    margin-top: -30px;
+    font-weight: normal;
+}
+
+.making-bg {
+    background: #f2f2f2;
+    margin-top: 110px;
+}
+
+.making-circle {
+    float: right;
+    margin-right: 85px;
+    margin-top: 202px;
+}
+.making-working_idea {
+    clear: both;
+    margin-bottom: 130px;
+}
+.relative {
+    position: relative;
+}
+
+.line-gor-making {
+    background: #fbc82a;
+    height: 1px;
+    margin-left: -17px;
+    position: absolute;
+    top: 483px;
+}
+.line-vert-making {
+    background: #fbc82a;
+    width: 744px;
+    height: 1px;
+    margin-left: 422px;
+    margin-top: 481px;
+    transform: rotate(-90deg);
+}
+.number-2 {
+    float: right;
+    margin-top: 216px;
+    margin-right: -70px;
+    font-family: "Century Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 34px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.testing {
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+.line-vert-testing {
+    background: #fbc82a;
+    width: 750px;
+    height: 1px;
+    margin-top: 25px;
+    transform: rotate(-90deg);
+}
+
+.dillers {
+    background: #1e1e1e;
+}
+.bg-color {
+    background: #555;
+}
+
+#map {
+    height: 550px;
+}
+
+.main-footer {
+    background: url('img/footer_bg.png') no-repeat;
+    background-size: cover;
+}
+
+.footer-logo {
+    margin-top: 48px;
+}
+
+.e-mail-footer {
+    font-family: "Century Gothic", sans-serif;
+    font-size: 16px;
+    color: #fcc721;
+    padding-left: 60px;
+    display: block;
+    margin-top: -103px;
+}
+
+.e-mail-footer:hover,.e-mail-footer:focus {
+    color: #fcc721;
+    text-decoration: none;
+    outline: none;
+}
+
+.e-mail-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fbc620;
+}
+
+
+
+
+
+

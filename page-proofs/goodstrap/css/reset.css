@@ -1,0 +1,82 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 14px;
+}
+a {
+	text-decoration: none;
+}
+input {
+	font-family: inherit;
+}
+
+html {
+	font-family: sans-serif; 
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+a {
+	background-color: transparent;
+}
+
+a:active,
+a:hover {
+	outline-width: 0;
+}
+
+img {
+	border-style: none;
+}
+
+code,
+pre {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+button,
+input,
+textarea {
+	font: inherit;
+}
+
+button,
+input { 
+	overflow: visible;
+}
+
+button,
+input,
+textarea { 
+	margin: 0;
+}
+
+button { 
+	text-transform: none;
+}
+
+button,
+[type="button"] {
+	cursor: pointer;
+}
+
+[disabled] {
+	cursor: not-allowed;
+}
+
+button:-moz-focusring,
+input:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+textarea {
+	overflow: auto;
+}
+

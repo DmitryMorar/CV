@@ -1,0 +1,104 @@
+/* Breadcrumbs
+----------------------------------------- */
+.breadcrumb {
+	display: inline-block;
+	list-style-type: none;
+	padding: 0;
+}
+
+.breadcrumb_i { /*breadcrumb item*/
+	display: inline;
+}
+
+.breadcrumb_i_lk { /*breadcrumb default link*/
+	color: #9095aa;
+	font-size: 18px;
+	font-weight: 700;
+	padding: 5px;
+}
+
+.breadcrumb_i_lk:hover {
+	color: #4e5265;
+}
+
+/*Default breadcrumb*/
+/*/classes modifiers*/
+.breadcrumb.__default .breadcrumb_i + .breadcrumb_i:before { /*add arrow before element*/
+	color: #9095aa;
+	content: "\f054";
+	font-family: FontAwesome;
+	padding-right: 5px;
+}
+
+.breadcrumb_i.__active .breadcrumb_i_lk { /*breadcrumb default link active*/
+	color: #f02148;
+}
+
+/*/classes modifiers*/
+/*/default breadcrumb*/
+
+/*dark breadcrumb*/
+/*classes modifiers*/
+.breadcrumb.__dark {
+	background-color:  #2b2937;
+	box-shadow: 0 4px 0 0 #1a1822;
+	border: 1px solid;
+	border-radius: 4px;
+	list-style-type: none;
+	min-width: 800px;
+	overflow: hidden;
+}
+
+.breadcrumb.__dark .breadcrumb_i_lk { /*breadcrumb link*/
+	float: left;
+	font-size: 14px;
+	padding: 12px 40px;
+	position: relative;
+}
+
+.breadcrumb.__dark .breadcrumb_i_lk:hover{ /*breadcrumb link hover*/
+	color: #fff;
+}
+
+.breadcrumb.__dark	.breadcrumb_i_lk:before {
+	border-top: 50px solid transparent;
+	border-bottom: 50px solid transparent;
+	border-left: 30px solid #ccc;
+	content: " ";
+	display: block;
+	height: 0;
+	left: 90%;
+	margin-left: 1px;
+	margin-top: -50px;
+	position: absolute;
+	top: 50%;
+	width: 0;
+	z-index: 1;
+}
+
+.breadcrumb.__dark	.breadcrumb_i_lk:after {
+	border-top: 50px solid transparent;
+	border-bottom: 50px solid transparent;
+	border-left: 30px solid #2b2937;
+	content: " ";
+	display: block;
+	height: 0;
+	left: 90%;
+	margin-top: -50px;
+	position: absolute;
+	top: 50%;
+	width: 0;
+	z-index: 1;
+}
+
+.breadcrumb.__dark .__active .breadcrumb_i_lk:after { /*breadcrumb link active*/
+	border-left: 30px solid #394264;
+}
+
+.breadcrumb.__dark .__active .breadcrumb_i_lk { /*breadcrumb link active*/
+	background-color: #394264;
+	color: #fff;
+}
+/*/classes modifiers*/
+/* /Breadcrumbs
+----------------------------------------- */

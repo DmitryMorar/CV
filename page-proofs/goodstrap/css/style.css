@@ -1,0 +1,311 @@
+/* Reset
+----------------------------------------------------------- */
+@import "reset.css";
+
+/* Base - First layer
+----------------------------------------------------------- */
+/*add style comonents*/
+@import url("menu.css");
+@import url("breadcrumb.css");
+@import url("pagination.css");
+@import url("buttons.css");
+@import url("forms.css");
+@import url("input-tags.css");
+/*/add style comonents*/
+
+.container {
+	width: 100%;
+	height: 100%;
+}
+.b-left {
+	background: #E0E0E0;
+	bottom: 0;
+	color: #424242;
+	font-family: 'Raleway', sans-serif;
+	min-width: 250px;
+	position: fixed;
+	top: 0;
+}
+.b-left h1 {
+	line-height: 64px;
+	padding-left: 40px;
+}
+
+.block-left_nav {
+	padding-top: 16px;
+}
+
+.b-left_nav_i {
+	display: block;
+	padding: 16px 40px;
+	color: #424242;
+	text-decoration: none;
+	margin: 0;
+	font-size: 16px;
+	line-height: 24px;
+	opacity: .4;
+}
+
+.b-left_nav_i:hover {
+	/*background: #fff;*/
+	opacity: 1;
+}
+/*modifier*/
+.b-left_nav_i.__active {
+	opacity: 1;
+	font-weight: 600;
+	background: #fff;
+}
+/*/modifier*/
+
+.b-right {
+	width: 87%;
+	float: left;
+	background-color: #f2f2f2;
+	margin-left: 13%;
+}
+
+.b-right_wrapper {
+	width: 850px;
+	height: 100%;
+	margin: 40px auto 0;
+}
+
+.title-cnt { /*title content*/
+	border-bottom: 2px solid #ccc;
+	font-family: 'Raleway', sans-serif;
+	margin: 0 auto 50px;
+	text-align: center;
+}
+
+.title-cnt h1 {
+	font-size: 300%;
+	font-weight: 100;
+	letter-spacing: 2px;
+}
+.btn-download {
+	background-color: transparent;
+	background-image: none;
+	border-color: #d9534f;
+	color: #d9534f;
+	display: block;
+	font-size: 18px;
+	margin: 0 auto;
+	padding: 15px 20px;
+	width: 250px;
+
+}
+.btn-download:hover {
+	background-color: #d9534f;
+	color: #fff;
+
+}
+
+section {
+	padding: 20px;
+	font-size: 18px;
+}
+section h2 {
+	font-weight: 300;
+	font-size: 1.5em;
+}
+section p {
+	font-weight: 300;
+	font-size: 1em;
+}
+section .note {
+	font-style: oblique;
+	font-size: .9em;
+	background-color: #FFF59D;
+}
+section code {
+	color: #E53935;
+	font-weight: 600;
+}
+section .it + .it,
+section .it + .itx,
+section .it + .field-it, 
+section .field-it + .itx {
+	margin-top: 20px;
+}
+section .w-forms {
+	margin-top: 20px;
+}
+
+.example {
+	background-color: #FaFaFa;
+	border: 1px solid #eee;
+	border-radius: 4px;
+	font-size: .95em;
+	margin-bottom: 50px;
+	padding: 10px 25px;
+	overflow-y: auto;
+}
+.example code {
+	color: #000;
+	font-weight: 400;
+}
+.example .comments {
+	color: #b3b3b3;
+
+}
+
+.__class {
+	color: #E53935;
+}
+
+/* Base - First layer
+----------------------------------------------------------- */
+
+/* Project - Second layer
+---------------------------------------------------- */
+
+/*input tags*/
+.tags { /*wrapper input tags*/
+	background-color: #fff;
+	border: 2px solid #1abc9c;
+	border-radius: 4px;
+	display: inline-block;
+	font-size: 13px;
+	margin-bottom: 20px;
+	padding: 10px;
+	position: relative;
+	vertical-align: middle;
+	width: 95%;
+}
+	
+/*Classes modifiers*/
+.tags.__bg-dark { /*wrapper input tags*/
+	border: 1px solid #1d1c27;
+	background-color:  #394264;
+}
+
+.tags.__bg-dark .it {
+	background-color:  transparent;
+	color: #fff;
+}
+
+/*change color in placeholder*/
+.tags.__bg-dark .it::-webkit-input-placeholder {
+	color:    #fff;
+}
+
+.tags.__bg-dark .it:-moz-placeholder {
+	color:    #fff;
+	opacity:  1;
+}
+
+.tags.__bg-dark .it::-moz-placeholder {
+	color:    #fff;
+	opacity:  1;
+}
+
+.tags.__bg-dark .it:-ms-input-placeholder {
+	color:    #fff;
+}
+/*/change color in placeholder*/
+
+.tags.__sm .tags_i {
+	height: 25px;
+	padding: 5px 20px;
+}
+
+.tags.__sm .tags_i a:after { 
+	top: 5px;
+}
+
+.tags.__sm .add-tags-field .it {
+	margin-top: 3px;
+}
+
+/*/Classes modifiers*/
+
+.tags_i { /*tags list item*/
+	border-radius: 4px;
+	color: #fff;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 700;
+	height: 40px;
+	line-height: 1;
+	list-style: none;
+	margin-right: 10px;
+	max-width: 100%;
+	padding: 14px 20px;
+	position: relative;
+	width: 102px;
+}
+
+.tags_i a:after {
+	color: #fff;
+	content: "\f00d";
+	position: absolute;
+	right: 15px;
+	top: 13px;
+	font-family: FontAwesome;
+}
+
+.tags_i a:hover {
+	opacity: 0.3;
+}
+
+.add-tags-field .it {
+	border: transparent;
+	border-left: 2px solid #000;
+	border-radius: 0;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 700;
+	height: 20px;
+	margin: 10px 0 0 20px;
+	padding: 0 10px;
+	width: 150px;
+}
+
+/*/Classes modifiers*/
+.tags_i.__color-1 {
+	background-color:  #1abc9c;
+	box-shadow: 0 3px 0 0 #18937b;
+}
+
+.tags_i.__color-2 {
+	background-color:  #e52c39;
+	box-shadow: 0 3px 0 0 #760d15;
+}
+
+.tags_i.__color-3 {
+	background-color:  #5d6a99;
+	box-shadow: 0 3px 0 0 #3d4a79;
+}
+
+.tags_i.__color-4 {
+	background-color:  #eac80d;
+	box-shadow: 0 3px 0 0 #bfa30c;
+}
+/*/Classes modifiers*/
+/* /input tags*/
+
+
+
+
+
+
+/* /Project - Second layer
+---------------------------------------------------- */
+/* Cosmetic - Third layer
+----------------------------------------------------------- */
+
+.clearfix {
+	display: block;
+}
+.clearfix:after {
+	clear: both;
+	content: "";
+	display: block;
+	visibility: hidden;
+	height: 0;
+}
+
+/* /Cosmetic
+----------------------------------------------------------- */
+
