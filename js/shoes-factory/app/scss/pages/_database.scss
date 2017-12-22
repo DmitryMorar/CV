@@ -1,0 +1,66 @@
+.employees-section {
+  &__top {
+	position: relative;
+	border-bottom: 1px solid #000;
+  }
+
+  &__list {
+
+  }
+}
+
+.models-section {
+  &__top {
+	position: relative;
+	border-bottom: 1px solid #000;
+
+  }
+}
+
+.list-row {
+  margin-top: 10px;
+  &__head {
+	display: flex;
+	background-color: #fff;
+	flex-direction: row;
+	height: 40px;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #8591a5;
+	border-bottom: 1px solid #e5e5e5;
+
+	&__first-cell {
+	  border-right: 1px solid #e5e5e5;
+	  width: 140px;
+	}
+
+	&__first-cell,
+	&__second-cell {
+	  padding: 10px;
+	}
+  }
+
+  &__item {
+	display: flex;
+	flex-direction: row;
+	background-color: #fff;
+	height: 40px;
+	border-bottom: 1px solid #e5e5e5;
+
+	&:hover {
+	  background: #f8faff;
+	}
+	&__first-cell {
+	  border-right: 1px solid #e5e5e5;
+	  width: 140px;
+
+	}
+
+	&__first-cell,
+	&__second-cell {
+	  padding: 10px;
+	}
+  }
+
+}
+

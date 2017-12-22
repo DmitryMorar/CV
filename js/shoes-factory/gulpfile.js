@@ -11,22 +11,22 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('app/css'))
         .pipe(browserSync.reload({stream: true}));
 });
+//
+//gulp.task('browser-sync', function () {
+//    browserSync.init({
+//        proxy: "cv/staff-factory/app/"
+//    });
+//});
+
 
 gulp.task('browser-sync', function () {
-    browserSync.init({
-        proxy: "cv/staff-factory/app/"
+    browserSync({
+        server: {
+        baseDir: 'app/'
+        },
+        notify: false
     });
 });
-
-
-// gulp.task('browser-sync', function() {
-//     browserSync({
-//         server: {
-// 			baseDir: 'app/'
-//         },
-//         notify: false
-//     });
-// });
 
 gulp.task('watch', ['browser-sync', 'sass'], function () {
     gulp.watch('app/scss/**/*.scss', ['sass']);

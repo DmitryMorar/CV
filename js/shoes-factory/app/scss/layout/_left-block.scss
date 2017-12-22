@@ -3,15 +3,23 @@
 }
 
 .left-block {
-  background: #1d2939;
-  min-height: 980px;
-  padding: 40px 15px 0 40px;
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  width: 115px;
+  min-height: 100%;
+  background: #1b3446;
 }
 
 .navbar {
 
   &-list {
-   }
+    padding: 40px 0;
+
+  }
 
   &-list__item {
     margin-top: 10px;

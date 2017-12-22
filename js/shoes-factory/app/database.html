@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>База данных</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="../bower_components/normalize-css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<main class="container-fluid">
+	<div class="row">
+
+		<!--LEFT BLOCK-->
+		<!--<div class="col-md-2 visible-lg no-gutter">-->
+		<div class="left-block">
+			<nav class="navbar">
+				<ul class="navbar-list">
+					<li class="navbar-list__item">
+						<a href="#" class="navbar-list__item__link">CRM</a>
+					</li>
+					<li class="navbar-list__item">
+						<a href="#" class="navbar-list__item__link">Журнал выполнения заказов</a>
+					</li>
+					<li class="navbar-list__item">
+						<a href="index.html" class="navbar-list__item__link">Зарплата</a>
+					</li>
+					<li class="navbar-list__item navbar-list__item_active">
+						<a href="database.html" class="navbar-list__item__link">База Данных</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<!--</div>-->
+		<!--END LEFT BLOCK-->
+
+		<!--RIGHT BLOCK-->
+		<div class="right-block">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-6">
+						<div class="employees-section">
+							<div class="employees-section__top">
+								<h3>Сотрудники</h3>
+								<button class="btn btn__create-new-data btn_blue">+</button>
+							</div>
+							<div class="employees-section__list">
+								<div class="list-row">
+									<div class="list-row__head">
+										<div class="list-row__head__first-cell">Должность</div>
+										<div class="list-row__head__second-cell">ФИО</div>
+									</div>
+									<div class="list-row__item js-list-item">
+										<div class="list-row__item__first-cell employee-position">Закройщик</div>
+										<div class="list-row__item__second-cell employee-name">Приходько Богдан</div>
+									</div>
+									<div class="list-row__item js-list-item">
+										<div class="list-row__item__first-cell employee-position">Закройщик</div>
+										<div class="list-row__item__second-cell employee-name">Приходько Богдан</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="models-section">
+							<div class="models-section__top">
+								<h3>Модели обуви</h3>
+								<button class="btn btn__create-new-data btn_blue">+</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!--END RIGHT BLOCK-->
+	</div>
+</main>
+<!--SCRIPTS-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/boot-calen/moment-with-locales.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/boot-calen/bootstrap-datetimepicker.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/pages/databae.js"></script>
+<!--END SCRIPTS-->
+
+</body>
+</html>

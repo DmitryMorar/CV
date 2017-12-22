@@ -1,6 +1,5 @@
 $(window).load(function () {
 
-
     var dataShoemaker = {
         firstShoemaker: {
             name: 'name',
@@ -29,12 +28,12 @@ $(window).load(function () {
     };
 
     var dispatch = {
-        s40:0,
-        s41:0,
-        s42:0,
-        s43:0,
-        s44:0,
-        s45:0,
+        s40: 0,
+        s41: 0,
+        s42: 0,
+        s43: 0,
+        s44: 0,
+        s45: 0,
         allS: 0
     };
 
@@ -54,9 +53,9 @@ $(window).load(function () {
         if (nameShoemaker == 'Дима') {
 
             dataShoemaker.firstShoemaker.name = nameShoemaker;
-            dataShoemaker.firstShoemaker.sizeShoe = [sizesShoe0,sizesShoe1,sizesShoe2,sizesShoe3,sizesShoe4,sizesShoe5];
+            dataShoemaker.firstShoemaker.sizeShoe = [sizesShoe0, sizesShoe1, sizesShoe2, sizesShoe3, sizesShoe4, sizesShoe5];
             dataShoemaker.firstShoemaker.allSize = sumAllSize(dataShoemaker.firstShoemaker.sizeShoe);
-            dataShoemaker.firstShoemaker.allSizeInWeek += dataShoemaker.firstShoemaker.allSize
+            dataShoemaker.firstShoemaker.allSizeInWeek += dataShoemaker.firstShoemaker.allSize;
             $('.js-first-employee-week >.item-count').text(dataShoemaker.firstShoemaker.allSizeInWeek);
 
             saveSumDispatch(dataShoemaker.firstShoemaker.sizeShoe);
@@ -68,7 +67,7 @@ $(window).load(function () {
         if (nameShoemaker == 'Игорь') {
 
             dataShoemaker.secondShoemaker.name = nameShoemaker;
-            dataShoemaker.secondShoemaker.sizeShoe = [sizesShoe0,sizesShoe1,sizesShoe2,sizesShoe3,sizesShoe4,sizesShoe5];
+            dataShoemaker.secondShoemaker.sizeShoe = [sizesShoe0, sizesShoe1, sizesShoe2, sizesShoe3, sizesShoe4, sizesShoe5];
             dataShoemaker.secondShoemaker.allSize = sumAllSize(dataShoemaker.secondShoemaker.sizeShoe);
             dataShoemaker.secondShoemaker.allSizeInWeek += dataShoemaker.secondShoemaker.allSize
 
@@ -81,7 +80,7 @@ $(window).load(function () {
         if (nameShoemaker == 'Рома') {
 
             dataShoemaker.thirdShoemaker.name = nameShoemaker;
-            dataShoemaker.thirdShoemaker.sizeShoe = [sizesShoe0,sizesShoe1,sizesShoe2,sizesShoe3,sizesShoe4,sizesShoe5];
+            dataShoemaker.thirdShoemaker.sizeShoe = [sizesShoe0, sizesShoe1, sizesShoe2, sizesShoe3, sizesShoe4, sizesShoe5];
             dataShoemaker.thirdShoemaker.allSize = sumAllSize(dataShoemaker.thirdShoemaker.sizeShoe);
             dataShoemaker.thirdShoemaker.allSizeInWeek += dataShoemaker.thirdShoemaker.allSize;
 
@@ -94,7 +93,7 @@ $(window).load(function () {
         if (nameShoemaker == 'Саша') {
 
             dataShoemaker.fourthShoemaker.name = nameShoemaker;
-            dataShoemaker.fourthShoemaker.sizeShoe = [sizesShoe0,sizesShoe1,sizesShoe2,sizesShoe3,sizesShoe4,sizesShoe5];
+            dataShoemaker.fourthShoemaker.sizeShoe = [sizesShoe0, sizesShoe1, sizesShoe2, sizesShoe3, sizesShoe4, sizesShoe5];
             dataShoemaker.fourthShoemaker.allSize = sumAllSize(dataShoemaker.fourthShoemaker.sizeShoe);
             dataShoemaker.fourthShoemaker.allSizeInWeek += dataShoemaker.fourthShoemaker.allSize;
 
@@ -108,7 +107,7 @@ $(window).load(function () {
     });
 
 
-    function sumAllSize (a) {
+    function sumAllSize(a) {
         var sum = parseInt(a[0]) + parseInt(a[1]) + parseInt(a[2]) + parseInt(a[3]) + parseInt(a[4]) + parseInt(a[5]);
         return sum
     }
@@ -145,24 +144,5 @@ $(window).load(function () {
         console.log('1');
     });
 
-
-
-
-
-    
-    
-    
-    
-    
-// Datetimepicker
-//     $(function () {
-//         $('#datetimepicker1').datetimepicker({
-//             pickTime: false,
-//             language: 'ru'
-//         });
-//     });
-//     $("#but").click(function () {
-//         console.log($('#datetimepicker1').data("DateTimePicker").viewDate._d);
-//     });
 
 });

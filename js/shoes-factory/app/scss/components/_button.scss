@@ -1,8 +1,6 @@
 .btn {
   display: inline-block;
-  padding: 6px 12px;
   margin-bottom: 0;
-  font-size: 14px;
   font-weight: 400;
   text-align: center;
   vertical-align: middle;
@@ -12,29 +10,56 @@
   border-radius: 4px;
   outline: none;
 
-  &-create {
-    display: block;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background: #8BC34A;
-    color: #fff;
-    font-size: 25px;
+  //btn in page database
+  &__create-new-data {
+	color: #fff;
+	font-size: 16px;
+	height: 38px;
+    width: 38px;
+	border: 1px solid #dbdedf;
+	border-radius: 50%;
+	text-transform: uppercase;
+	font-weight: 700;
+	cursor: pointer;
+	outline: none;
+    position: absolute;
+    right: 20px;
+    top: -5px;
 
     &:hover {
-      opacity: .7;
+      background-color: #0b61f4;
+      color: #fff;
     }
-    &:active {
-      background: #73b135;
-    }
+
   }
-  &-form {
-    width: 100%;
-    background: #D9534F;
 
-    &:hover {
-      background: #bc2e29;
-    }
+
+  //btn in page new sell
+  &-form {
+	width: 100%;
+	background: #D9534F;
+
+	&:hover {
+	  background: #bc2e29;
+	}
+  }
+
+  //colors
+  &_blue {
+	border-color: #4077d6;
+	background: #4c8bf7;
+	color: #f5f5f5;
+  }
+
+  //sizing
+  &_sm {
+    font-size: 10px;
+    padding: 4px 10px;
+
+  }
+  &_lg {
+	font-size: 18px;
+	padding: 18px 44px;
+	min-width: 230px;
   }
 }
-
