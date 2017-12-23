@@ -8,8 +8,7 @@
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
 		  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-	<link rel="stylesheet" href="../bower_components/normalize-css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -17,7 +16,6 @@
 	<div class="row">
 
 		<!--LEFT BLOCK-->
-		<!--<div class="col-md-2 visible-lg no-gutter">-->
 		<div class="left-block">
 			<nav class="navbar">
 				<ul class="navbar-list">
@@ -48,24 +46,40 @@
 						<div class="employees-section">
 							<div class="employees-section__top">
 								<h3>Сотрудники</h3>
-								<button class="btn btn__create-new-data btn_blue">+</button>
+								<button class="js-add-new-employee btn btn__create-new-data btn_blue">+</button>
 							</div>
+							<!-- Left section-->
 							<div class="employees-section__list">
-								<div class="list-row">
-									<div class="list-row__head">
-										<div class="list-row__head__first-cell">Должность</div>
-										<div class="list-row__head__second-cell">ФИО</div>
+
+								<div class="list-row__head">
+									<div class="list-row__head__first-cell">Должность</div>
+									<div class="list-row__head__second-cell">ФИО</div>
+								</div>
+
+								<!-- new item-->
+								<div class="js-list-new-item list-row__item list-row__new-item">
+									<div class="js-edit-cell list-row__item__cell employee-position">
+										<input type="text">
 									</div>
-									<div class="list-row__item js-list-item">
-										<div class="list-row__item__first-cell employee-position">Закройщик</div>
-										<div class="list-row__item__second-cell employee-name">Приходько Богдан</div>
+									<div class="js-edit-cell list-row__item__cell employee-name"></div>
+									<span class="js-delete-item list-row__item__delete-button fa fa-trash-o"></span>
+								</div>
+								<!-- end new item-->
+
+
+								<div class="js-list-row list-row">
+
+									<!-- list item -->
+									<div class="js-list-item list-row__item">
+										<div class="js-edit-cell list-row__item__cell employee-position">1</div>
+										<div class="js-edit-cell list-row__item__cell employee-name">1</div>
+										<span class="js-delete-item list-row__item__delete-button fa fa-trash-o"></span>
 									</div>
-									<div class="list-row__item js-list-item">
-										<div class="list-row__item__first-cell employee-position">Закройщик</div>
-										<div class="list-row__item__second-cell employee-name">Приходько Богдан</div>
-									</div>
+									<!-- end list item -->
+
 								</div>
 							</div>
+							<!--end Left section-->
 						</div>
 					</div>
 
@@ -86,13 +100,12 @@
 </main>
 <!--SCRIPTS-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/boot-calen/moment-with-locales.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 		crossorigin="anonymous"></script>
-<script type="text/javascript" src="js/boot-calen/bootstrap-datetimepicker.min.js"></script>
+
 <script src="js/index.js"></script>
-<script src="js/pages/databae.js"></script>
+<script src="js/pages/database.js"></script>
 <!--END SCRIPTS-->
 
 </body>

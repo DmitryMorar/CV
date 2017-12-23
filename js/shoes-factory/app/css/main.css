@@ -1074,13 +1074,48 @@ template {
     flex-direction: row;
     background-color: #fff;
     height: 40px;
-    border-bottom: 1px solid #e5e5e5; }
+    border-bottom: 1px solid #e5e5e5;
+    position: relative; }
     .list-row__item:hover {
       background: #f8faff; }
-    .list-row__item__first-cell {
+    .list-row__item__cell:first-child {
       border-right: 1px solid #e5e5e5;
-      width: 140px; }
-    .list-row__item__first-cell, .list-row__item__second-cell {
+      width: 182px;
       padding: 10px; }
+    .list-row__item__cell:nth-child(even) {
+      width: 100%;
+      padding: 10px; }
+    .list-row__item__delete-button {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+      color: #e5e5e5; }
+      .list-row__item__delete-button:hover {
+        color: #000; }
+    .list-row__item__cell__edit-button {
+      cursor: pointer;
+      width: 18px;
+      height: 18px;
+      margin-left: 10px;
+      border-radius: 3px;
+      background-color: #fff;
+      border: solid 1px #e8e8e8;
+      position: relative;
+      color: #e5e5e5;
+      padding: 2px; }
+      .list-row__item__cell__edit-button:hover {
+        color: #000; }
+  .list-row__new-item {
+    isplay: none;
+    padding: 0; }
+    .list-row__new-item input {
+      width: 100%;
+      height: 39px;
+      border: transparent;
+      background: #f8faff; }
+      .list-row__new-item input:focus {
+        border: transparent;
+        outline: none; }
 
 /*# sourceMappingURL=main.css.map */
