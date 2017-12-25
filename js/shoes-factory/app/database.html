@@ -9,6 +9,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
 		  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -42,55 +44,94 @@
 			<div class="container">
 				<div class="row">
 
+					<!-- TODO указать правильные классы для блоков со списками -->
 					<div class="col-md-6">
+						<!-- Employee section-->
+
 						<div class="employees-section">
 							<div class="employees-section__top">
 								<h3>Сотрудники</h3>
-								<button class="js-add-new-employee btn btn__create-new-data btn_blue">+</button>
-							</div>
-							<!-- Left section-->
-							<div class="employees-section__list">
+								<button class="js-add-new-employee btn btn_create-new-data btn_blue">+</button>
 
 								<div class="list-row__head">
 									<div class="list-row__head__first-cell">Должность</div>
 									<div class="list-row__head__second-cell">ФИО</div>
 								</div>
+							</div>
+
+
+							<div class="js-employee-list list-row">
 
 								<!-- new item-->
-								<div class="js-list-new-item list-row__item list-row__new-item">
-									<div class="js-edit-cell list-row__item__cell employee-position">
-										<input type="text">
-									</div>
-									<div class="js-edit-cell list-row__item__cell employee-name"></div>
-									<span class="js-delete-item list-row__item__delete-button fa fa-trash-o"></span>
-								</div>
+
 								<!-- end new item-->
 
-
-								<div class="js-list-row list-row">
-
-									<!-- list item -->
-									<div class="js-list-item list-row__item">
-										<div class="js-edit-cell list-row__item__cell employee-position">1</div>
-										<div class="js-edit-cell list-row__item__cell employee-name">1</div>
-										<span class="js-delete-item list-row__item__delete-button fa fa-trash-o"></span>
+								<!-- list items -->
+								<div class="js-list-item list-row__item">
+									<div class="js-edit-cell list-row__item__cell employee-position">Закройщик</div>
+									<div class="js-edit-cell list-row__item__cell employee-name">Богдан Приходько
 									</div>
-									<!-- end list item -->
-
+									<span class="js-delete-item list-row__item__delete-button fa fa-trash-o"></span>
 								</div>
+								<div class="js-list-item list-row__item">
+									<div class="js-edit-cell list-row__item__cell employee-position">1</div>
+									<div class="js-edit-cell list-row__item__cell employee-name">1</div>
+									<span class="js-delete-item list-row__item__delete-button fa fa-trash-o"></span>
+								</div>
+								<div class="js-list-item list-row__item">
+									<div class="js-edit-cell list-row__item__cell employee-position">1</div>
+									<div class="js-edit-cell list-row__item__cell employee-name">1</div>
+									<span class="js-delete-item list-row__item__delete-button fa fa-trash-o"></span>
+								</div>
+								<!-- end list item -->
+
 							</div>
-							<!--end Left section-->
 						</div>
 					</div>
+					<!--end Employee section-->
+
+					<!-- Models section-->
 
 					<div class="col-md-6">
 						<div class="models-section">
 							<div class="models-section__top">
 								<h3>Модели обуви</h3>
-								<button class="btn btn__create-new-data btn_blue">+</button>
+								<button class="btn btn_create-new-data btn_blue">+</button>
+
+								<div class="list-row__head">
+									<div class="list-row__head__first-cell">Должность</div>
+									<div class="list-row__head__second-cell">ФИО</div>
+								</div>
+							</div>
+
+							<div class="js-models-list list-row">
+								<div class="cell-editor">
+									<div class="cell-editor__inner">
+										<div class="cell-editor__form form">
+											<input class="field cell-editor__field" type="text">
+										</div>
+
+										<div class="cell-editor__buttons">
+											<button class="btn_cell-editor btn"><span
+													class="js-save-cell-editor fa fa-check btn_green"></span></button>
+											<button class="btn_cell-editor btn"><span
+													class="js-cancel-cell-editor fa fa-times btn_red"></span></button>
+										</div>
+									</div>
+								</div>
+
+								<div class="js-list-new-item list-row__item list-row__item_add-new">
+									<div class="js-edit-cell list-row__item__cell employee-position">Test</div>
+									<div class="js-edit-cell list-row__item__cell employee-name">Test</div>
+										<span class="js-delete-item list-row__item__delete-button fa fa-trash-o">
+										</span><span
+										class="js-save-new-item list-row__item__save-button fa fa-check btn_green"></span>
+									<span class="js-cancel-new-item list-row__item__cancel-button fa fa-times btn_red"></span>
+								</div>
 							</div>
 						</div>
 					</div>
+					<!--end Models section-->
 				</div>
 			</div>
 

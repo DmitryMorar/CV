@@ -11,28 +11,32 @@
   outline: none;
 
   //btn in page database
-  &__create-new-data {
+  &_create-new-data {
 	color: #fff;
 	font-size: 16px;
 	height: 38px;
-    width: 38px;
+	width: 38px;
 	border: 1px solid #dbdedf;
 	border-radius: 50%;
 	text-transform: uppercase;
 	font-weight: 700;
 	cursor: pointer;
 	outline: none;
-    position: absolute;
-    right: 20px;
-    top: -5px;
+	position: absolute;
+	right: 20px;
+	top: -5px;
 
-    &:hover {
-      background-color: #0b61f4;
-      color: #fff;
-    }
-
+	&:hover {
+	  background-color: #0b61f4;
+	  color: #fff;
+	}
   }
 
+  &_cell-editor {
+	position: relative;
+	background-color: #fcfcfc;
+	border: 1px solid #ccc;
+  }
 
   //btn in page new sell
   &-form {
@@ -50,11 +54,17 @@
 	background: #4c8bf7;
 	color: #f5f5f5;
   }
+  &_green {
+	color: #007700;
+  }
+  &_red {
+	color: #ac050b;
+  }
 
   //sizing
   &_sm {
-    font-size: 10px;
-    padding: 4px 10px;
+	font-size: 10px;
+	padding: 4px 10px;
 
   }
   &_lg {
