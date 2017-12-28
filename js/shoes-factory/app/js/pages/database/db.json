@@ -1,0 +1,56 @@
+{
+  "employees": [
+    {
+      "id": 0,
+      "position": "Закройщик",
+      "name": "Богдан Приходько"
+    },
+    {
+      "id": 1,
+      "position": "Швея",
+      "name": "Женя Мотросова"
+    },
+    {
+      "id": 2,
+      "position": "Сапожник",
+      "name": "Дима Гордиенко"
+    },
+    {
+      "id": 3,
+      "position": "Упаковщик",
+      "name": "Дима Морарь"
+    }
+  ],
+  "models": [
+    {
+      "id": 4,
+      "name": "zl1-01",
+      "price": {
+        "cutter": 20,
+        "seamstress": 60,
+        "shoemaker": 50,
+        "packer": 20
+      }
+    },
+    {
+      "id": 5,
+      "name": "zl1-01",
+      "price": {
+        "cutter": 20,
+        "seamstress": 60,
+        "shoemaker": 50,
+        "packer": 20
+      }
+    },
+    {
+      "id": 6,
+      "name": "zl1-01",
+      "price": {
+        "cutter": 20,
+        "seamstress": 60,
+        "shoemaker": 50,
+        "packer": 20
+      }
+    }
+  ]
+}

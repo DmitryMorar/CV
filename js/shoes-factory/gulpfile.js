@@ -11,12 +11,6 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('app/css'))
         .pipe(browserSync.reload({stream: true}));
 });
-//
-//gulp.task('browser-sync', function () {
-//    browserSync.init({
-//        proxy: "cv/staff-factory/app/"
-//    });
-//});
 
 
 gulp.task('browser-sync', function () {
@@ -30,6 +24,7 @@ gulp.task('browser-sync', function () {
 
 gulp.task('watch', ['browser-sync', 'sass'], function () {
     gulp.watch('app/scss/**/*.scss', ['sass']);
+    gulp.watch('app/js/**/*.json', browserSync.reload);
     gulp.watch('app/js/**/*.js', browserSync.reload);
     gulp.watch('app/*.html', browserSync.reload);
 });

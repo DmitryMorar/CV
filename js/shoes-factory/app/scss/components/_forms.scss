@@ -11,12 +11,30 @@
 .form {
 	position: relative;
 	max-width: 100%;
+
+
+	//new employees
+	&_new-employees {
+		display: flex;
+		flex-direction: row;
+
+		& .field:focus {
+			border-bottom-color: transparent;
+		}
+
+		& .field::-webkit-input-placeholder {
+			font-size: 12px;
+			color: #cdd2d3;
+		}
+
+
+	}
+
 }
 
 .field {
 	background: #fff;
 	color: #808080;
-	display: block;
 	font-size: 14px;
 	outline: 0;
 	padding: 0;

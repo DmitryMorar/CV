@@ -4,8 +4,6 @@
 	<meta charset="UTF-8">
 	<title>База данных</title>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
 		  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -45,66 +43,51 @@
 				<div class="row">
 
 					<!-- TODO указать правильные классы для блоков со списками -->
+					<!-- Employees section-->
 					<div class="col-md-6">
-						<!-- Employee section-->
-						<div class="employees-section">
-							<div class="employees-section__top">
+						<div class="employees">
+							<div class="employees__top">
 								<h3>Сотрудники</h3>
-								<button class="js-add-new-employee btn btn_create-new-data btn_blue">+</button>
+								<button class="js-add-new-item btn btn_create-new-data btn_blue" data-list="employees">+</button>
 
-								<div class="list-row__head">
-									<div class="list-row__head__first-cell">Должность</div>
-									<div class="list-row__head__second-cell">ФИО</div>
+								<div class="list-head">
+									<div class="list-head__cell list-head__cell_employees">Должность</div>
+									<div class="list-head__cell list-head__cell_employees">ФИО</div>
 								</div>
 							</div>
 
-							<div class="js-employee-list list-row">
-								<!-- list items -->
-								<div class="js-list-item list-row__item">
-									<div class="js-edit-cell list-row__item__cell employee-position">Закройщик</div>
-									<div class="js-edit-cell list-row__item__cell employee-name">Богдан Приходько</div>
-									<span class="js-delete-item list-row__item__delete-button fa fa-trash-o"></span>
-								</div>
-								<div class="js-list-item list-row__item">
-									<div class="js-edit-cell list-row__item__cell employee-position">1</div>
-									<div class="js-edit-cell list-row__item__cell employee-name">1</div>
-									<span class="js-delete-item list-row__item__delete-button fa fa-trash-o"></span>
-								</div>
-								<div class="js-list-item list-row__item">
-									<div class="js-edit-cell list-row__item__cell employee-position">1</div>
-									<div class="js-edit-cell list-row__item__cell employee-name">1</div>
-									<span class="js-delete-item list-row__item__delete-button fa fa-trash-o"></span>
-								</div>
-								<!-- end list item -->
+							<div class="js-employee-list list-row"></div>
 
-							</div>
 						</div>
 					</div>
-					<!--end Employee section-->
+					<!--end Employees section-->
 
 					<!-- Models section-->
-
 					<div class="col-md-6">
-						<div class="models-section">
-							<div class="models-section__top">
-								<h3>Модели обуви</h3>
-								<button class="btn btn_create-new-data btn_blue">+</button>
+						<div class="models">
+							<div class="models__top">
+								<h3>Цена за модель</h3>
+								<button class="js-add-new-item btn btn_create-new-data btn_blue" data-list="models">+</button>
 
-								<div class="list-row__head">
-									<div class="list-row__head__first-cell">Должность</div>
-									<div class="list-row__head__second-cell">ФИО</div>
+
+								<div class="list-head">
+									<div class="list-head__cell list-head__cell_models">Модель</div>
+									<div class="list-head__cell list-head__cell_models">Закройщик</div>
+									<div class="list-head__cell list-head__cell_models">Швея</div>
+									<div class="list-head__cell list-head__cell_models">Сапожник</div>
+									<div class="list-head__cell list-head__cell_models">Упаковщик</div>
 								</div>
+
 							</div>
 
 							<div class="js-models-list list-row">
 
-								<div class="js-list-new-item list-row__item list-row__item_add-new">
-									<div class="js-edit-cell list-row__item__cell employee-position">Test</div>
-									<div class="js-edit-cell list-row__item__cell employee-name">Test</div>
-										<span class="js-delete-item list-row__item__delete-button fa fa-trash-o">
-										</span><span
-										class="js-save-new-item list-row__item__save-button fa fa-check btn_green"></span>
-									<span class="js-cancel-new-item list-row__item__cancel-button fa fa-times btn_red"></span>
+								<div class="js-list-row__item list-row__item list-row__item_models" data-item-id="4">
+									<div class="js-edit-cell list-row__item__cell list-row__item__cell_models" data-cell-type="model">zl1-01</div>
+									<div class="js-edit-cell list-row__item__cell list-row__item__cell_models" data-cell-type="cutter">20</div>
+									<div class="js-edit-cell list-row__item__cell list-row__item__cell_models" data-cell-type="seamstress">60</div>
+									<div class="js-edit-cell list-row__item__cell list-row__item__cell_models" data-cell-type="shoemaker">50</div>
+									<div class="js-edit-cell list-row__item__cell list-row__item__cell_models" data-cell-type="packer">20</div>
 								</div>
 
 							</div>
@@ -124,8 +107,8 @@
 		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 		crossorigin="anonymous"></script>
 
-<script src="js/index.js" type="text/javascript"></script>
-<script src="js/pages/database.js" type="text/javascript"></script>
+<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/pages/database/database.js" type="text/javascript" charset="utf-8"></script>
 
 <!--END SCRIPTS-->
 

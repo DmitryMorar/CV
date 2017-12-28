@@ -5,11 +5,40 @@
 
 //TODO need add localfont
 
-.employees-section {
+.employees {
 	&__top {
 		position: relative;
-	}
 
+	}
+}
+
+.list-head {
+	display: flex;
+	background-color: #fff;
+	flex-direction: row;
+	height: 40px;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #8591a5;
+	border-top: 1px solid #000;
+
+	&__cell {
+		border-right: 1px solid #e5e5e5;
+		padding: 10px;
+
+		//modifacators
+		&_employees:first-child {
+			width: 180px;
+		}
+		&_employees:last-child {
+			width: 100%;
+		}
+
+		&_models:last-child {
+			width: 100%;
+
+		}
+	}
 }
 
 .models-section {
@@ -21,28 +50,6 @@
 
 .list-row {
 	margin-top: 10px;
-
-	&__head {
-		display: flex;
-		background-color: #fff;
-		flex-direction: row;
-		height: 40px;
-		text-transform: uppercase;
-		font-weight: 700;
-		color: #8591a5;
-		//border-bottom: 1px solid #e5e5e5;
-		border-top: 1px solid #000;
-
-		&__first-cell {
-			border-right: 1px solid #e5e5e5;
-			width: 140px;
-		}
-
-		&__first-cell,
-		&__second-cell {
-			padding: 10px;
-		}
-	}
 
 	&__item {
 		display: flex;
@@ -56,22 +63,51 @@
 			background: #f8faff;
 		}
 
-		&__cell:first-child {
+			//modificator
+			&_models {
+				text-align: center;
+			}
+
+		&__cell {
+			padding: 10px;
 			border-right: 1px solid #e5e5e5;
-			width: 182px;
-			padding: 10px;
+
+
+			//modificator
+			&_employees:first-child {
+				width: 182px;
+			}
+			//TODO find best solution
+			&_employees:nth-child(even) {
+				width: 100%;
+				padding: 10px;
+			}
+
+			&_models:first-child {
+				width: 85px;
+			}
+			&_models:nth-child(2) {
+				width: 110px;
+			}
+			&_models:nth-child(3) {
+				width: 65px;
+			}
+			&_models:nth-child(4) {
+				width: 102px;
+			}
+			&_models:nth-child(5) {
+				width: 190px;
+			}
+
 
 		}
-		&__cell:nth-child(even) {
-			width: 100%;
-			padding: 10px;
-		}
+
+
 		//TODO All buttons need to place in _button.scss
-
 		//the delete-button style
 		&__delete-button {
 			position: absolute;
-			right: 10px;
+			right: 20px;
 			top: 10px;
 			cursor: pointer;
 			color: #bfbfbf;
@@ -81,6 +117,20 @@
 			}
 
 		}
+
+		//the edit-button
+		&__edit-button {
+			cursor: pointer;
+			position: absolute;
+			color: #bfbfbf;
+			right: 50px;
+			top: 10px;
+
+			&:hover {
+				color: #000;
+			}
+		}
+
 		//the yes and no-button style
 		&__save-button,
 		&__cancel-button {
@@ -99,23 +149,6 @@
 			top: 10px;
 		}
 
-		//the edit-button style
-		&__cell__edit-button {
-			cursor: pointer;
-			width: 18px;
-			height: 18px;
-			margin-left: 10px;
-			border-radius: 3px;
-			background-color: #fff;
-			border: solid 1px #e8e8e8;
-			position: relative;
-			color: #bfbfbf;
-			padding: 2px;
-
-			&:hover {
-				color: #000;
-			}
-		}
 	}
 
 	//the aadNew-button style
@@ -124,11 +157,19 @@
 	}
 }
 
-
 //helpers
-.w100 {
-	width: 100px;
+.w90 {
+	width: 90px;
 }
-.mr10	{
-	margin-right: 10px;
+
+.w180 {
+	width: 180px;
+}
+
+.w-flexible {
+	width: 100%;
+}
+
+.disnone {
+	display: none;
 }
