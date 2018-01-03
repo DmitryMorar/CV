@@ -9,26 +9,9 @@
 }
 
 .form {
+	display: flex;
+	flex-direction: row;
 	position: relative;
-	max-width: 100%;
-
-
-	//new employees
-	&_new-employees {
-		display: flex;
-		flex-direction: row;
-
-		& .field:focus {
-			border-bottom-color: transparent;
-		}
-
-		& .field::-webkit-input-placeholder {
-			font-size: 12px;
-			color: #cdd2d3;
-		}
-
-
-	}
 
 }
 
@@ -41,11 +24,14 @@
 	width: 100%;
 	border: 1px solid transparent;
 
-	&_modal {
-		height: 29px;
+	&_modal-box {
+		height: 30px;
 
-		&:focus {
-			border-bottom-color: #4c8bf7;
+		&::-webkit-input-placeholder {
+			font-size: 12px;
+			color: #cdd2d3;
 		}
+
 	}
+
 }

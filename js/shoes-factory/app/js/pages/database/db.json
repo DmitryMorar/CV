@@ -24,7 +24,7 @@
   "models": [
     {
       "id": 4,
-      "name": "zl1-01",
+      "model": "zl1-01",
       "price": {
         "cutter": 20,
         "seamstress": 60,
@@ -34,22 +34,22 @@
     },
     {
       "id": 5,
-      "name": "zl1-01",
+      "model": "zl1-01z",
       "price": {
-        "cutter": 20,
-        "seamstress": 60,
-        "shoemaker": 50,
-        "packer": 20
+        "cutter": 21,
+        "seamstress": 61,
+        "shoemaker": 51,
+        "packer": 21
       }
     },
     {
       "id": 6,
-      "name": "zl1-01",
+      "model": "zl1-05z",
       "price": {
-        "cutter": 20,
-        "seamstress": 60,
-        "shoemaker": 50,
-        "packer": 20
+        "cutter": 22,
+        "seamstress": 62,
+        "shoemaker": 52,
+        "packer": 22
       }
     }
   ]

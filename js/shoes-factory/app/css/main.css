@@ -347,16 +347,9 @@ template {
   border-radius: 4px; }
 
 .form {
-  position: relative;
-  max-width: 100%; }
-  .form_new-employees {
-    display: flex;
-    flex-direction: row; }
-    .form_new-employees .field:focus {
-      border-bottom-color: transparent; }
-    .form_new-employees .field::-webkit-input-placeholder {
-      font-size: 12px;
-      color: #cdd2d3; }
+  display: flex;
+  flex-direction: row;
+  position: relative; }
 
 .field {
   background: #fff;
@@ -366,18 +359,21 @@ template {
   padding: 0;
   width: 100%;
   border: 1px solid transparent; }
-  .field_modal {
-    height: 29px; }
-    .field_modal:focus {
-      border-bottom-color: #4c8bf7; }
+  .field_modal-box {
+    height: 30px; }
+    .field_modal-box::-webkit-input-placeholder {
+      font-size: 12px;
+      color: #cdd2d3; }
 
 .modal-box {
   position: absolute;
   z-index: 4; }
   .modal-box_edit-cell {
     width: 195px; }
-  .modal-box_new-employees {
+  .modal-box_employees {
     left: 145px; }
+  .modal-box_models {
+    left: 690px; }
   .modal-box__inner {
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
@@ -1211,6 +1207,9 @@ template {
 
 .w90 {
   width: 90px; }
+
+.w65 {
+  width: 65px; }
 
 .w180 {
   width: 180px; }
