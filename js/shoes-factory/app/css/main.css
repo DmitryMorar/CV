@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*base*/
 /*--------------------------------------------------------------
 * Normalize
@@ -244,34 +245,6 @@ template {
 /* /Grid
 ----------------------------------------------- */
 /*components*/
-.b-panel-info {
-  padding: 15px;
-  border-radius: 5px;
-  color: #fff;
-  min-height: 204px; }
-  .b-panel-info__title {
-    font-size: 18px;
-    font-weight: 500;
-    text-align: center; }
-  .b-panel-info_green {
-    background: #1CAF9A; }
-  .b-panel-info_red {
-    background: #D9534F; }
-  .b-panel-info_blue {
-    background: #428bca; }
-  .b-panel-info_dark {
-    background: #1d2939; }
-  .b-panel-info .list {
-    padding-left: 30px; }
-    .b-panel-info .list__item {
-      font-size: 22px;
-      padding: 2px; }
-  .b-panel-info .shoes-total-count,
-  .b-panel-info .amount-in-week {
-    padding: 30px;
-    font-size: 65px;
-    text-align: center; }
-
 .btn {
   display: inline-block;
   margin-bottom: 0;
@@ -1085,27 +1058,79 @@ template {
   margin-top: 15px; }
 
 /*pages*/
+.new-order {
+  display: flex;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #cdd2d3;
+  height: 250px; }
+
+.dropdown {
+  cursor: pointer;
+  min-height: 35px;
+  width: 100%;
+  background: #fff;
+  padding: 5px;
+  position: relative;
+  border: 1px solid #cdd2d3;
+  border-radius: 3px;
+  margin-bottom: 10px; }
+  .dropdown:hover {
+    border-color: #858c93; }
+  .dropdown__default-text {
+    color: #bfbfbf; }
+  .dropdown__icon {
+    color: #999;
+    position: absolute;
+    top: 10px;
+    right: 10px; }
+  .dropdown__menu {
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: auto;
+    min-width: 100%;
+    border-radius: 0 0 .28571429rem .28571429rem;
+    position: absolute;
+    background-color: #fff;
+    z-index: 1;
+    left: 0;
+    top: 100%;
+    margin-top: -1px;
+    display: none; }
+    .dropdown__menu__item {
+      border: 1px solid #cdd2d3; }
+      .dropdown__menu__item:hover {
+        background-color: #f2f2f2; }
+      .dropdown__menu__item .position {
+        display: block;
+        font-size: 14px;
+        color: #027353; }
+      .dropdown__menu__item .labels {
+        display: inline-block;
+        color: #fff;
+        width: 20px;
+        height: 20px;
+        text-transform: uppercase;
+        border-radius: 3px;
+        font-size: 16px;
+        text-align: center; }
+        .dropdown__menu__item .labels_cutter {
+          background-color: red; }
+          .dropdown__menu__item .labels_cutter:before {
+            content: 'З'; }
+        .dropdown__menu__item .labels_shoemaker {
+          background-color: blue; }
+          .dropdown__menu__item .labels_shoemaker:before {
+            content: 'С'; }
+        .dropdown__menu__item .labels_cutter {
+          background-color: red; }
+          .dropdown__menu__item .labels_cutter:before {
+            content: 'З'; }
+
 .employee__name {
   font-size: 20px;
   text-align: center;
   padding: 10px 0; }
-
-.employee__amount-in-day {
-  height: 55px;
-  position: relative;
-  background: #fff;
-  border-radius: 5px;
-  width: 100%;
-  padding: 15px 30px;
-  font-size: 20px;
-  margin-bottom: 5px; }
-  .employee__amount-in-day .value {
-    margin-left: 40px; }
-  .employee__amount-in-day .glyphicon-remove {
-    float: right;
-    font-size: 14px; }
-  .employee__amount-in-day .glyphicon-remove:hover {
-    opacity: .6; }
 
 .color-line {
   display: inline-block;
