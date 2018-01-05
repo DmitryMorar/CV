@@ -10,6 +10,7 @@
 		  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 	<link rel="stylesheet" href="css/main.css">
 
@@ -17,7 +18,7 @@
 <body>
 
 <!--MAIN -->
-<main class="container-fluid">
+<main class="js-main-container container-fluid">
 
 	<!--LEFT BLOCK-->
 	<div class="left-block">
@@ -51,21 +52,86 @@
 							<div class="new-order__employees">
 
 								<div class="js-dropdown dropdown">
-									<input class="dropdown__field" type="hidden" name="position">
-									<input class="dropdown__field" type="hidden" name="name">
-									<div class="dropdown__default-text">Сотрудники</div>
-									<i class="dropdown__icon fa fa-caret-down" aria-hidden="true"></i>
-									<div class="js-dropdown__menu dropdown__menu">
-										<div class="js-dropdown-item dropdown__menu__item" data-employee-position="cutter"><span class="labels labels_shoemaker"></span>Богдан Приходько</div>
-									</div>
+									<input type="hidden">
+									<input type="hidden">
+									<i class="dropdown__icon fa fa-caret-down"></i>
+									<div class="js-dropdown-title dropdown__title">Сотрудники</div>
+									<div class="js-dropdown-menu dropdown__menu" data-dropdown-type="employee"></div>
 								</div>
 
 							</div>
-							<div class="new-order__models">models</div>
-							<div class="new-order__date">date</div>
+
+							<div class="new-order__models">
+								<div class="js-dropdown dropdown">
+									<input type="hidden">
+									<i class="dropdown__icon fa fa-caret-down"></i>
+									<div class="js-dropdown-title dropdown__title">Модель</div>
+									<div class="js-dropdown-menu dropdown__menu" data-dropdown-type="model"></div>
+								</div>
+
+
+							</div>
+							<div class="new-order__date">
+								<input id="datepicker" class="field field_calendar" placeholder="Дата">
+							</div>
 						</div>
 						<div class="col-md-4">
-							<div class="new-order__sizes">1</div>
+							<div class="new-order__sizes">
+								<select class="field field_sizes" name="size-36" required>
+									<option value="" disabled selected hidden>- 36р -</option>
+									<option value="1">1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+								</select>
+								<select class="field field_sizes" name="size-37" required>
+									<option value="" disabled selected hidden>- 37р -</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+								</select>
+								<select class="field field_sizes" name="size-38" required>
+									<option value="" disabled selected hidden>- 38р -</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+								</select>
+								<select class="field field_sizes" name="size-39" required>
+									<option value="" disabled selected hidden>- 39р -</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+								</select>
+								<select class="field field_sizes" name="size-40" required>
+									<option value="" disabled selected hidden>- 40р -</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+								</select>
+								<select class="field field_sizes" name="size-41" required>
+									<option value="" disabled selected hidden>- 41р -</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+								</select>
+							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="new-order__button">1</div>
@@ -73,7 +139,8 @@
 					</div>
 				</div>
 				<div class="col-md-6">
-					<div class="money-at-week">1</div>
+					<div class="money-at-week">
+					</div>
 				</div>
 			</div>
 			<!--SECOND-->
@@ -121,6 +188,12 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 		crossorigin="anonymous"></script>
+<script
+		src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+		integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+		crossorigin="anonymous"></script>
+
+<script src="js/index.js" charset="utf-8" type="text/javascript"></script>
 <script src="js/index.js" charset="utf-8" type="text/javascript"></script>
 <script src="js/pages/database/database.js" charset="utf-8" type="text/javascript"></script>
 <script src="js/pages/salaries/salaries.js" charset="utf-8" type="text/javascript"></script>

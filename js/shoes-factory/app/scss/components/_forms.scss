@@ -22,10 +22,10 @@
 	outline: 0;
 	padding: 0;
 	width: 100%;
-	border: 1px solid transparent;
 
 	&_modal-box {
 		height: 30px;
+		border: 1px solid transparent;
 
 		&::-webkit-input-placeholder {
 			font-size: 12px;
@@ -34,4 +34,36 @@
 
 	}
 
+	&_calendar {
+		padding: 5px;
+		position: relative;
+		border: 1px solid #cdd2d3;
+		border-radius: 3px;
+		margin-bottom: 10px;
+		height: 35px;
+		color: #000;
+
+		&::-webkit-input-placeholder {
+			color: #cdd2d3;
+		}
+	}
+
+	&_sizes {
+		padding: 5px;
+		position: relative;
+		border: 1px solid #cdd2d3;
+		border-radius: 3px;
+		margin-bottom: 10px;
+		height: 35px;
+		color: #000;
+		width: 48%;
+
+		&:required:invalid {
+			color: gray;
+		}
+
+		//& option[disabled] {
+		//	display: none;
+		//}
+	}
 }
