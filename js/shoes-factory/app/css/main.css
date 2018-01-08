@@ -281,10 +281,24 @@ template {
     background: #D9534F; }
     .btn-form:hover {
       background: #bc2e29; }
-  .btn_modal-box {
+  .btn_outline-red {
     background-color: transparent;
-    border: 1px solid #cdd2d3;
-    margin-left: 10px; }
+    border-color: #cdd2d3;
+    margin-left: 10px;
+    color: #ac050b; }
+    .btn_outline-red:hover {
+      color: #fff;
+      background-color: #dc3545;
+      border-color: #dc3545; }
+  .btn_outline-green {
+    background-color: transparent;
+    border-color: #cdd2d3;
+    margin-left: 10px;
+    color: #007700; }
+    .btn_outline-green:hover {
+      color: #fff;
+      background-color: #28a745;
+      border-color: #28a745; }
   .btn_blue {
     border-color: #4077d6;
     background: #4c8bf7;
@@ -354,7 +368,7 @@ template {
     margin-bottom: 10px;
     height: 35px;
     color: #000;
-    width: 48%; }
+    width: 32%; }
     .field_sizes:required:invalid {
       color: gray; }
 
@@ -394,6 +408,51 @@ template {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.3); }
+
+.dropdown {
+  cursor: pointer;
+  min-height: 35px;
+  width: 100%;
+  background: #fff;
+  padding: 5px;
+  position: relative;
+  border: 1px solid #cdd2d3;
+  border-radius: 3px;
+  margin-bottom: 10px; }
+  .dropdown:hover {
+    border-color: #858c93; }
+  .dropdown__title {
+    color: #bfbfbf; }
+  .dropdown__icon {
+    color: #999;
+    position: absolute;
+    top: 10px;
+    right: 10px; }
+  .dropdown__menu {
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: auto;
+    min-width: 100%;
+    border-radius: 0 0 3px 3px;
+    position: absolute;
+    background-color: #fff;
+    z-index: 1;
+    left: 0;
+    top: 100%;
+    margin-top: 2px;
+    display: none; }
+    .dropdown__menu__item {
+      border: 1px solid #000;
+      border-top: transparent;
+      padding: 5px; }
+      .dropdown__menu__item span {
+        display: block; }
+      .dropdown__menu__item span:first-child {
+        color: #ffad99;
+        font-size: 12px;
+        line-height: 12px; }
+      .dropdown__menu__item:hover {
+        background-color: #f2f2f2; }
 
 /*layout*/
 .container {
@@ -1083,57 +1142,50 @@ template {
   background-color: #fff;
   padding: 10px;
   border: 1px solid #cdd2d3;
-  height: 250px; }
+  height: 175px; }
+  .new-order__button {
+    text-align: right; }
 
-.dropdown {
-  cursor: pointer;
-  min-height: 35px;
-  width: 100%;
-  background: #fff;
-  padding: 5px;
-  position: relative;
+.money-at-week {
+  background-color: #1caf9a;
+  height: 175px;
+  padding: 10px; }
+  .money-at-week__title {
+    margin: 0;
+    padding: 10px;
+    color: #fff;
+    text-align: center; }
+  .money-at-week__from-position {
+    color: #fff;
+    font-size: 16px; }
+  .money-at-week__all-week {
+    text-align: center;
+    font-size: 36px;
+    padding: 20px 0;
+    color: #fff; }
+
+.weekly-list__column__title {
+  padding: 10px 0;
+  margin: 0;
+  text-align: center; }
+
+.column__days-list__item {
+  background-color: #fff;
   border: 1px solid #cdd2d3;
-  border-radius: 3px;
-  margin-bottom: 10px; }
-  .dropdown:hover {
-    border-color: #858c93; }
-  .dropdown__title {
-    color: #bfbfbf; }
-  .dropdown__icon {
-    color: #999;
-    position: absolute;
-    top: 10px;
-    right: 10px; }
-  .dropdown__menu {
-    overflow-x: hidden;
-    overflow-y: auto;
-    width: auto;
-    min-width: 100%;
-    border-radius: 0 0 3px 3px;
-    position: absolute;
-    background-color: #fff;
-    z-index: 1;
-    left: 0;
-    top: 100%;
-    margin-top: 2px;
+  padding: 10px;
+  cursor: pointer; }
+  .column__days-list__item .item__title {
+    margin: 0;
+    font-size: 18px; }
+  .column__days-list__item .item__content {
     display: none; }
-    .dropdown__menu__item {
-      border: 1px solid #000;
-      border-top: transparent;
-      padding: 5px; }
-      .dropdown__menu__item span {
-        display: block; }
-      .dropdown__menu__item span:first-child {
-        color: #ffad99;
-        font-size: 12px;
-        line-height: 12px; }
-      .dropdown__menu__item:hover {
-        background-color: #f2f2f2; }
-
-.employee__name {
-  font-size: 20px;
-  text-align: center;
-  padding: 10px 0; }
+  .column__days-list__item .item__employee-name {
+    font-weight: bold;
+    font-size: 16px; }
+  .column__days-list__item .item__employee-model {
+    font-weight: bold; }
+  .column__days-list__item .item__size {
+    font-style: italic; }
 
 .color-line {
   display: inline-block;

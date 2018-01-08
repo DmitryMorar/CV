@@ -147,8 +147,8 @@ $(window).load(function () {
 			'</div>' +
 			'<input class="js-field-modal-box field field_modal-box disnone" type="text" data-cell-type="id" value="' + id + '">' +
 			'<div class="modal-box__buttons">' +
-			'<button class="js-button-modal-box btn_modal-box btn_green btn" data-action="save"><span class="fa fa-check"></span></button>' +
-			'<button class="js-button-modal-box btn_modal-box btn_red btn" data-action="cancel"><span class="fa fa-times"></span></button>' +
+			'<button class="js-button-modal-box btn btn_outline-green" data-action="save"><span class="fa fa-check"></span></button>' +
+			'<button class="js-button-modal-box btn btn_outline-red" data-action="cancel"><span class="fa fa-times"></span></button>' +
 			'</div></div></div>'
 		);
 		$('body').append('<div class="js-modal-overlay modal_overlay"></div>');
@@ -190,8 +190,8 @@ $(window).load(function () {
 			'</div>' +
 			'<input class="js-field-modal-box field field_modal-box disnone" type="text" data-cell-type="id" value="' + id + '">' +
 			'<div class="modal-box__buttons">' +
-			'<button class="js-button-modal-box btn_modal-box btn_green btn" data-action="save"><span class="fa fa-check"></span></button>' +
-			'<button class="js-button-modal-box btn_modal-box btn_red btn" data-action="cancel"><span class="fa fa-times"></span></button>' +
+			'<button class="js-button-modal-box btn btn_outline-green" data-action="save"><span class="fa fa-check"></span></button>' +
+			'<button class="js-button-modal-box btn btn_outline-red" data-action="cancel"><span class="fa fa-times"></span></button>' +
 			'</div></div></div>'
 		);
 		$('body').append('<div class="js-modal-overlay modal_overlay"></div>');

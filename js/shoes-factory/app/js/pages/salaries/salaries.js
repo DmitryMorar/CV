@@ -109,6 +109,48 @@ $(window).load(function () {
 		monthNamesShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"]
 	});
 
+
+	/*
+	 * ====================================
+	 * 		Weekly list
+	 * ====================================
+	 * */
+
+	//handler which open content in item
+	$('.js-days-list').on('click', '.js-days-list__item', function () {
+		event.stopPropagation();
+
+		var currentItem = $(this),
+			daysItemContent = currentItem.find('.js-item__content');
+
+		daysItemContent.toggle('fast');
+	});
+
+
+	//draw all item in weekly list
+	//function drawAllItemInWeeklyList() {
+	//
+	//	$.getJSON("js/pages/database/db.json", function (data) {
+	//
+	//		$.each(data, function (section) {
+	//
+	//			if (section == 'employees') {
+	//
+	//				$.each(this, function (key, val) {
+	//					addItemEmployeeDropdown(val.position, val.name);
+	//				})
+	//			}
+	//
+	//			if (section == 'models') {
+	//				$.each(this, function (key, val) {
+	//					addItemModelDropdown(val.model)
+	//				});
+	//			}
+	//		})
+	//	});
+	//}
+
+
 });
 
 

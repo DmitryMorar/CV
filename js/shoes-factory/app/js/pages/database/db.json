@@ -52,5 +52,83 @@
         "packer": 22
       }
     }
+  ],
+  "weekly-list": [
+    {
+      "date": "Jun 8",
+      "employees": [
+        {
+          "position": "cutter",
+          "name": "Богдан",
+          "model": "zl1-01",
+          "totalSum": 6,
+          "size-36": 1,
+          "size-37": 1,
+          "size-38": 1,
+          "size-39": 1,
+          "size-40": 1,
+          "size-41": 1
+        },
+        {
+          "position": "seamstress",
+          "name": "Женя Матросова",
+          "model": "zl1-01",
+          "totalSum": 6,
+          "size-36": 1,
+          "size-37": 1,
+          "size-38": 1,
+          "size-39": 1,
+          "size-40": 1,
+          "size-41": 1
+        },
+        {
+          "position": "shoemaker",
+          "name": "Дима Гордиенко",
+          "model": "zl1-01",
+          "totalSum": 6,
+          "size-36": 1,
+          "size-37": 1,
+          "size-38": 1,
+          "size-39": 1,
+          "size-40": 1,
+          "size-41": 1
+        },
+        {
+          "position": "packer",
+          "name": "Дима Морарь",
+          "model": "zl1-01",
+          "totalSum": 6,
+          "size-36": 1,
+          "size-37": 1,
+          "size-38": 1,
+          "size-39": 1,
+          "size-40": 1,
+          "size-41": 1
+        }
+      ]
+    }
+  ],
+  "weekMoneys": [
+    {
+      "totalSum":
+      {
+        "allWeek": 120,
+        "cutter": 120,
+        "seamstress": 360,
+        "shoemaker": 300,
+        "packer": 120
+      }
+    },
+    {
+      "days": [
+        {
+         "date": "Jun 8",
+          "cutter": 120,
+          "seamstress": 360,
+          "shoemaker": 300,
+          "packer": 120
+        }
+      ]
+    }
   ]
 }

@@ -48,136 +48,307 @@
 			<div class="row">
 				<div class="col-md-6">
 					<div class="new-order">
-						<div class="col-md-5">
-							<div class="new-order__employees">
+						<form action="#">
+							<div class="col-md-5">
+								<div class="new-order__employees">
 
-								<div class="js-dropdown dropdown">
-									<input type="hidden">
-									<input type="hidden">
-									<i class="dropdown__icon fa fa-caret-down"></i>
-									<div class="js-dropdown-title dropdown__title">Сотрудники</div>
-									<div class="js-dropdown-menu dropdown__menu" data-dropdown-type="employee"></div>
+									<div class="js-dropdown dropdown">
+										<input type="hidden">
+										<input type="hidden">
+										<i class="dropdown__icon fa fa-caret-down"></i>
+
+										<div class="js-dropdown-title dropdown__title">Сотрудники</div>
+										<div class="js-dropdown-menu dropdown__menu" data-dropdown-type="employee"></div>
+									</div>
+
+								</div>
+
+								<div class="new-order__models">
+									<div class="js-dropdown dropdown">
+										<input type="hidden">
+										<i class="dropdown__icon fa fa-caret-down"></i>
+
+										<div class="js-dropdown-title dropdown__title">Модель</div>
+										<div class="js-dropdown-menu dropdown__menu" data-dropdown-type="model"></div>
+									</div>
+
+
+								</div>
+								<div class="new-order__date">
+									<input id="datepicker" class="field field_calendar" placeholder="Дата">
+								</div>
+							</div>
+							<div class="col-md-7">
+								<div class="new-order__sizes">
+									<select class="field field_sizes" name="size-36" required>
+										<option value="" disabled selected hidden>- 36р -</option>
+										<option value="1">1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+									</select>
+									<select class="field field_sizes" name="size-37" required>
+										<option value="" disabled selected hidden>- 37р -</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+									</select>
+									<select class="field field_sizes" name="size-38" required>
+										<option value="" disabled selected hidden>- 38р -</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+									</select>
+									<select class="field field_sizes" name="size-39" required>
+										<option value="" disabled selected hidden>- 39р -</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+									</select>
+									<select class="field field_sizes" name="size-40" required>
+										<option value="" disabled selected hidden>- 40р -</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+									</select>
+									<select class="field field_sizes" name="size-41" required>
+										<option value="" disabled selected hidden>- 41р -</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+									</select>
+								</div>
+								<div class="new-order__button">
+									<button class="btn btn_outline-green" type="submit">
+										<span class="fa fa-check"></span>
+									</button>
+									<button class="btn btn_outline-red" type="reset">
+										<span class="fa fa-times"></span>
+									</button>
 								</div>
 
 							</div>
-
-							<div class="new-order__models">
-								<div class="js-dropdown dropdown">
-									<input type="hidden">
-									<i class="dropdown__icon fa fa-caret-down"></i>
-									<div class="js-dropdown-title dropdown__title">Модель</div>
-									<div class="js-dropdown-menu dropdown__menu" data-dropdown-type="model"></div>
-								</div>
-
-
-							</div>
-							<div class="new-order__date">
-								<input id="datepicker" class="field field_calendar" placeholder="Дата">
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="new-order__sizes">
-								<select class="field field_sizes" name="size-36" required>
-									<option value="" disabled selected hidden>- 36р -</option>
-									<option value="1">1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-									<option>6</option>
-								</select>
-								<select class="field field_sizes" name="size-37" required>
-									<option value="" disabled selected hidden>- 37р -</option>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-									<option>6</option>
-								</select>
-								<select class="field field_sizes" name="size-38" required>
-									<option value="" disabled selected hidden>- 38р -</option>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-									<option>6</option>
-								</select>
-								<select class="field field_sizes" name="size-39" required>
-									<option value="" disabled selected hidden>- 39р -</option>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-									<option>6</option>
-								</select>
-								<select class="field field_sizes" name="size-40" required>
-									<option value="" disabled selected hidden>- 40р -</option>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-									<option>6</option>
-								</select>
-								<select class="field field_sizes" name="size-41" required>
-									<option value="" disabled selected hidden>- 41р -</option>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-									<option>6</option>
-								</select>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="new-order__button">1</div>
-						</div>
+						</form>
 					</div>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-5">
 					<div class="money-at-week">
+						<h3 class="money-at-week__title">Итого</h3>
+
+						<div class="row">
+							<div class="col-md-6">
+								<div class="money-at-week__from-position" data-employee-position="cutter">Закройщик -
+									<span>12</span></div>
+								<div class="money-at-week__from-position" data-employee-position="seamstrees">Швея -
+									<span>13</span></div>
+								<div class="money-at-week__from-position" data-employee-position="shoemaker">Сапожник -
+									<span>14</span></div>
+								<div class="money-at-week__from-position" data-employee-position="packer">Упаковщик -
+									<span>15</span></div>
+							</div>
+							<div class="col-md-6">
+								<div class="money-at-week__all-week">44</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 			<!--SECOND-->
-			<div class="row">
-				<!--weekly calendar-->
-				<div class="col-md-6">
-					<div class="col-md-6">
-						<div class="b-employee-completed js-first-employee-day">
-							<p class="employee__name">Закройщик</p>
-							<span class="color-line color-line_red"></span>
+
+			<section class="weekly-list">
+				<div class="row">
+					<div class="col-md-3">
+
+						<div class="weekly-list__column">
+							<h3 class="weekly-list__column__title">Закройщики</h3>
+							<span class="color-line color-line_blue"></span>
+
+							<div class="js-days-list column__days-list" data-list-type="cutter">
+
+								<div class="js-days-list__item column__days-list__item">
+									<div class="js-item__title item__title">Янв 8</div>
+									<div class="js-item__content item__content">
+										<div class="item__employee-name">Богдан Приходько</div>
+										<span class="item__employee-model">zl1-01</span>
+										<span class="item__size" data-size="36">36/<span>6</span></span>
+										<span class="item__size" data-size="37">37/<span>5</span></span>
+										<span class="item__size" data-size="38">38/<span>5</span></span>
+										<span class="item__size" data-size="39">39/<span>5</span></span>
+										<span class="item__size" data-size="40">40/<span>5</span></span>
+										<span class="item__size" data-size="41">41/<span>6</span></span>
+									</div>
+								</div>
+							</div>
 
 						</div>
 					</div>
-					<div class="col-md-6">
-						<div class="b-employee-completed js-second-employee-day">
-							<p class="employee__name">Швея</p>
-							<span class="color-line color-line_blue"></span>
+					<div class="col-md-3">
+						<div class="weekly-list__column">
+							<h3 class="weekly-list__column__title">Швеи</h3>
+							<span class="color-line color-line_red"></span>
+
+							<div class="js-days-list column__days-list" data-list-type="seamstrees">
+
+								<div class="js-days-list__item column__days-list__item">
+									<div class="js-item__title item__title">Янв 8</div>
+									<div class="js-item__content item__content">
+										<div class="item__employee-name">Женя Матросова</div>
+										<span class="item__employee-model">zl1-01</span>
+										<span class="item__size" data-size="36">36/<span>6</span></span>
+										<span class="item__size" data-size="37">37/<span>5</span></span>
+										<span class="item__size" data-size="38">38/<span>5</span></span>
+										<span class="item__size" data-size="39">39/<span>5</span></span>
+										<span class="item__size" data-size="40">40/<span>5</span></span>
+										<span class="item__size" data-size="41">41/<span>6</span></span>
+									</div>
+								</div>
+							</div>
+
 						</div>
+
 					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="col-md-6">
-						<div class="b-employee-completed js-third-employee-day">
-							<p class="employee__name">Сапожник</p>
+					<div class="col-md-3">
+						<div class="weekly-list__column">
+							<h3 class="weekly-list__column__title">Сапожники</h3>
 							<span class="color-line color-line_green"></span>
+
+							<div class="js-days-list column__days-list" data-list-type="shoemaker">
+
+								<div class="js-days-list__item column__days-list__item">
+									<div class="js-item__title item__title">Янв 8</div>
+									<div class="js-item__content item__content">
+										<div class="item__employee-name">Дима Гордиенко</div>
+										<span class="item__employee-model">zl1-01</span>
+										<span class="item__size" data-size="36">36/<span>6</span></span>
+										<span class="item__size" data-size="37">37/<span>5</span></span>
+										<span class="item__size" data-size="38">38/<span>5</span></span>
+										<span class="item__size" data-size="39">39/<span>5</span></span>
+										<span class="item__size" data-size="40">40/<span>5</span></span>
+										<span class="item__size" data-size="41">41/<span>6</span></span>
+									</div>
+								</div>
+							</div>
+
 						</div>
+
 					</div>
-					<div class="col-md-6">
-						<div class="b-employee-completed js-fourth-employee-day">
-							<p class="employee__name">Упаковщик</p>
+					<div class="col-md-3">
+						<div class="weekly-list__column">
+							<h3 class="weekly-list__column__title">Упаковщики</h3>
 							<span class="color-line color-line_dark"></span>
+
+							<div class="js-days-list column__days-list" data-list-type="packer">
+
+								<div class="js-days-list__item column__days-list__item">
+									<div class="js-item__title item__title">Янв 8</div>
+									<div class="js-item__content item__content">
+										<div class="item__employee-name">Дима Морарь</div>
+										<span class="item__employee-model">zl1-01</span>
+										<span class="item__size" data-size="36">36/<span>6</span></span>
+										<span class="item__size" data-size="37">37/<span>5</span></span>
+										<span class="item__size" data-size="38">38/<span>5</span></span>
+										<span class="item__size" data-size="39">39/<span>5</span></span>
+										<span class="item__size" data-size="40">40/<span>5</span></span>
+										<span class="item__size" data-size="41">41/<span>6</span></span>
+									</div>
+								</div>
+							</div>
+
 						</div>
+
 					</div>
+
+
+					<!--<div class="weekly-list__item">-->
+					<!--<h3 class="weekly-list__item__title">Янв 8</h3>-->
+
+					<!--<div class="weekly-list__item__content">-->
+					<!--<div class="employee-name">Богдан Приходько</div>-->
+					<!--<span class="employee-model">zl1-01</span>-->
+					<!--<span class="sizes" data-size="36">36/<span>6</span></span>-->
+					<!--<span class="sizes" data-size="37">37/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="38">38/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="39">39/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="40">40/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="41">41/<span>-</span></span>-->
+					<!--</div>-->
+					<!--<div class="weekly-list__item__content">-->
+					<!--<div class="employee-name">Богдан Приходько</div>-->
+					<!--<span class="employee-model">zl1-01</span>-->
+					<!--<span class="sizes" data-size="36">36/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="37">37/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="38">38/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="39">39/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="40">40/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="41">41/<span>-</span></span>-->
+					<!--</div>-->
+					<!--<div class="weekly-list__item__content">-->
+					<!--<div class="employee-name">Богдан Приходько</div>-->
+					<!--<span class="employee-model">zl1-01</span>-->
+					<!--<span class="sizes" data-size="36">36/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="37">37/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="38">38/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="39">39/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="40">40/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="41">41/<span>-</span></span>-->
+					<!--</div>-->
+					<!--</div>-->
+					<!--<div class="weekly-list__item">-->
+					<!--<h3 class="weekly-list__item__title">Янв 8</h3>-->
+
+					<!--<div class="weekly-list__item__content">-->
+					<!--<div class="employee-name">Богдан Приходько</div>-->
+					<!--<span class="employee-model">zl1-01</span>-->
+					<!--<span class="sizes" data-size="36">36/<span>6</span></span>-->
+					<!--<span class="sizes" data-size="37">37/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="38">38/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="39">39/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="40">40/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="41">41/<span>-</span></span>-->
+					<!--</div>-->
+					<!--<div class="weekly-list__item__content">-->
+					<!--<div class="employee-name">Богдан Приходько</div>-->
+					<!--<span class="employee-model">zl1-01</span>-->
+					<!--<span class="sizes" data-size="36">36/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="37">37/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="38">38/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="39">39/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="40">40/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="41">41/<span>-</span></span>-->
+					<!--</div>-->
+					<!--<div class="weekly-list__item__content">-->
+					<!--<div class="employee-name">Богдан Приходько</div>-->
+					<!--<span class="employee-model">zl1-01</span>-->
+					<!--<span class="sizes" data-size="36">36/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="37">37/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="38">38/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="39">39/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="40">40/<span>5</span></span>-->
+					<!--<span class="sizes" data-size="41">41/<span>-</span></span>-->
+					<!--</div>-->
+					<!--</div>-->
 				</div>
-				<!--end weekly calendar-->
-			</div>
+			</section>
+			<!--end weekly calendar-->
 		</div>
+	</div>
 	</div>
 	<!--END RIGHT BLOCK-->
 </main>
