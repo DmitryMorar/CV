@@ -10,6 +10,12 @@
 	border-radius: 4px;
 	outline: none;
 
+
+	&:active,
+	&:focus {
+		outline: 0;
+	}
+
 	//btn in page database
 	&_create-new-data {
 		color: #fff;

@@ -53,66 +53,111 @@
       }
     }
   ],
-  "weekly-list": [
+  "listWorksDuringWeek": [
     {
-      "date": "Jun 8",
+      "date": "Янв 8",
       "employees": [
         {
-          "position": "cutter",
-          "name": "Богдан",
+          "position": "Закройщик",
+          "name": "Богдан Приходько",
           "model": "zl1-01",
-          "totalSum": 6,
-          "size-36": 1,
-          "size-37": 1,
-          "size-38": 1,
-          "size-39": 1,
-          "size-40": 1,
-          "size-41": 1
+          "size36": 1,
+          "size37": 1,
+          "size38": 1,
+          "size39": 1,
+          "size40": 1,
+          "size41": 1
         },
         {
-          "position": "seamstress",
+          "position": "Швея",
           "name": "Женя Матросова",
           "model": "zl1-01",
-          "totalSum": 6,
-          "size-36": 1,
-          "size-37": 1,
-          "size-38": 1,
-          "size-39": 1,
-          "size-40": 1,
-          "size-41": 1
+          "size36": "",
+          "size37": "",
+          "size38": "",
+          "size39": "",
+          "size40": "",
+          "size41": ""
         },
         {
-          "position": "shoemaker",
+          "position": "Сапожник",
           "name": "Дима Гордиенко",
           "model": "zl1-01",
-          "totalSum": 6,
-          "size-36": 1,
-          "size-37": 1,
-          "size-38": 1,
-          "size-39": 1,
-          "size-40": 1,
-          "size-41": 1
+          "size36": 1,
+          "size37": 1,
+          "size38": 1,
+          "size39": 1,
+          "size40": 1,
+          "size41": 1
         },
         {
-          "position": "packer",
+          "position": "Упаковщик",
           "name": "Дима Морарь",
           "model": "zl1-01",
-          "totalSum": 6,
-          "size-36": 1,
-          "size-37": 1,
-          "size-38": 1,
-          "size-39": 1,
-          "size-40": 1,
-          "size-41": 1
+          "size36": 1,
+          "size37": 1,
+          "size38": 1,
+          "size39": 1,
+          "size40": 1,
+          "size41": 1
+        }
+      ]
+    },
+    {
+      "date": "Янв 9",
+      "employees": [
+        {
+          "position": "Закройщик",
+          "name": "Богдан Приходько",
+          "model": "zl1-01",
+          "size36": 1,
+          "size37": 1,
+          "size38": 1,
+          "size39": 1,
+          "size40": 1,
+          "size41": 1
+        },
+        {
+          "position": "Швея",
+          "name": "Женя Матросова",
+          "model": "zl1-01",
+          "size36": "",
+          "size37": "",
+          "size38": "",
+          "size39": "",
+          "size40": "",
+          "size41": ""
+        },
+        {
+          "position": "Сапожник",
+          "name": "Дима Гордиенко",
+          "model": "zl1-01",
+          "size36": 1,
+          "size37": 1,
+          "size38": 1,
+          "size39": 1,
+          "size40": 1,
+          "size41": 1
+        },
+        {
+          "position": "Упаковщик",
+          "name": "Дима Морарь",
+          "model": "zl1-01",
+          "size36": 1,
+          "size37": 1,
+          "size38": 1,
+          "size39": 1,
+          "size40": 1,
+          "size41": 1
         }
       ]
     }
   ],
-  "weekMoneys": [
+  "moneysDuringWeek": [
     {
       "totalSum":
       {
-        "allWeek": 120,
+        "allWeek": 900,
         "cutter": 120,
         "seamstress": 360,
         "shoemaker": 300,

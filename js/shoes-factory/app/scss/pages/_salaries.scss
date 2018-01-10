@@ -9,9 +9,30 @@
 		text-align: right;
 	}
 
+	&__date {
+		position: relative;
+
+		& .dropdown__icon {
+			color: #999;
+			position: absolute;
+			top: 10px;
+			right: 10px;
+
+		}
+	}
+
 }
 
-.money-at-week {
+#datepicker {
+
+	cursor: pointer;
+
+	&:hover {
+		border-color: #858c93;
+	}
+}
+
+.moneys-during-week {
 	background-color: #1caf9a;
 	height: 175px;
 	padding: 10px;
@@ -23,12 +44,12 @@
 		text-align: center;
 	}
 
-	&__from-position {
+	&__employee {
 		color: #fff;
 		font-size: 16px;
 	}
 
-	&__all-week {
+	&__total-sum {
 		text-align: center;
 		font-size: 36px;
 		padding: 20px 0;
@@ -56,17 +77,14 @@
 	padding: 10px;
 	cursor: pointer;
 
-
 	& .item__title {
 		margin: 0;
 		font-size: 18px;
 	}
 
-
 	& .item__content {
 		display: none;
 	}
-
 
 	& .item__employee-name {
 		font-weight: bold;
@@ -110,3 +128,16 @@
 .visible {
 	display: block;
 }
+
+.grey-color {
+	color: #bfbfbf;
+}
+
+.dark-color {
+	color: #000;
+}
+
+.red-border {
+	border-color: red;
+}
+
