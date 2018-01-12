@@ -153,27 +153,12 @@
       ]
     }
   ],
-  "moneysDuringWeek": [
+  "moneysDuringWeek":
     {
-      "totalSum":
-      {
-        "allWeek": 900,
-        "cutter": 120,
-        "seamstress": 360,
-        "shoemaker": 300,
-        "packer": 120
-      }
-    },
-    {
-      "days": [
-        {
-         "date": "Jun 8",
-          "cutter": 120,
-          "seamstress": 360,
-          "shoemaker": 300,
-          "packer": 120
-        }
-      ]
+      "total": 900,
+      "cutter": 120,
+      "seamstress": 360,
+      "shoemaker": 300,
+      "packer": 120
     }
-  ]
 }

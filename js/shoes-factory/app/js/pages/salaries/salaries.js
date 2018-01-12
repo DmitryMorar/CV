@@ -10,34 +10,34 @@ $(function () {
 	function drawAllItemsInPage() {
 		$.getJSON("js/pages/database/db.json", function (data) {
 
-			$.each(data, function (section) {
+			$.each(data, function (section) { //maybe use other loop
 
 				switch (section) {
 
 					case 'employees':
-						$.each(this, function () {
+						$.each(this, function () { //this - employees section
 							var employee = this;
-							addItemEmployeeDropdown(employee.position, employee.name);
+							addItemInDropDonw(employee);
 						});
 						break;
 
 					case 'models':
-						$.each(this, function () {
+						$.each(this, function () { //this - models section
 							var model = this;
-							addItemModelDropdown(model.model)
+							addItemInDropDonw(model);
 						});
 						break;
 
 					case 'listWorksDuringWeek':
-						$.each(this, function () {
+						$.each(this, function () { //this - listWorksDuringWeek section
 							var dataDay = this;
 							addItemInWeeklyList(dataDay);
 						});
 						break;
 
 					case 'moneysDuringWeek':
-						var value = this;
-						addDataInMoneyAtWeek(value);
+						var moneysWeek = this;
+						addDataInMoneysWeek(moneysWeek);
 						break;
 
 					default:
@@ -46,40 +46,47 @@ $(function () {
 		});
 	}
 
-
 	/*
 	 * ====================================
 	 * 		Add functions / change DOM
 	 * ====================================
 	 * */
-	function addItemEmployeeDropdown(position, name) {
 
-		var employeeDropdown = $('[data-dropdown-type=employee]');
+	var addItemInDropDonw = function (obj) {
 
-		employeeDropdown.append(
-			'<div class="js-dropdown-item dropdown__menu__item"><span>' + position + '</span><span>' + name + '</span></div>'
-		)
-	}
+		if (typeof obj !== 'object') {
+			return false
+		}
 
-	function addItemModelDropdown(name) {
+		var employeeDropdown = $('[data-dropdown-type=employee]'),
+			modelDropdown = $('[data-dropdown-type=model]');
 
-		var modelDropdown = $('[data-dropdown-type=model]');
+		if (obj.hasOwnProperty('position')) {
+			employeeDropdown.append(
+				'<div class="js-dropdown-item dropdown__menu__item" data-item-type="employees"><span>' + obj.position + '</span><span>' + obj.name + '</span></div>'
+			)
+		} else if (obj.hasOwnProperty('model')) {
+			modelDropdown.append(
+				'<div class="js-dropdown-item dropdown__menu__item" data-item-type="models">' + obj.model + '</div>'
+			)
+		}
 
-		modelDropdown.append(
-			'<div class="js-dropdown-item dropdown__menu__item">' + name + '</div>'
-		)
-	}
+	};
 
-	function addItemInWeeklyList(dataDay) {
+	var addItemInWeeklyList = function (dataDay) {
 
-		//if obj dataDay from newOrder save him how array
-		var dataEmployee = dataDay.employees ? dataDay.employees : [dataDay];
+		if (typeof dataDay !== 'object') {
+			return
+		}
 
 		var dateOfDay = dataDay.date,
 			cutterList = $('[data-list-type=cutter]'),
 			seamstressList = $('[data-list-type=seamstress]'),
 			shoemakerList = $('[data-list-type=shoemaker]'),
-			packerList = $('[data-list-type=packer]');
+			packerList = $('[data-list-type=packer]'),
+
+		//if obj dataDay from newOrder save him how array
+			dataEmployee = dataDay.employees ? dataDay.employees : [dataDay];
 
 		$.each(dataEmployee, function (key, employee) {
 
@@ -104,9 +111,13 @@ $(function () {
 				default:
 			}
 		})
-	}
+	};
 
-	function addItemInPositionList(listWhereAddItem, employee, dateOfDay) {
+	var addItemInPositionList = function (listWhereAddItem, employee, dateOfDay) {
+
+		if (typeof employee !== 'object') {
+			return
+		}
 
 		listWhereAddItem.append(
 			'<div class="js-days-list__item column__days-list__item">' +
@@ -123,27 +134,29 @@ $(function () {
 			'</div>' +
 			'</div>'
 		)
-	}
+	};
 
-	//TODO find best solution
-	function addDataInMoneyAtWeek(value) {
-		var moneysAllWeek = value[0].totalSum.allWeek,
-			allMoneysCutter = value[0].totalSum.cutter,
-			allMoneysSeamstress = value[0].totalSum.seamstress,
-			allMoneysShoemaker = value[0].totalSum.shoemaker,
-			allMoneysPacker = value[0].totalSum.packer,
-			moneysWeekPositionCutter = $('[data-moneys-during-week-employee=cutter]'),
-			moneysWeekPositionSeamstress = $('[data-moneys-during-week-employee=seamstress]'),
-			moneysWeekPositionShoemaker = $('[data-moneys-during-week-employee=shoemaker]'),
-			moneysWeekPositionPacker = $('[data-moneys-during-week-employee=packer]'),
-			moneysWeektoTotalSum = $('[data-moneys-during-week-total=sum]');
+	var addDataInMoneysWeek = function (moneyWeek) {
 
-		moneysWeekPositionCutter.find('span').text(allMoneysCutter);
-		moneysWeekPositionSeamstress.find('span').text(allMoneysSeamstress);
-		moneysWeekPositionShoemaker.find('span').text(allMoneysShoemaker);
-		moneysWeekPositionPacker.find('span').text(allMoneysPacker);
-		moneysWeektoTotalSum.text(moneysAllWeek);
-	}
+		if (typeof moneyWeek !== 'object') {
+			return
+		}
+
+		var itemsPosition = $('.js-moneys-week__employee'),
+			moneysWeekTotalSum = $('[data-moneys-week=total]'),
+			i = 0,
+			max;
+
+		for (i, max = itemsPosition.length; i < max; i++) {
+
+			//dependency between obj property and data-attribute of DOM element
+			var a = $(itemsPosition[i]).data('moneys-week-employee'),
+				b = moneyWeek[a];
+
+			$(itemsPosition[i]).find('span').text(b);
+		}
+		moneysWeekTotalSum.text(moneyWeek.total);
+	};
 
 
 	/*
@@ -151,6 +164,7 @@ $(function () {
 	 * 		Weekly list
 	 * ====================================
 	 * */
+
 	//handler which open content in item
 	$('.js-days-list').on('click', '.js-days-list__item', function () {
 		event.stopPropagation();
@@ -161,65 +175,57 @@ $(function () {
 		daysItemContent.toggle('fast');
 	});
 
-
 	/*
 	 * ====================================
 	 * 	New orders
 	 * ====================================
 	 * */
+
 	//handler on button which read fields values in orders
 	$('.js-save-btn-new-order').click(function () {
 		event.preventDefault();
 
+		var objNewOrder = readNewOrder();
 
-			var cat = readNewOrder();
+		addItemInWeeklyList(objNewOrder);
 
-			addItemInWeeklyList(cat);
-
-			clearFieldNewOrder();
+		clearFieldsNewOrder();
 	});
 
 	//handler on button which clear fields values in orders
 	$('.js-cancel-btn-new-order').click(function () {
 		event.preventDefault();
 
-		clearFieldNewOrder();
+		clearFieldsNewOrder();
 	});
 
-	function readNewOrder() {
+	var readNewOrder = function () {
 
 		var allInput = $('input[type=hidden]'),
 			allSelect = $('select'),
-			i = 0,
-			max,
-			key,
-			value,
 			newOrder = {};
 
 		//save date where create orders
 		newOrder.date = $('#datepicker').val();
 
 		//save in obj employee data
-		for (i, max = allInput.length; i < max; i++) {
-			key = allInput[i].name;
-			value = allInput[i].value;
+		readFieldsNewOrder(allInput, newOrder);
 
-			newOrder[key] = value;
-		}
-
-		//TODO duplicated code!!!
 		//save in obj number of sizes
-		for (i = 0, max = allSelect.length; i < max; i++) {
-			key = allSelect[i].name;
-			value = allSelect[i].value;
+		readFieldsNewOrder(allSelect, newOrder);
 
+		return newOrder
+	};
+
+	var readFieldsNewOrder = function (nodes, newOrder) {
+		for (var i = 0, max = nodes.length; i < max; i++) {
+			key = nodes[i].name;
+			value = nodes[i].value;
 			newOrder[key] = value;
 		}
-		return newOrder
-	}
+	};
 
-	//clear fields in new order
-	function clearFieldNewOrder() {
+	var clearFieldsNewOrder = function () {
 
 		//clear value in employee data
 		var allInputs = $('input[type=hidden]'),
@@ -237,61 +243,101 @@ $(function () {
 		datePicker.val('');
 
 		//clear value in employee data
-		for (i, max = allInputs.length; i < max; i++) {
-			allInputs[i].value = '';
-		}
+		clearValuesNewOrder(allInputs);
 
-		//TODO duplicated code!!!
 		//clear value in number of sizes
-		for (i = 0, max = allSelect.length; i < max; i++) {
-			allSelect[i].value = '';
-		}
-	}
+		clearValuesNewOrder(allSelect);
 
+	};
+
+	var clearValuesNewOrder = function (nodes) {
+
+		for (var i = 0, max = nodes.length; i < max; i++) {
+			nodes[i].value = '';
+		}
+
+	};
 
 	/*
 	 * ====================================
 	 * 		Dropdown
 	 * ====================================
 	 * */
-	var dropDown = $('.js-dropdown'),
-		dropDownMenu = $('.js-dropdown-menu');
 
-	dropDown.click(function () {
+	$('.js-dropdown').click(function () {
+
+		var dropDownMenu = $('.js-dropdown-menu');
+
 		$(this).find(dropDownMenu).toggle('fast');
 	});
 
-	dropDownMenu.on('click', '.js-dropdown-item', function () {
+	$('.js-dropdown-menu').on('click', '.js-dropdown-item', function (event) {
 		event.stopPropagation();
 
-		var mainParent = $(this).parent(dropDownMenu).parent(dropDown),
-			dropDownTitle = $(this).parent(dropDownMenu).prev('.js-dropdown-title'),
-			allInputInCurrentDropDown = mainParent.find('input[type=hidden]'),
-			employeePosition = $(this).find('span:first').text(),
-			employeeName = $(this).find('span:last').text(),
-			modelName = $(this).text();
+		var currentItem = event.currentTarget,
+			mainParent = $(currentItem).parent($('.js-dropdown-menu')).parent($('.js-dropdown')),
+			dropDownMenu = $(currentItem).parent('.js-dropdown-menu'),
+			dropDownTitle = mainParent.find($('.js-dropdown-title'));
 
-		//TODO find best solution
-		if (allInputInCurrentDropDown.length == 2) {
+		var itemData = readCurrentItem(currentItem);
 
-			$(allInputInCurrentDropDown[0]).attr('value', employeePosition);
-			$(allInputInCurrentDropDown[1]).attr('value', employeeName);
-
-			//change title
-			dropDownTitle.text(employeeName)
-
-		} else if (allInputInCurrentDropDown.length == 1) {
-
-			$(allInputInCurrentDropDown[0]).attr('value', modelName);
-
-			//change title
-			dropDownTitle.text(modelName)
-		}
+		changeTextDropdown(currentItem, itemData);
 
 		$(this).parent(dropDownMenu).toggle('fast');
 		dropDownTitle.addClass('dark-color');
 	});
 
+	var readCurrentItem = function (currentItem) {
+
+		var obj1 = {},
+			employeePosition = $(currentItem).find('span:first').text(),
+			employeeName = $(currentItem).find('span:last').text(),
+			modelName = $(currentItem).text(),
+			typeItem = $(currentItem).data('item-type');
+
+		switch (typeItem) {
+			case 'employees':
+				obj1.typeItem = typeItem;
+				obj1.position = employeePosition;
+				obj1.name = employeeName;
+				break;
+
+			case 'models':
+				obj1.typeItem = typeItem;
+				obj1.model = modelName;
+				break;
+
+			default:
+		}
+
+		return obj1;
+	};
+
+	//TODO find best solution
+	var changeTextDropdown = function (currentItem ,itemData) {
+
+		var mainParent = $(currentItem).parent($('.js-dropdown-menu')).parent($('.js-dropdown')),
+			allInputsDropDown = mainParent.find('input[type=hidden]'),
+			dropDownTitle = mainParent.find($('.js-dropdown-title'));
+
+		if (typeof itemData !== 'object') {
+			return false
+		}
+
+		if (allInputsDropDown.length == 1) {
+
+			$(allInputsDropDown[0]).attr('value', itemData.model);
+			//change title
+			dropDownTitle.text(itemData.model)
+
+		} else if (allInputsDropDown.length == 2) {
+
+			$(allInputsDropDown[0]).attr('value', itemData.position);
+			$(allInputsDropDown[1]).attr('value', itemData.name);
+			//change title
+			dropDownTitle.text(itemData.name)
+		}
+	};
 
 	/*
 	 * ====================================
