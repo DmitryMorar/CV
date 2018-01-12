@@ -1,9 +1,11 @@
-/*base*/
-@import 'base/_reset';
 
 /*helpers*/
 @import 'helpers/_variables';
 @import 'helpers/_mixins';
+
+/*base*/
+@import 'base/_reset';
+@import 'base/_font';
 
 /*components*/
 @import 'components/_button';
@@ -12,7 +14,6 @@
 @import 'components/_dropdown';
 
 /*layout*/
-@import 'layout/_grid-bootstrap';
 @import 'layout/_left-block';
 @import 'layout/_right-block';
 

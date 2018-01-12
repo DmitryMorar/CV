@@ -1,0 +1,42 @@
+@font-face {
+	font-family: 'montserratregular';
+	src: url('../../fotns/monsterrat/montserrat-regular-webfont.woff2') format('woff2'),
+	url('../../fotns/monsterrat/montserrat-regular-webfont.woff') format('woff'),
+	url('../../fotns/monsterrat/montserrat-regular-webfont.ttf') format('truetype'),
+	url('../../fotns/monsterrat/montserrat-regular-webfont.svg#montserratregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('../../fotns/icons/fontawesome-webfont.woff2') format('woff2'),
+	url('../../fotns/icons/fontawesome-webfont.woff') format('woff'),
+	url('../../fotns/icons/fontawesome-webfont.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+.ic {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	&-caret-down:before {
+		content: "\f0d7";
+	}
+
+	&-check:before {
+		content: "\f00c";
+	}
+	&-times:before {
+		content: "\f00d";
+	}
+
+}
+
+

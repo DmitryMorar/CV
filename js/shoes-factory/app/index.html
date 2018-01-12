@@ -4,14 +4,17 @@
 	<meta charset="utf-8">
 	<title>Shoes-Factory</title>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
-		  integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
+
+	<!--<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">-->
+
+
+	<link rel="stylesheet" href="css/grid.css">
 	<link rel="stylesheet" href="css/main.css">
 
 </head>
@@ -46,16 +49,16 @@
 		<div class="container-fluid">
 			<!-- FIRST-->
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-lg-6 col-md-7">
 					<div class="new-order">
-						<form action="#">
-							<div class="col-md-5">
+						<form class="form" action="#">
+							<div class="col-lg-4 col-md-4">
 								<div class="new-order__employees">
 
 									<div class="js-dropdown dropdown">
 										<input type="hidden" name="position">
 										<input type="hidden" name="name">
-										<i class="dropdown__icon fa fa-caret-down"></i>
+										<i class="dropdown__icon ic ic-caret-down"></i>
 
 										<div class="js-dropdown-title dropdown__title">Сотрудники</div>
 										<div class="js-dropdown-menu dropdown__menu" data-dropdown-type="employee"></div>
@@ -66,7 +69,7 @@
 								<div class="new-order__models">
 									<div class="js-dropdown dropdown">
 										<input type="hidden" name="model">
-										<i class="dropdown__icon fa fa-caret-down"></i>
+										<i class="dropdown__icon ic ic-caret-down"></i>
 
 										<div class="js-dropdown-title dropdown__title">Модель</div>
 										<div class="js-dropdown-menu dropdown__menu" data-dropdown-type="model"></div>
@@ -76,10 +79,10 @@
 								</div>
 								<div class="new-order__date">
 									<input id="datepicker" class="field field_calendar" placeholder="Дата">
-									<i class="dropdown__icon fa fa-caret-down"></i>
+									<i class="dropdown__icon ic ic-caret-down"></i>
 								</div>
 							</div>
-							<div class="col-md-7">
+							<div class="col-lg-8 col-md-8">
 								<div class="new-order__sizes">
 									<select class="field field_sizes" name="size36" required>
 										<option value="" disabled selected hidden>- 36р -</option>
@@ -138,10 +141,10 @@
 								</div>
 								<div class="new-order__button">
 									<button class="js-save-btn-new-order btn btn_outline-green" type="submit">
-										<span class="fa fa-check"></span>
+										<span class="ic ic-check"></span>
 									</button>
 									<button class="js-cancel-btn-new-order btn btn_outline-red" type="reset">
-										<span class="fa fa-times"></span>
+										<span class="ic ic-times"></span>
 									</button>
 								</div>
 
@@ -149,11 +152,10 @@
 						</form>
 					</div>
 				</div>
-				<div class="col-md-5">
+				<div class="col-lg-5 col-md-5">
 					<div class="moneys-during-week">
 						<h3 class="moneys-during-week__title">Итого</h3>
 
-						<div class="row">
 							<div class="col-md-6">
 								<div class="moneys-during-week__employee" data-moneys-during-week-employee="cutter">Закройщик -
 									<span></span></div>
@@ -167,7 +169,6 @@
 							<div class="col-md-6">
 								<div class="moneys-during-week__total-sum" data-moneys-during-week-total="sum"></div>
 							</div>
-						</div>
 					</div>
 				</div>
 			</div>

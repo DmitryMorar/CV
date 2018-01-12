@@ -1,45 +1,40 @@
-.container-fluid {
-
-}
-
 .left-block {
-  z-index: 20;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 0;
-  width: 115px;
-  min-height: 100%;
-  background: #1b3446;
+	z-index: 20;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	width: 115px;
+	min-height: 100%;
+	background: #1b3446;
 }
 
 .navbar {
 
-  &-list {
-    padding: 40px 0;
+	&-list {
+		padding: 40px 0;
+	}
 
-  }
+	&-list__item {
+		margin-top: 10px;
 
-  &-list__item {
-    margin-top: 10px;
+		&_active {
+			background: #1caf9a;
+		}
+		&:hover {
+			background: #fff;
+			transition: $transition-base;
+		}
+		&:hover &__link {
+			color: #000;
+		}
+	}
 
-    &_active {
-      background: #1caf9a;
-    }
-    &:hover {
-      background: #fff;
-    }
-    &:hover &__link {
-      color: #000;
-    }
-  }
-
-  &-list__item__link {
-    display: block;
-    color: #fff;
-    font-size: 16px;
-    padding: 7px 10px;
-
-  }
+	&-list__item__link {
+		display: block;
+		color: #fff;
+		font-size: 16px;
+		padding: 7px 10px;
+	}
 }

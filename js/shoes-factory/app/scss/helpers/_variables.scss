@@ -1,11 +1,9 @@
-/*--------------------------------------------------------------
-* Main content
---------------------------------------------------------------*/
+//Colors
 
-/* Colors
-------------------------------------------- */
 $white: #fff;
+$black: #000;
 $grey: #777379;
+$grey2: #212529;
 $red: #da4e60;
 $light-grey: #989ca3;
 $blue-1: #366685;
@@ -14,75 +12,55 @@ $blue-3: #30536b;
 $blue-4: #4a708e;
 $light-blue: #47bae6;
 
-/*permanent variable-colors*/
-$bg-main-section: $white; //background main section
-$bg-top-line: $blue-2; //background top line main section
-$bg-nav-menu: $blue-1; //background sidebar
+$body-bg: $white !default;
+$body-color: $grey2;
 
-$main-ft-color: $grey; //main-font-color
-$title-ft-color: $light-grey; //title-font-color
-$label-ft-color: $light-grey; //label-font-color
-$ft-color-lk-nav-menu: $white; //font color link nav-menu
-/* /permanent variable-colors */
-/* /Colors
-------------------------------------------- */
+//Transition
 
-/* Sizing
-------------------------------------------- */
-/*typography*/
-$ft-size-base: 14px !default; //font size base
-$ft-size-small: ceil(($ft-size-base * 0.85)); //font size small  ~12px
-$ft-size-medium: ceil(($ft-size-base * 1.14)); //font size small  ~16px
-$ft-size-large: ceil(($ft-size-base * 1.285)); //font size large ~18px
-$ft-size-xlarge: ceil(($ft-size-base * 1.714)); //font size large ~24px
-/*/typography*/
+$transition-base: all .2s ease-in-out !default;
+$transition-fade: opacity .15s linear !default;
+$transition-collapse: height .35s ease !default;
+
+//Sizing
 
 $padding-base-vertical: 6px;
 $padding-base-horizontal: 12px;
-/* /Sizing
------------------------------------------------ */
 
-/* Grid
------------------------------------------------ */
+//Font
 
-// Grid breakpoints
+$font-family-sans-serif: "montserratregular", Arial, Roboto, sans-serif;
+$font-family-monospace: monospace;
+$font-family-base: $font-family-sans-serif;
 
-$grid-breakpoints: (
-  // Extra small screen / phone
-        xs: 0,
-  // Small screen / phone
-        sm: 544px,
-  // Medium screen / tablet
-        md: 768px,
-  // Large screen / desktop
-        lg: 992px,
-  // Extra large screen / wide desktop
-        xl: 1200px
-) !default;
+$font-size-base: 1rem !default;
+$font-size-sm: ($font-size-base * .875);
+$font-size-lg: ($font-size-base * 1.25);
+
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+
+$font-weight-base: $font-weight-normal !default;
+$line-height-base: 1.5 !default;
+
+$headings-margin-bottom: 0, 5rem;
+
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+
+// Links
+
+$link-decoration: none !default;
+$link-hover-decoration: underline !default;
+
+//Buttons
+
+$btn-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
 
-// Grid containers
-//
-// Define the maximum width of `.container` for different screen sizes.
-
-$container-max-widths: (
-        sm: 576px,
-        md: 720px,
-        lg: 940px,
-        xl: 1140px
-) !default;
 
 
-// Grid columns
-//
-// Set the number of columns and specify the width of the gutters.
-
-$grid-columns:               12 !default;
-$grid-gutter-width:          1.875rem !default; // 30px
-
-//missing variables
-$enable-flex:               false !default;
-$enable-grid-classes:        true !default;
-
-/* /Grid
------------------------------------------------ */

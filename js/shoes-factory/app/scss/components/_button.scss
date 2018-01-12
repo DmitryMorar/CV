@@ -9,7 +9,7 @@
 	border: 1px solid transparent;
 	border-radius: 4px;
 	outline: none;
-
+	transition: $transition-base;
 
 	&:active,
 	&:focus {
@@ -61,6 +61,7 @@
 		border-color: #cdd2d3;
 		margin-left: 10px;
 		color: #ac050b;
+		padding: .35rem .7rem;
 
 		&:hover {
 			color: #fff;
@@ -76,6 +77,7 @@
 		border-color: #cdd2d3;
 		margin-left: 10px;
 		color: #007700;
+		padding: .35rem .7rem;
 
 		&:hover {
 			color: #fff;
@@ -123,5 +125,4 @@
 		padding: 18px 44px;
 		min-width: 230px;
 	}
-
 }
