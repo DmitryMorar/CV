@@ -36,205 +36,196 @@
 				<li class="navbar-list__item">
 					<a href="database.html" class="navbar-list__item__link">База Данных</a>
 				</li>
-				<li class="navbar-list__item">
-					<a href="#" class="navbar-list__item__link">Журнал заказов</a>
-				</li>
 			</ul>
 		</nav>
-	</section>
-	<!--END LEFT BLOCK-->
+		<!--</section>-->
 
-	<!--RIGHT BLOCK-->
-	<section class="right-block">
-		<div class="container-fluid">
-			<!-- FIRST-->
-			<section class="row">
-				<div class="col-lg-6 col-md-7">
-					<div class="new-order">
-						<form class="form" action="#">
-							<div class="col-lg-4 col-md-4">
-								<div class="new-order__employees">
+		<!--RIGHT BLOCK-->
+		<section class="right-block">
+			<div class="container-fluid">
+				<!-- FIRST-->
+				<section class="row">
+					<div class="col-lg-6 col-md-7">
+						<div class="new-order">
+							<form class="form" action="#">
+								<div class="col-lg-4 col-md-4">
+									<div class="new-order__employees">
 
-									<div class="js-dropdown dropdown">
-										<input type="hidden" name="position">
-										<input type="hidden" name="name">
+										<div class="js-dropdown dropdown">
+											<input type="hidden" name="position">
+											<input type="hidden" name="name">
+											<i class="dropdown__icon ic ic-caret-down"></i>
+
+											<div class="js-dropdown-title dropdown__title">Сотрудники</div>
+											<div class="js-dropdown-menu dropdown__menu" data-dropdown-type="employee"></div>
+										</div>
+
+									</div>
+
+									<div class="new-order__models">
+										<div class="js-dropdown dropdown">
+											<input type="hidden" name="model">
+											<i class="dropdown__icon ic ic-caret-down"></i>
+
+											<div class="js-dropdown-title dropdown__title">Модель</div>
+											<div class="js-dropdown-menu dropdown__menu" data-dropdown-type="model"></div>
+										</div>
+
+
+									</div>
+									<div class="new-order__date">
+										<input id="datepicker" class="field field_calendar" placeholder="Дата">
 										<i class="dropdown__icon ic ic-caret-down"></i>
-
-										<div class="js-dropdown-title dropdown__title">Сотрудники</div>
-										<div class="js-dropdown-menu dropdown__menu" data-dropdown-type="employee"></div>
+									</div>
+								</div>
+								<div class="col-lg-8 col-md-8">
+									<div class="new-order__sizes">
+										<select class="field field_sizes" name="size36" required>
+											<option value="" disabled selected hidden>- 36р -</option>
+											<option value="1">1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+										</select>
+										<select class="field field_sizes" name="size37" required>
+											<option value="" disabled selected hidden>- 37р -</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+										</select>
+										<select class="field field_sizes" name="size38" required>
+											<option value="" disabled selected hidden>- 38р -</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+										</select>
+										<select class="field field_sizes" name="size39" required>
+											<option value="" disabled selected hidden>- 39р -</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+										</select>
+										<select class="field field_sizes" name="size40" required>
+											<option value="" disabled selected hidden>- 40р -</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+										</select>
+										<select class="field field_sizes" name="size41" required>
+											<option value="" disabled selected hidden>- 41р -</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+										</select>
+									</div>
+									<div class="new-order__button">
+										<button class="js-save-btn-new-order btn btn_outline-green" type="submit">
+											<span class="ic ic-check"></span>
+										</button>
+										<button class="js-cancel-btn-new-order btn btn_outline-red" type="reset">
+											<span class="ic ic-times"></span>
+										</button>
 									</div>
 
 								</div>
-
-								<div class="new-order__models">
-									<div class="js-dropdown dropdown">
-										<input type="hidden" name="model">
-										<i class="dropdown__icon ic ic-caret-down"></i>
-
-										<div class="js-dropdown-title dropdown__title">Модель</div>
-										<div class="js-dropdown-menu dropdown__menu" data-dropdown-type="model"></div>
-									</div>
-
-
-								</div>
-								<div class="new-order__date">
-									<input id="datepicker" class="field field_calendar" placeholder="Дата">
-									<i class="dropdown__icon ic ic-caret-down"></i>
-								</div>
-							</div>
-							<div class="col-lg-8 col-md-8">
-								<div class="new-order__sizes">
-									<select class="field field_sizes" name="size36" required>
-										<option value="" disabled selected hidden>- 36р -</option>
-										<option value="1">1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-									</select>
-									<select class="field field_sizes" name="size37" required>
-										<option value="" disabled selected hidden>- 37р -</option>
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-									</select>
-									<select class="field field_sizes" name="size38" required>
-										<option value="" disabled selected hidden>- 38р -</option>
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-									</select>
-									<select class="field field_sizes" name="size39" required>
-										<option value="" disabled selected hidden>- 39р -</option>
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-									</select>
-									<select class="field field_sizes" name="size40" required>
-										<option value="" disabled selected hidden>- 40р -</option>
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-									</select>
-									<select class="field field_sizes" name="size41" required>
-										<option value="" disabled selected hidden>- 41р -</option>
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-									</select>
-								</div>
-								<div class="new-order__button">
-									<button class="js-save-btn-new-order btn btn_outline-green" type="submit">
-										<span class="ic ic-check"></span>
-									</button>
-									<button class="js-cancel-btn-new-order btn btn_outline-red" type="reset">
-										<span class="ic ic-times"></span>
-									</button>
-								</div>
-
-							</div>
-						</form>
+							</form>
+						</div>
 					</div>
-				</div>
-				<div class="col-lg-5 col-md-5">
-					<div class="js-moneys-week moneys-week">
-						<h3 class="moneys-week__title">Итого</h3>
+					<div class="col-lg-5 col-md-5">
+						<div class="js-moneys-week moneys-week">
+							<h3 class="moneys-week__title">Итого</h3>
 
 							<div class="col-md-6">
-								<div class="js-moneys-week__employee moneys-week__employee" data-moneys-week-employee="cutter">Закройщик -
+								<div class="js-moneys-week__employee moneys-week__employee" data-moneys-week-employee="cutter">
+									Закройщик -
 									<span></span></div>
-								<div class="js-moneys-week__employee moneys-week__employee" data-moneys-week-employee="seamstress">Швея -
+								<div class="js-moneys-week__employee moneys-week__employee"
+									 data-moneys-week-employee="seamstress">
+									Швея -
 									<span></span></div>
-								<div class="js-moneys-week__employee moneys-week__employee" data-moneys-week-employee="shoemaker">Сапожник -
+								<div class="js-moneys-week__employee moneys-week__employee" data-moneys-week-employee="shoemaker">
+									Сапожник -
 									<span></span></div>
-								<div class="js-moneys-week__employee moneys-week__employee" data-moneys-week-employee="packer">Упаковщик -
+								<div class="js-moneys-week__employee moneys-week__employee" data-moneys-week-employee="packer">
+									Упаковщик -
 									<span></span></div>
 							</div>
 							<div class="col-md-6">
 								<div class="moneys-week__total-sum" data-moneys-week="total"></div>
 							</div>
-					</div>
-				</div>
-			</section>
-			<!--SECOND-->
-
-			<section class="weekly-list">
-				<div class="row">
-					<div class="col-md-3">
-
-						<div class="weekly-list__column">
-							<h3 class="js-json weekly-list__column__title">Закройщики</h3>
-							<span class="color-line color-line_blue"></span>
-
-							<div class="js-days-list column__days-list" data-list-type="cutter"></div>
-
 						</div>
 					</div>
-					<div class="col-md-3">
-						<div class="weekly-list__column">
-							<h3 class="js-json2 weekly-list__column__title">Швеи</h3>
-							<span class="color-line color-line_red"></span>
+				</section>
+				<!--SECOND-->
 
-							<div class="js-days-list column__days-list" data-list-type="seamstress"></div>
+				<section class="weekly-list">
+					<div class="row">
+						<div class="col-md-3">
+
+							<div class="weekly-list__column">
+								<h3 class="js-json weekly-list__column__title">Закройщики</h3>
+								<span class="color-line color-line_blue"></span>
+
+								<div class="js-days-list column__days-list" data-list-type="cutter"></div>
+
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="weekly-list__column">
+								<h3 class="js-json2 weekly-list__column__title">Швеи</h3>
+								<span class="color-line color-line_red"></span>
+
+								<div class="js-days-list column__days-list" data-list-type="seamstress"></div>
+
+							</div>
 
 						</div>
+						<div class="col-md-3">
+							<div class="weekly-list__column">
+								<h3 class="weekly-list__column__title">Сапожники</h3>
+								<span class="color-line color-line_green"></span>
 
-					</div>
-					<div class="col-md-3">
-						<div class="weekly-list__column">
-							<h3 class="weekly-list__column__title">Сапожники</h3>
-							<span class="color-line color-line_green"></span>
+								<div class="js-days-list column__days-list" data-list-type="shoemaker"></div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="weekly-list__column">
+								<h3 class="weekly-list__column__title">Упаковщики</h3>
+								<span class="color-line color-line_dark"></span>
 
-							<div class="js-days-list column__days-list" data-list-type="shoemaker"></div>
+								<div class="js-days-list column__days-list" data-list-type="packer"></div>
+							</div>
 						</div>
 					</div>
-					<div class="col-md-3">
-						<div class="weekly-list__column">
-							<h3 class="weekly-list__column__title">Упаковщики</h3>
-							<span class="color-line color-line_dark"></span>
-
-							<div class="js-days-list column__days-list" data-list-type="packer"></div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!--end weekly calendar-->
-		</div>
-	</section>
-	<!--END RIGHT BLOCK-->
+				</section>
+				<!--end weekly calendar-->
+			</div>
+		</section>
 </main>
-<!--END MAIN-->
 
 <!--SCRIPTS-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-		crossorigin="anonymous"></script>
-<script
-		src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
 		integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
 		crossorigin="anonymous"></script>
 
-<script src="js/index.js" charset="utf-8" type="text/javascript"></script>
-<script src="js/index.js" charset="utf-8" type="text/javascript"></script>
-<script src="js/pages/database/database.js" charset="utf-8" type="text/javascript"></script>
 <script src="js/pages/salaries/salaries.js" charset="utf-8" type="text/javascript"></script>
-<!--END SCRIPTS-->
 </body>
 </html>

@@ -1,16 +1,24 @@
+/*
+* Draw all item and data in page
+* Add functions / change DOM
+* Weekly list
+* New orders
+* DropDown
+* DatePicker
+* */
+
 $(function () {
 
-	drawAllItemsInPage();
-
 	/*
-	 * ====================================
-	 * 		Draw all item and data in page
+	 * 	Draw all item and data in page
 	 * ====================================
 	 * */
-	function drawAllItemsInPage() {
+
+	var drawAllItemsInPage = function() {
 		$.getJSON("js/pages/database/db.json", function (data) {
 
-			$.each(data, function (section) { //maybe use other loop
+			//TODO maybe use other loop
+			$.each(data, function (section) {
 
 				switch (section) {
 
@@ -44,124 +52,123 @@ $(function () {
 				}
 			})
 		});
-	}
+	};
+	drawAllItemsInPage();
 
 	/*
-	 * ====================================
-	 * 		Add functions / change DOM
+	 * 	Add functions / change DOM
 	 * ====================================
 	 * */
 
 	var addItemInDropDonw = function (obj) {
 
-		if (typeof obj !== 'object') {
-			return false
-		}
-
-		var employeeDropdown = $('[data-dropdown-type=employee]'),
-			modelDropdown = $('[data-dropdown-type=model]');
-
-		if (obj.hasOwnProperty('position')) {
-			employeeDropdown.append(
-				'<div class="js-dropdown-item dropdown__menu__item" data-item-type="employees"><span>' + obj.position + '</span><span>' + obj.name + '</span></div>'
-			)
-		} else if (obj.hasOwnProperty('model')) {
-			modelDropdown.append(
-				'<div class="js-dropdown-item dropdown__menu__item" data-item-type="models">' + obj.model + '</div>'
-			)
-		}
-
-	};
-
-	var addItemInWeeklyList = function (dataDay) {
-
-		if (typeof dataDay !== 'object') {
-			return
-		}
-
-		var dateOfDay = dataDay.date,
-			cutterList = $('[data-list-type=cutter]'),
-			seamstressList = $('[data-list-type=seamstress]'),
-			shoemakerList = $('[data-list-type=shoemaker]'),
-			packerList = $('[data-list-type=packer]'),
-
-		//if obj dataDay from newOrder save him how array
-			dataEmployee = dataDay.employees ? dataDay.employees : [dataDay];
-
-		$.each(dataEmployee, function (key, employee) {
-
-			switch (employee.position) {
-
-				case 'Закройщик':
-					addItemInPositionList(cutterList, employee, dateOfDay);
-					break;
-
-				case 'Швея':
-					addItemInPositionList(seamstressList, employee, dateOfDay);
-					break;
-
-				case 'Сапожник':
-					addItemInPositionList(shoemakerList, employee, dateOfDay);
-					break;
-
-				case 'Упаковщик':
-					addItemInPositionList(packerList, employee, dateOfDay);
-					break;
-
-				default:
+			if (typeof obj !== 'object') {
+				return false
 			}
-		})
-	};
 
-	var addItemInPositionList = function (listWhereAddItem, employee, dateOfDay) {
+			var employeeDropdown = $('[data-dropdown-type=employee]'),
+				modelDropdown = $('[data-dropdown-type=model]');
 
-		if (typeof employee !== 'object') {
-			return
-		}
+			//check dropdown type item
+			if (obj.hasOwnProperty('position')) {
+				employeeDropdown.append(
+					'<div class="js-dropdown-item dropdown__menu__item" data-item-type="employees"><span>' + obj.position + '</span><span>' + obj.name + '</span></div>'
+				)
+			} else if (obj.hasOwnProperty('model')) {
+				modelDropdown.append(
+					'<div class="js-dropdown-item dropdown__menu__item" data-item-type="models">' + obj.model + '</div>'
+				)
+			}
 
-		listWhereAddItem.append(
-			'<div class="js-days-list__item column__days-list__item">' +
-			'<div class="js-item__title item__title">' + dateOfDay + '</div>' +
-			'<div class="js-item__content item__content">' +
-			'<div class="item__employee-name">' + employee.name + '</div>' +
-			'<span class="item__employee-model">' + employee.model + '</span>' +
-			'<span class="item__size" data-size="36">36/<span>' + employee.size36 + '</span> </span>' +
-			'<span class="item__size" data-size="37">37/ <span>' + employee.size37 + '</span> </span>' +
-			'<span class="item__size" data-size="38">38/ <span>' + employee.size38 + '</span> </span>' +
-			'<span class="item__size" data-size="39">39/ <span>' + employee.size39 + '</span> </span>' +
-			'<span class="item__size" data-size="40">40/ <span>' + employee.size40 + '</span> </span>' +
-			'<span class="item__size" data-size="41">41/ <span>' + employee.size41 + '</span> </span>' +
-			'</div>' +
-			'</div>'
-		)
-	};
+		},
 
-	var addDataInMoneysWeek = function (moneyWeek) {
+		addItemInWeeklyList = function (dataDay) {
 
-		if (typeof moneyWeek !== 'object') {
-			return
-		}
+			if (typeof dataDay !== 'object') {
+				return
+			}
 
-		var itemsPosition = $('.js-moneys-week__employee'),
-			moneysWeekTotalSum = $('[data-moneys-week=total]'),
-			i = 0,
-			max;
+			var dateOfDay = dataDay.date,
+				cutterList = $('[data-list-type=cutter]'),
+				seamstressList = $('[data-list-type=seamstress]'),
+				shoemakerList = $('[data-list-type=shoemaker]'),
+				packerList = $('[data-list-type=packer]'),
 
-		for (i, max = itemsPosition.length; i < max; i++) {
+			//if obj dataDay from newOrder save him how array
+				dataEmployee = dataDay.employees ? dataDay.employees : [dataDay];
 
-			//dependency between obj property and data-attribute of DOM element
-			var a = $(itemsPosition[i]).data('moneys-week-employee'),
-				b = moneyWeek[a];
+			$.each(dataEmployee, function (key, employee) {
 
-			$(itemsPosition[i]).find('span').text(b);
-		}
-		moneysWeekTotalSum.text(moneyWeek.total);
-	};
+				switch (employee.position) {
 
+					case 'Закройщик':
+						addItemInPositionList(cutterList, employee, dateOfDay);
+						break;
+
+					case 'Швея':
+						addItemInPositionList(seamstressList, employee, dateOfDay);
+						break;
+
+					case 'Сапожник':
+						addItemInPositionList(shoemakerList, employee, dateOfDay);
+						break;
+
+					case 'Упаковщик':
+						addItemInPositionList(packerList, employee, dateOfDay);
+						break;
+
+					default:
+				}
+			})
+		},
+
+		addItemInPositionList = function (listWhereAddItem, employee, dateOfDay) {
+
+			if (typeof employee !== 'object') {
+				return
+			}
+
+			listWhereAddItem.append(
+				'<div class="js-days-list__item column__days-list__item">' +
+				'<div class="js-item__title item__title">' + dateOfDay + '</div>' +
+				'<div class="js-item__content item__content">' +
+				'<div class="item__employee-name">' + employee.name + '</div>' +
+				'<span class="item__employee-model">' + employee.model + '</span>' +
+				'<span class="item__size" data-size="36">36/<span>' + employee.size36 + '</span> </span>' +
+				'<span class="item__size" data-size="37">37/ <span>' + employee.size37 + '</span> </span>' +
+				'<span class="item__size" data-size="38">38/ <span>' + employee.size38 + '</span> </span>' +
+				'<span class="item__size" data-size="39">39/ <span>' + employee.size39 + '</span> </span>' +
+				'<span class="item__size" data-size="40">40/ <span>' + employee.size40 + '</span> </span>' +
+				'<span class="item__size" data-size="41">41/ <span>' + employee.size41 + '</span> </span>' +
+				'</div>' +
+				'</div>'
+			)
+		},
+
+		addDataInMoneysWeek = function (moneyWeek) {
+
+			if (typeof moneyWeek !== 'object') {
+				return
+			}
+
+			var itemsPosition = $('.js-moneys-week__employee'),
+				moneysWeekTotalSum = $('[data-moneys-week=total]'),
+				i = 0,
+				max;
+
+			for (i, max = itemsPosition.length; i < max; i++) {
+
+				//dependency between obj property and data-attribute of DOM element
+				var a = $(itemsPosition[i]).data('moneys-week-employee'),
+					b = moneyWeek[a];
+
+				$(itemsPosition[i]).find('span').text(b);
+			}
+			moneysWeekTotalSum.text(moneyWeek.total);
+		};
 
 	/*
-	 * ====================================
-	 * 		Weekly list
+	 *	Weekly list
 	 * ====================================
 	 * */
 
@@ -176,7 +183,6 @@ $(function () {
 	});
 
 	/*
-	 * ====================================
 	 * 	New orders
 	 * ====================================
 	 * */
@@ -201,69 +207,68 @@ $(function () {
 
 	var readNewOrder = function () {
 
-		var allInput = $('input[type=hidden]'),
-			allSelect = $('select'),
-			newOrder = {};
+			var allInput = $('input[type=hidden]'),
+				allSelect = $('select'),
+				newOrder = {};
 
-		//save date where create orders
-		newOrder.date = $('#datepicker').val();
+			//save date where create orders
+			newOrder.date = $('#datepicker').val();
 
-		//save in obj employee data
-		readFieldsNewOrder(allInput, newOrder);
+			//save in obj employee data
+			readFieldsNewOrder(allInput, newOrder);
 
-		//save in obj number of sizes
-		readFieldsNewOrder(allSelect, newOrder);
+			//save in obj number of sizes
+			readFieldsNewOrder(allSelect, newOrder);
 
-		return newOrder
-	};
+			return newOrder
+		},
 
-	var readFieldsNewOrder = function (nodes, newOrder) {
-		for (var i = 0, max = nodes.length; i < max; i++) {
-			key = nodes[i].name;
-			value = nodes[i].value;
-			newOrder[key] = value;
-		}
-	};
+		readFieldsNewOrder = function (nodes, newOrder) {
+			for (var i = 0, max = nodes.length; i < max; i++) {
+				key = nodes[i].name;
+				value = nodes[i].value;
+				newOrder[key] = value;
+			}
+		},
 
-	var clearFieldsNewOrder = function () {
+		clearFieldsNewOrder = function () {
 
-		//clear value in employee data
-		var allInputs = $('input[type=hidden]'),
-			allSelect = $('select'),
-			dropDownTitles = $('.js-dropdown-title'),
-			datePicker = $("#datepicker"),
-			i = 0,
-			max;
+			//clear value in employee data
+			var allInputs = $('input[type=hidden]'),
+				allSelect = $('select'),
+				dropDownTitles = $('.js-dropdown-title'),
+				datePicker = $("#datepicker");
 
-		//TODO find best solution
-		dropDownTitles.removeClass('dark-color').addClass('grey-color');
-		$(dropDownTitles[0]).text('Сотрудники');
-		$(dropDownTitles[1]).text('Модель');
+			//TODO find best solution
+			dropDownTitles.removeClass('dark-color').addClass('grey-color');
+			$(dropDownTitles[0]).text('Сотрудники');
+			$(dropDownTitles[1]).text('Модель');
 
-		datePicker.val('');
+			datePicker.val('');
 
-		//clear value in employee data
-		clearValuesNewOrder(allInputs);
+			//clear value in employee data
+			clearValuesNewOrder(allInputs);
 
-		//clear value in number of sizes
-		clearValuesNewOrder(allSelect);
+			//clear value in number of sizes
+			clearValuesNewOrder(allSelect);
 
-	};
+		},
 
-	var clearValuesNewOrder = function (nodes) {
+		clearValuesNewOrder = function (nodes) {
 
-		for (var i = 0, max = nodes.length; i < max; i++) {
-			nodes[i].value = '';
-		}
+			for (var i = 0, max = nodes.length; i < max; i++) {
+				nodes[i].value = '';
+			}
 
-	};
+		};
+
 
 	/*
-	 * ====================================
-	 * 		Dropdown
+	 * 	DropDown
 	 * ====================================
 	 * */
 
+	//handler which show/close dropdown menu
 	$('.js-dropdown').click(function () {
 
 		var dropDownMenu = $('.js-dropdown-menu');
@@ -271,6 +276,7 @@ $(function () {
 		$(this).find(dropDownMenu).toggle('fast');
 	});
 
+	//handler on dropdown item
 	$('.js-dropdown-menu').on('click', '.js-dropdown-item', function (event) {
 		event.stopPropagation();
 
@@ -283,7 +289,7 @@ $(function () {
 
 		changeTextDropdown(currentItem, itemData);
 
-		$(this).parent(dropDownMenu).toggle('fast');
+		$(currentItem).parent(dropDownMenu).toggle('fast');
 		dropDownTitle.addClass('dark-color');
 	});
 
@@ -309,41 +315,38 @@ $(function () {
 
 			default:
 		}
-
 		return obj1;
-	};
+		},
 
-	//TODO find best solution
-	var changeTextDropdown = function (currentItem ,itemData) {
-
-		var mainParent = $(currentItem).parent($('.js-dropdown-menu')).parent($('.js-dropdown')),
-			allInputsDropDown = mainParent.find('input[type=hidden]'),
-			dropDownTitle = mainParent.find($('.js-dropdown-title'));
+		changeTextDropdown = function (currentItem, itemData) {
 
 		if (typeof itemData !== 'object') {
 			return false
 		}
 
-		if (allInputsDropDown.length == 1) {
+		var mainParent = $(currentItem).parent().parent(),
+			allInputsDropDown = mainParent.find('input[type=hidden]'),
+			dropDownTitle = mainParent.find($('.js-dropdown-title'));
 
+		//TODO find best solution
+		if (allInputsDropDown.length == 1) {
 			$(allInputsDropDown[0]).attr('value', itemData.model);
-			//change title
-			dropDownTitle.text(itemData.model)
+
+			dropDownTitle.text(itemData.model); //change title
 
 		} else if (allInputsDropDown.length == 2) {
-
 			$(allInputsDropDown[0]).attr('value', itemData.position);
 			$(allInputsDropDown[1]).attr('value', itemData.name);
-			//change title
-			dropDownTitle.text(itemData.name)
+
+			dropDownTitle.text(itemData.name); //change title
 		}
 	};
 
 	/*
-	 * ====================================
-	 * 		Datepicker
+	 * 	DatePicker
 	 * ====================================
 	 * */
+
 	$("#datepicker").datepicker({
 		monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
 		dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
