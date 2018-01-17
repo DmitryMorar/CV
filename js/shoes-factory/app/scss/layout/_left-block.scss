@@ -8,9 +8,47 @@
 	width: 115px;
 	min-height: 100%;
 	background: #1b3446;
+	transition: $transition-base;
 }
 
+//TODO duplicate code
+.nav-wrap {
+	z-index: 20;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	width: 115px;
+	min-height: 100%;
+	background: #1b3446;
+	transition: $transition-base;
+}
+
+
+
 .navbar {
+
+	&-toggle {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: transparent;
+		border: 0;
+		width: 50px;
+		height: 50px;
+		font-size: 1.5rem;
+		padding: 0;
+		color: #ffffff;
+		font-weight: 400;
+		display: none;
+
+		&:before {
+			display: block;
+			font-family: FontAwesome, sans-serif;
+			content: "\f0c9";
+		}
+	}
 
 	&-list {
 		padding: 40px 0;
@@ -37,4 +75,23 @@
 		font-size: 16px;
 		padding: 7px 10px;
 	}
+}
+
+
+@media (max-width: 768px) {
+
+	//add mobile menu
+	.nav-wrap {
+		left: -115px;
+	}
+
+	.left-block {
+		min-height: 50px;
+		width: 100%;
+	}
+
+	.navbar-toggle {
+		display: block;
+	}
+
 }

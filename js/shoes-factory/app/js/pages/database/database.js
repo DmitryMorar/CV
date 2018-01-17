@@ -107,13 +107,12 @@ $(function() {
 
 		var dataModalBox = readFieldsModalBox(fieldsInModalBox);
 
-		//if new item
+		//if new item create id
 		if (dataModalBox.id === undefined) {
 			dataModalBox.id = Math.floor(Math.random() * 1000);
 		}
 
 		switch (buttonTypeAction) {
-
 			case 'save':
 				//check type of item
 				if (dataModalBox.hasOwnProperty('model')) {

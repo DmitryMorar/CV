@@ -3,12 +3,9 @@
 // Navbar
 // etc.
 
-//TODO need add localfont
-
 .employees {
 	&__top {
 		position: relative;
-
 	}
 }
 
@@ -21,11 +18,16 @@
 	font-weight: 700;
 	color: #8591a5;
 	border-top: 1px solid #000;
+	text-align: center;
 
 	&__cell {
 		border-right: 1px solid #e5e5e5;
 		padding: 10px;
 
+		&:last-child {
+			border-right: 1px solid transparent;
+
+		}
 		//modifacators
 		&_employees:first-child {
 			width: 180px;
@@ -34,10 +36,22 @@
 			width: 100%;
 		}
 
-		&_models:last-child {
-			width: 100%;
-
+		&_models:first-child {
+			width: 85px;
 		}
+		&_models:nth-child(2) {
+			width: 110px;
+		}
+		&_models:nth-child(3) {
+			width: 65px;
+		}
+		&_models:nth-child(4) {
+			width: 102px;
+		}
+		&_models:nth-child(5) {
+			width: 190px;
+		}
+
 	}
 }
 
@@ -63,26 +77,34 @@
 			background: #f8faff;
 		}
 
-			//modificator
-			&_models {
-				text-align: center;
-			}
+		//modificator
+		&_models {
+			text-align: center;
+
+		}
 
 		&__cell {
 			padding: 10px;
 			border-right: 1px solid #e5e5e5;
+			overflow: hidden;
 
+			&:last-child {
+				border-right: 1px solid transparent;
+			}
 
-			//modificator
+			//MODIFICATORS
+			//employees
 			&_employees:first-child {
 				width: 182px;
 			}
+
 			//TODO find best solution
 			&_employees:nth-child(even) {
 				width: 100%;
 				padding: 10px;
 			}
 
+			//models
 			&_models:first-child {
 				width: 85px;
 			}
@@ -101,7 +123,6 @@
 
 
 		}
-
 
 		//TODO All buttons need to place in _button.scss
 		//the delete-button style
@@ -130,25 +151,6 @@
 				color: #000;
 			}
 		}
-
-		//the yes and no-button style
-		&__save-button,
-		&__cancel-button {
-			position: absolute;
-			cursor: pointer;
-
-		}
-
-		&__save-button {
-			right: 145px;
-			top: 10px;
-		}
-
-		&__cancel-button {
-			right: 100px;
-			top: 10px;
-		}
-
 	}
 
 	//the aadNew-button style
@@ -161,6 +163,7 @@
 .w90 {
 	width: 90px;
 }
+
 .w65 {
 	width: 65px;
 }
@@ -175,4 +178,82 @@
 
 .disnone {
 	display: none;
+}
+
+//media queries
+
+//table
+@media (min-width: 768px) {
+	.employees {
+		margin-bottom: 20px;
+	}
+}
+
+//mobile
+@media (max-width: 426px) {
+
+	.employees {
+		margin-bottom: 20px;
+	}
+
+	.list-head__cell {
+		font-size: .875rem;
+		padding: 10px 5px;
+
+		//MODIFICATORS
+
+		//employees
+		&_employees:first-child {
+
+			width: 160px;
+		}
+
+		//models
+		&_models:first-child {
+			width: 150px;
+		}
+		&_models:nth-child(2) {
+			width: 144px;
+		}
+		&_models:nth-child(3) {
+			width: 140px;
+		}
+		&_models:nth-child(4) {
+			width: 115px;
+		}
+		&_models:nth-child(5) {
+			width: 168px;
+		}
+
+	}
+
+	.list-row__item__cell {
+		font-size: .875rem;
+
+		&_employees:first-child {
+			width: 160px;
+		}
+
+		&_models:first-child {
+			width: 70px;
+		}
+		&_models:nth-child(2) {
+			width: 50px;
+		}
+		&_models:nth-child(3) {
+			width: 50px;
+		}
+		&_models:nth-child(4) {
+			width: 50px;
+		}
+		&_models:nth-child(5) {
+			width: 50px;
+		}
+
+		&_models:last-child {
+			border-right: 0 solid transparent;
+		}
+
+	}
+
 }

@@ -10,86 +10,79 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-
 	<link rel="stylesheet" href="css/grid.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<main class="container-fluid">
+<!--LEFT BLOCK-->
+<header class="left-block">
+	<button class="navbar-toggle"></button>
+	<div class="nav-wrap">
+		<nav class="navbar">
+			<ul class="navbar-list">
+				<li class="navbar-list__item">
+					<a href="https://smartshoes.amocrm.ru/leads/pipeline/591043" class="navbar-list__item__link"
+					   target="_blank">CRM</a>
+				</li>
+				<li class="navbar-list__item">
+					<a href="index.html" class="navbar-list__item__link">Зарплата</a>
+				</li>
+				<li class="navbar-list__item navbar-list__item_active">
+					<a href="#" class="navbar-list__item__link">База Данных</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<!--RIGHT BLOCK-->
+<main class="right-block">
 	<div class="row">
-		<!--LEFT BLOCK-->
-		<section class="left-block">
-			<nav class="navbar">
-				<ul class="navbar-list">
-					<li class="navbar-list__item">
-						<a href="https://smartshoes.amocrm.ru/leads/pipeline/591043" class="navbar-list__item__link">CRM</a>
-					</li>
-					<li class="navbar-list__item">
-						<a href="index.html" class="navbar-list__item__link">Зарплата</a>
-					</li>
-					<li class="navbar-list__item navbar-list__item_active">
-						<a href="database.html" class="navbar-list__item__link">База Данных</a>
-					</li>
-				</ul>
-			</nav>
-		</section>
+		<!-- EMPLOYEES-->
+		<div class="col-lg-6">
+			<div class="employees">
+				<div class="employees__top">
+					<h3>Сотрудники</h3>
+					<button class="js-add-new-item btn btn_create-new-data btn_blue" data-list-type="employees">+
+					</button>
 
-		<!--RIGHT BLOCK-->
-		<section class="right-block">
-			<div class="container">
-				<div class="row">
-
-					<!-- TODO указать правильные классы для блоков со списками -->
-					<!-- EMPLOYEES-->
-					<div class="col-md-6">
-						<div class="employees">
-							<div class="employees__top">
-								<h3>Сотрудники</h3>
-								<button class="js-add-new-item btn btn_create-new-data btn_blue" data-list-type="employees">+
-								</button>
-
-								<div class="list-head">
-									<div class="list-head__cell list-head__cell_employees">Должность</div>
-									<div class="list-head__cell list-head__cell_employees">ФИО</div>
-								</div>
-							</div>
-
-							<div class="js-employee-list list-row"></div>
-
-						</div>
-					</div>
-
-					<!-- MODELS-->
-					<div class="col-md-6">
-						<div class="models">
-							<div class="models__top">
-								<h3>Цена за модель</h3>
-								<button class="js-add-new-item btn btn_create-new-data btn_blue" data-list-type="models">+
-								</button>
-
-
-								<div class="list-head">
-									<div class="list-head__cell list-head__cell_models">Модель</div>
-									<div class="list-head__cell list-head__cell_models">Закройщик</div>
-									<div class="list-head__cell list-head__cell_models">Швея</div>
-									<div class="list-head__cell list-head__cell_models">Сапожник</div>
-									<div class="list-head__cell list-head__cell_models">Упаковщик</div>
-								</div>
-
-							</div>
-
-							<div class="js-models-list list-row"></div>
-						</div>
+					<div class="list-head">
+						<div class="list-head__cell list-head__cell_employees">Должность</div>
+						<div class="list-head__cell list-head__cell_employees">ФИО</div>
 					</div>
 				</div>
-			</div>
 
-		</section>
+				<div class="js-employee-list list-row"></div>
+
+			</div>
+		</div>
+
+		<!-- MODELS-->
+		<div class="col-lg-6">
+			<div class="models">
+				<div class="models__top">
+					<h3>Цена за модель</h3>
+					<button class="js-add-new-item btn btn_create-new-data btn_blue" data-list-type="models">+</button>
+
+					<div class="list-head">
+						<div class="list-head__cell list-head__cell_models">Мод</div>
+						<div class="list-head__cell list-head__cell_models">Зак</div>
+						<div class="list-head__cell list-head__cell_models">Шв</div>
+						<div class="list-head__cell list-head__cell_models">Сап</div>
+						<div class="list-head__cell list-head__cell_models">Упа</div>
+					</div>
+
+				</div>
+
+				<div class="js-models-list list-row"></div>
+			</div>
+		</div>
 	</div>
 </main>
 
 <!--SCRIPTS-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/pages/database/database.js" type="text/javascript" charset="utf-8"></script>
 
 </body>

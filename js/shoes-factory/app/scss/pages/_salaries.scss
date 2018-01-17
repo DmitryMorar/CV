@@ -1,3 +1,13 @@
+.top-section {
+	& .row {
+		margin: 0;
+	}
+
+	& [class ^=col-] {
+		padding-left: 0;
+	}
+}
+
 .new-order {
 	display: flex;
 	background-color: #fff;
@@ -5,6 +15,7 @@
 	border: 1px solid #cdd2d3;
 	height: 175px;
 
+	&__sizes,
 	&__button {
 		text-align: right;
 	}
@@ -20,9 +31,11 @@
 
 		}
 	}
+
+	& .row {
+		margin: 0;
+	}
 }
-
-
 
 .moneys-week {
 	background-color: #1caf9a;
@@ -60,17 +73,13 @@
 	}
 }
 
-
 //Weekly-list
-
 .weekly-list__column {
-
 	&__title {
 		padding: 10px 0;
 		margin: 0;
 		text-align: center;
 	}
-
 }
 
 .column__days-list__item {
@@ -143,3 +152,32 @@
 	border-color: red;
 }
 
+//media queries
+
+//table
+@media (min-width: 768px) {
+
+	.field_sizes {
+		width: 31%;
+	}
+
+	.md-pr0 {
+		padding-right: 0;
+	}
+}
+
+//mobile
+@media (max-width: 426px) {
+
+	.field_sizes {
+		width: 31%;
+	}
+
+	.top-section [class ^=col-] {
+		padding-right: 0;
+	}
+
+	.sm-mb10 {
+		margin-bottom: 10px;
+	}
+}
