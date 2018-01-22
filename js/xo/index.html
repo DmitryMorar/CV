@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>X / O</title>
-    <link rel="stylesheet" href="css/index.css">
-    <script src="js/getWinner.js"></script>
-    <script src="js/index.js"></script>
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/examples.css"/>
+    <script type="text/javascript" src="js/XO(old).js"></script>
+    <script type="text/javascript" src="js/getWinner.js"></script>
+
 </head>
+<style>
+    body {
+        background-color: #454;
+    }
+    .startGame {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+    }
+    .mainGame {
+        position: absolute;
+        top: 25%;
+        left: 30%;
+    }
+</style>
 <body>
-<div class="container">
-<button class="startNewGame" onclick="removeClass()">Начать новую игру</button>
-<div class="winner-message"></div>
-<div class="field">
-    <div class="row">
-        <div class="cell"></div><div class="cell"></div><div class="cell"></div>
-    </div>
-    <div class="row">
-        <div class="cell"></div><div class="cell"></div><div class="cell"></div>
-    </div>
-    <div class="row">
-        <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+<div class="startGame">
+    <p>Введите размер поля <i style="font-size: 12px;">(от 3 до 10)</i></p>
+    <input class="count">
+    <button class="generateField">Создать поле</button>
+    <div class="error-message"></div>
+</div>
+<div class="mainGame">
+    <button class="startNewGame">Начать новую игру</button>
+    <div class="winner-message"></div>
+    <div class="field">
     </div>
 </div>
-</div>
+
+
 </body>
 </html>

@@ -1,63 +1,108 @@
-function removeClass() {
-    var cells = document.getElementsByClassName('cell');
-    for (var i = 0; i < cells.length; i++) {
-        cells[i].classList.remove('x', 'o');
-    }
-    var winMessage = document.querySelector('.winner-message');
-    winMessage.innerHTML = '';
-}
-
 window.addEventListener('load', function () {
-    var cells = document.getElementsByClassName('cell');
-    var lastValue = 'o';
-    for (var i = 0; i < cells.length; i++) {
-        cells[i].addEventListener('click', function (event) {
-            if (!event.target.classList.contains('x') && !event.target.classList.contains('o')) {
-                if (lastValue == 'x') {
-                    event.target.classList.add('o');
-                    lastValue = 'o';
-                } else {
-                    event.target.classList.add('x');
-                    lastValue = 'x';
-                }
-                if (getWinner() == 'x') {
-                    document.querySelector('.winner-message').innerHTML = "Крестик победил";
-                }
-                if (getWinner() == 'o') {
-                    document.querySelector('.winner-message').innerHTML = "Нолик победил";
-                }
-            }
-        })
-    }
 
-    function getWinner() {
-        var cellsD = document.querySelectorAll('.cell');
-        var cells = [[], [], []];
-        var i;
-        for (i = 0; i < 3; i++) {
-            for (var j = 0; j < 3; j++) {
-                var el = cellsD[i * 3 + j];
-                if (el.classList.contains('x')) {
-                    cells[i][j] = 'x';
-                }
-                if (el.classList.contains('o')) {
-                    cells[i][j] = 'o';
-                }
-            }
-        }
-        if (
-            ((cells[0][0] === cells[1][1]) && (cells[1][1] === cells[2][2])) ||
-            ((cells[2][0] === cells[1][1]) && (cells[1][1] === cells[0][2]))
-        ) {
-            return cells[1][1];
-        }
-        for (i = 0; i < 2; i++) {
-            if ((cells[0][i] === cells[1][i]) && (cells[1][i] === cells[2][i])) {
-                return cells[0][i];
-            }
-            if ((cells[i][0] === cells[i][1]) && (cells[i][1] === cells[i][2])) {
-                return cells[i][0];
-            }
-        }
-    }
+	var lastV = localStorage.getItem('lastV'),
+		lastValue = JSON.parse(lastV);
+
+	var	game = localStorage.getItem('game'),
+		catArray = JSON.parse(game);
+
+	drawFromStorage();
+
+	var container = document.querySelector('.container');
+	container.addEventListener('click', function (event) {
+
+		var target = event.target,
+			targetClass = event.target.classList;
+
+		if (!targetClass.contains('x') && !targetClass.contains('o')) {
+
+			if (lastValue === null) {
+				lastValue = 'o';
+			}
+
+			if (lastValue === 'o') {
+				targetClass.add('x');
+				lastValue = 'x';
+
+				saveInStorage(target, lastValue);
+
+			} else {
+
+				targetClass.add('o');
+				lastValue = 'o';
+
+				saveInStorage(target, lastValue);
+			}
+			showWhoWin();
+		}
+	});
+
+	function showWhoWin() {
+
+		var winner = getWinner();
+
+		if (winner === 'x') {
+			document.querySelector('.who-win').innerHTML = "Крестик победил";
+			document.querySelector('.winner-message').style.opacity="1";
+			document.querySelector('.winner-message').style.visibility="visible";
+		}
+		if (winner === 'o') {
+			document.querySelector('.who-win').innerHTML = "Нолик победил";
+			document.querySelector('.winner-message').style.opacity="1";
+			document.querySelector('.winner-message').style.visibility="visible";
+		}
+	}
+
+	function saveInStorage(target, lastValue) {
+
+		var arrayCells = document.querySelectorAll('.cell'),
+			indexTargets;
+
+		localStorage.setItem('lastV', JSON.stringify(lastValue));
+
+		indexTargets = Array.prototype.indexOf.call(arrayCells, target);
+
+		if(catArray === null) {
+			catArray = [];
+		}
+
+		catArray[indexTargets] = lastValue;
+
+		localStorage.setItem('game', JSON.stringify(catArray));
+	}
+
+	function drawFromStorage() {
+
+		var foo = localStorage.getItem('game'),
+			bar = JSON.parse(foo),
+			i = 0,
+			max,
+			cells = document.querySelectorAll('.cell');
+
+		if (bar === null) {
+			return;
+		}
+
+		for (i, max = bar.length; i < max; i++) {
+
+			if (bar[i] === null) {
+				continue;
+			}
+
+			cells[i].classList.add(bar[i]);
+		}
+	}
+
+	var buttonNewGame = document.querySelector('.btn-new');
+	buttonNewGame.addEventListener('click', function () {
+
+		document.querySelector('.winner-message').style.display="none";
+
+		localStorage.removeItem('game');
+		localStorage.removeItem('lastV');
+
+		location.reload();
+	})
 });
+
+
