@@ -1,6 +1,6 @@
 .left-block {
-	z-index: 20;
 	position: fixed;
+	z-index: 20;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -9,6 +9,15 @@
 	min-height: 100%;
 	background: #1b3446;
 	transition: $transition-base;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 200;
+	height: 50px;
+	color: rgba(225, 246, 255, 0.3);
 }
 
 //TODO duplicate code
@@ -25,28 +34,35 @@
 	transition: $transition-base;
 }
 
+.header-wrap {
+	position: fixed;
+	z-index: 2000;
+	width: 120px;
+	left: -120px;
+	top: 0;
+	bottom: 0;
+	overflow: auto;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+}
+
+
 
 
 .navbar {
 
 	&-toggle {
-		position: absolute;
-		top: 0;
-		left: 0;
 		background-color: transparent;
 		border: 0;
 		width: 50px;
 		height: 50px;
 		font-size: 1.5rem;
 		padding: 0;
-		color: #ffffff;
-		font-weight: 400;
+		color: $white;
 		display: none;
 
-		&:before {
-			display: block;
-			font-family: FontAwesome, sans-serif;
-			content: "\f0c9";
+		&:focus {
+			outline: 0;
 		}
 	}
 

@@ -246,6 +246,8 @@ template {
     content: "\f00c"; }
   .ic-times:before {
     content: "\f00d"; }
+  .ic-menu:before {
+    content: "\f0c9"; }
 
 /*components*/
 .btn {
@@ -435,7 +437,7 @@ template {
     border-color: #858c93; }
   .dropdown__title {
     color: #bfbfbf;
-    overflow: auto;
+    overflow: visible;
     font-size: .875rem; }
   .dropdown__icon {
     color: #999;
@@ -470,8 +472,8 @@ template {
 
 /*layout*/
 .left-block {
-  z-index: 20;
   position: fixed;
+  z-index: 20;
   top: 0;
   left: 0;
   right: 0;
@@ -480,6 +482,14 @@ template {
   min-height: 100%;
   background: #1b3446;
   transition: all 0.2s ease-in-out; }
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 200;
+  height: 50px;
+  color: rgba(225, 246, 255, 0.3); }
 
 .nav-wrap {
   z-index: 20;
@@ -493,23 +503,28 @@ template {
   background: #1b3446;
   transition: all 0.2s ease-in-out; }
 
-.navbar-toggle {
-  position: absolute;
+.header-wrap {
+  position: fixed;
+  z-index: 2000;
+  width: 120px;
+  left: -120px;
   top: 0;
-  left: 0;
+  bottom: 0;
+  overflow: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch; }
+
+.navbar-toggle {
   background-color: transparent;
   border: 0;
   width: 50px;
   height: 50px;
   font-size: 1.5rem;
   padding: 0;
-  color: #ffffff;
-  font-weight: 400;
+  color: #fff;
   display: none; }
-  .navbar-toggle:before {
-    display: block;
-    font-family: FontAwesome, sans-serif;
-    content: "\f0c9"; }
+  .navbar-toggle:focus {
+    outline: 0; }
 
 .navbar-list {
   padding: 40px 0; }
